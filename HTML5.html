@@ -6,49 +6,51 @@
 </head>
 
 <body>
-    <!--ELEMENTOS HTML <b> Y <strong>-->
-    <!--El elemento HTML <b> define texto en negrita, sin ninguna importancia adicional.-->
-    <b>Este texto está en negrita<br></b>
+    <!--HTML <blockquote> PARA CITAS-->
+    <!--El elemento HTML <blockquote> define una sección que se cita de otra fuente.
+    Los navegadores suelen sangrar elementos <blockquote>.-->
+    <p>Aquí está una cita del sitio web de WWF:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        Durante 50 años, WWF ha estado protegiendo el futuro de la naturaleza.
+        La organización de conservación líder en el mundo,
+        WWF trabaja en 100 países y cuenta con el apoyo de
+        1,2 millones de miembros en los Estados Unidos y
+        cerca de 5 millones en todo el mundo.
+    </blockquote>
 
-    <!--El elemento HTML <strong> define texto con gran importancia. El contenido dentro generalmente se muestra en negrita.-->
-    <strong>¡Este texto es importante!<br></strong>
+    <!--HTML <q> PARA CITAS CORTAS-->
+    <!--La etiqueta HTML <q> define una cita corta.
+    Los navegadores normalmente insertan comillas alrededor de la cita.-->
+    <p>El objetivo de WWF es: <q>Construir un futuro donde las personas vivan en armonía con la naturaleza.</q></p>
 
-    <!--ELEMENTOS HTML <i> Y <em>-->
-    <!--El elemento HTML <i> define una parte del texto en una voz o estado de ánimo alternativo. El contenido en el interior generalmente se muestra en cursiva.
-    Consejo: la etiqueta <i> se usa a menudo para indicar un término técnico, una frase de otro idioma, un pensamiento, un nombre de barco, etc.-->
-    <i>Este texto está en cursiva<br></i>
+    <!--HTML <abbr> PARA ABREVIATURAS-->
+    <!--La etiqueta HTML <abbr> define una abreviatura o un acrónimo, como "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
+    Las abreviaturas de marcado pueden proporcionar información útil a los navegadores, sistemas de traducción y motores de búsqueda.
+    Consejo: Use el atributo de título global para mostrar la descripción de la abreviatura / acrónimo cuando pase el mouse sobre el elemento.-->
+    <p>La <abbr title="Organización Mundial de la Salud">OMS</abbr> fue fundada en 1948.</p>
 
-    <!--El elemento HTML <em> define texto enfatizado. El contenido en el interior generalmente se muestra en cursiva.
-    Consejo: Un lector de pantalla pronunciará las palabras con énfasis <em>, usando estrés verbal.-->
-    <em>Este texto se enfatiza<br></em>
+    <!--<address> HTML PARA INFORMACION DE CONTACTO-->
+    <!--La etiqueta HTML <address> define la información de contacto del autor / propietario de un documento o artículo.
+    La información de contacto puede ser una dirección de correo electrónico, URL, dirección física, número de teléfono, identificador de redes sociales, etc.
+    El texto en el elemento <address> generalmente se muestra en cursiva, y los navegadores siempre agregarán un salto de línea antes y después del elemento <address>.-->
+    <address>
+        Escrito por John Doe.<br>
+        Visítenos en:<br>
+        Example.com<br>
+        Caja 564, Disneyland<br>
+        USA
+    </address>
 
-    <!--ELEMENTO HTML <small>-->
-    <!--El elemento HTML <small> define texto más pequeño-->
-    <small>Este es un texto más pequeño.</small>
+    <!--HTML <cite> PARA EL TITULO DEL TRABAJO-->
+    <!--La etiqueta HTML <cite> define el título de una obra creativa (por ejemplo, un libro, un poema, una canción, una película, una pintura, una escultura, etc.).
+    Nota: El nombre de una persona no es el título de una obra.
+    El texto en el elemento <cite> generalmente se presenta en cursiva.-->
+    <p><cite>The Scream</cite> por Edvard Munch. Pintado en 1893.</p>
 
-    <!--ELEMENTO HTML <mark>-->
-    <!--El elemento HTML <mark> define el texto que se debe marcar o resaltar-->
-    <p>No te olvides de comprar <mark>Leche</mark> Hoy.</p>
-
-    <!--ELEMENTO HTML <del>-->
-    <!--El elemento HTML <del> define el texto que se ha eliminado de un documento. Los navegadores generalmente marcarán una línea a través del texto eliminado-->
-    <p>Mi color favorito es <del>azul</del> rojo.</p>
-
-    <!--ELEMENTO HTML <ins>-->
-    <!--El elemento HTML <ins> define un texto que se ha insertado en un documento. Los navegadores generalmente subrayarán el texto insertado-->
-    <p>Mi color favorito es <del>azul</del> <ins>rojo</ins>.</p>
-
-    <!--ELEMENTO HTML <sub>-->
-    <!--El elemento HTML <sub> define el texto del subíndice. El texto del subíndice aparece medio carácter debajo de la 
-    línea normal, y a veces se representa en una fuente más pequeña. Texto subíndice se puede utilizar para las 
-    fórmulas químicas, como H2O-->
-    <p>Esto es <sub>Subíndice</sub> texto.</p>
-
-    <!--ELEMENTO HTML <sup>-->
-    <!--El elemento HTML <sup> define texto superíndice. El texto en superíndice aparece medio carácter por encima de la 
-    línea normal, y a veces se representa en una fuente más pequeña. El texto en superíndice puede usarse para notas
-    al pie, como WWW [1]-->
-    <p>Esto es <sup>superíndice</sup> texto.</p>
+    <!--HTML <bdo> PARA ANULACION BIDIRECCIONAL-->
+    <!--BDO significa anulación bidireccional.
+    La etiqueta HTML <bdo> se usa para anular la dirección del texto actual-->
+    <bdo dir="rtl">Este texto se escribirá de derecha a izquierda</bdo>
 </body>
 
 </html>
