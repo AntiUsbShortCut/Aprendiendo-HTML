@@ -6,13 +6,46 @@
 </head>
 
 <body>
-    <!--CSS EN LINEA-->
-    <!--Un CSS en línea se utiliza para aplicar un estilo único a un único elemento HTML.
-    Un CSS en línea utiliza el atributo de un elemento HTML.style
-    En el ejemplo siguiente se establece el color del texto del elemento en azul y el color del texto del elemento en 
-    rojo:<h1><p>-->
-    <h1 style="color:blue;">Un encabezado azul</h1>
-    <p style="color:red;">Un párrafo rojo.</p>
+    <!--CSS INTERNO-->
+    <!--Un CSS interno se utiliza para definir un estilo para una sola página HTML.
+    Un CSS interno se define en la sección de una página HTML, dentro de un elemento.<head><style>
+    En el ejemplo siguiente se establece el color del texto de ALL los elementos (en esa página) en azul y el color del
+    texto de ALL los elementos en rojo. Además, la página se mostrará con un color de fondo "powderblue": <h1><p>-->
+
+    <!--COLORES, FUENTES Y TAMAÑOS CSS-->
+    <!--Aquí, vamos a demostrar algunas propiedades CSS de uso común. Aprenderá más sobre ellos más adelante.
+    La propiedad CSS background-color define el color del fondo de los elementos HTML.
+    La propiedad CSS color define el color del texto que se va a utilizar.
+    La propiedad CSS font-family define la fuente que se va a utilizar.
+    La propiedad CSS font-size define el tamaño de texto que se va a utilizar.
+    La propiedad CSS border define un borde alrededor de un elemento HTML.
+    La propiedad CSS padding define un relleno (espacio) entre el texto y el borde.
+    La propiedad CSS margin define un margen (espacio) fuera del borde.-->
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        h1 {
+            color: blue;
+            font-family: verdana;
+            font-size: 300%;
+            border: 2px solid powderblue;
+            padding: 30px;
+            margin: 50px;
+        }
+
+        p {
+            color: red;
+            font-family: courier;
+            font-size: 160%;
+            border: 2px solid powderblue;
+            padding: 30px;
+            margin: 50px;
+        }
+    </style>
+    <h1>Esto es un encabezado</h1>
+    <p>Esto es un párrafo.</p>
 </body>
 
 </html>
