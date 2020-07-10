@@ -3,12 +3,72 @@
 
 <head>
     <title>Aprendiendo-HTML5</title>
-    
-    <!--Especifica la codificación de caracteres para el documento HTML-->
     <meta charset="utf-8">
 </head>
 
 <body>
+    <!--ENLACES HTML - HIPERVINCULOS-->
+    <!--Los enlaces HTML son hipervínculos.
+    Puede hacer clic en un enlace y saltar a otro documento.
+    Cuando mueves el mouse sobre un enlace, la flecha del mouse se convertirá en una pequeña mano.
+    Nota: Un enlace no tiene que ser texto. ¡Un enlace puede ser una imagen o cualquier otro elemento HTML!-->
+
+    <!--ENLACES HTML - SINTAXIS-->
+    <!--La etiqueta HTML <a> define un hipervínculo
+    El atributo más importante del elemento <a> es el atributo href, que indica el destino del enlace.
+    El texto del enlace es la parte que será visible para el lector.
+    Al hacer clic en el texto del enlace, se enviará al lector a la dirección URL especificada.-->
+    <a href="https://www.w3schools.com/">Visit W3Schools.com!<br></a>
+    <!--Por defecto, los enlaces aparecerán de la siguiente manera en todos los navegadores:
+    Un enlace no visitado está subrayado y azul
+    Un enlace visitado está subrayado y morado
+    Un enlace activo está subrayado y rojo-->
+
+    <!--ENLACES HTML: EL ATRIBUTO DE DESTINO-->
+    <!--Por defecto, la página vinculada se mostrará en la ventana del navegador actual. Para cambiar esto, debe especificar otro objetivo para el enlace.
+    El targetatributo especifica dónde abrir el documento vinculado.
+    El targetatributo puede tener uno de los siguientes valores:
+    _self- Defecto. Abre el documento en la misma ventana / pestaña en la que se hizo clic
+    _blank - Abre el documento en una nueva ventana o pestaña
+    _parent - Abre el documento en el marco primario
+    _top - Abre el documento en el cuerpo completo de la ventana.-->
+    <a href="https://www.w3schools.com/" target="_self">En la misma ventana/pestaña<br></a>
+    <a href="https://www.w3schools.com/" target="_blank">En una nueva ventana o pestaña<br></a>
+    <a href="https://www.w3schools.com/" target="_parent">En el marco primario<br></a>
+    <a href="https://www.w3schools.com/" target="_top">En el cuerpo completo de una ventana</a>
+
+    <!--URL ABSOLUTAS FRENTE A URL RELATIVAS-->
+    <!--Ambos ejemplos anteriores están utilizando una URL absoluta (una dirección web completa) en el atributo href.
+    Se especifica un enlace local (un enlace a una página dentro del mismo sitio web) con una URL relativa (sin la parte "https: // www")-->
+    <h2>URLs ABSOLUTAS</h2>
+    <p><a href="https://www.w3.org/">W3C</a></p>
+    <p><a href="https://www.google.com/">Google</a></p>
+
+    <h2>URLs RELATIVAS</h2>
+    <p><a href="html_images.asp">Imagenes HTML</a></p>
+    <p><a href="/css/default.asp">Tutorial CSS</a></p>
+
+    <!--ENLACES HTML: USE UNA IMAGEN COMO ENLACE-->
+    <!--Para usar una imagen como un enlace, simplemente coloque la etiqueta <img> dentro de la etiqueta <a>-->
+    <a href="default.asp">
+        <img src="https://th.bing.com/th/id/OIP.PwVLmt2I92Xu2zDCfEbtUwHaEK?w=328&h=184&c=7&o=5&pid=1.7"
+            alt="HTML tutorial" style="width:500px;height:500px;"><br>
+    </a>
+    <!--ENLACE A UNA DIRECCION DE CORREO ELECTRONICO-->
+    <!--Use mailto: dentro del atributo href para crear un enlace que abra el programa de correo electrónico del usuario 
+    (para que pueda enviar un nuevo correo electrónico)-->
+    <a href="mailto:someone@example.com">Enviar correo<br></a>
+
+    <!--BOTON COMO ENLACE-->
+    <!--Para usar un botón HTML como enlace, debe agregar un código JavaScript.
+    JavaScript le permite especificar qué sucede en ciertos eventos, como hacer clic en un botón-->
+    <button onclick="document.location='default.asp'">Tutorial HTML</button><br>
+
+    <!--TITULOS DE ENLACES-->
+    <!--El atributo title especifica información adicional sobre un elemento. La información se muestra con mayor 
+    frecuencia como texto de información sobre herramientas cuando el mouse se mueve sobre el elemento.-->
+    <a href="https://www.w3schools.com/html/" title="Vaya a la sección HTML de W3Schools">Visita nuestro Tutorial
+        HTML</a>
 </body>
 
 </html>
