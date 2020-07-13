@@ -4,87 +4,117 @@
 <head>
     <title>Aprendiendo-HTML5</title>
     <meta charset="utf-8">
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <!--CREAR UN MARCADOR EN HTML-->
-    <!--Los marcadores pueden ser útiles si una página web es muy larga.
-    Para crear un marcador: primero cree el marcador, luego agregue un enlace.
-    Cuando se hace clic en el enlace, la página se desplazará hacia abajo o hacia arriba a la ubicación con el marcador.-->
+    <!--Sintaxis de imágenes HTML-->
+    <!--La <img>etiqueta HTML se usa para incrustar una imagen en una página web.
+    Las imágenes no se insertan técnicamente en una página web; las imágenes están vinculadas a páginas web. 
+    La etiqueta <img>crea un espacio de retención para la imagen referenciada.
+    La etiqueta <img>está vacía, contiene solo atributos y no tiene una etiqueta de cierre.
+    La etiqueta <img>tiene dos atributos obligatorios:
+    src: especifica la ruta a la imagen
+    alt: especifica un texto alternativo para la imagen-->
+    <h2>imagen HTML</h2>
+    <img src="pic_trulli.jpg" alt="Trulli" style="height:auto; width: auto;">
 
-    <!--Use el atributo id (id = " value ") para definir marcadores en una página
-    Use el atributo href (href = "# value ") para vincular al marcador-->
-    <p><a href="#C4">Jump to Chapter 4</a></p>
-    <p><a href="#C10">Jump to Chapter 10</a></p>
+    <!--EL ATRIBUTO src
+    El atributo src requerido especifica la ruta (URL) a la imagen.
+    Nota: cuando se carga una página web; Es el navegador, en ese momento, el que obtiene la imagen de un 
+    servidor web y la inserta en la página. Por lo tanto, asegúrese de que la imagen realmente permanezca en el 
+    mismo lugar en relación con la página web, de lo contrario sus visitantes obtendrán un ícono de enlace roto. El 
+    icono de enlace roto se muestra si el navegador no puede encontrar la imagen.-->
 
-    <h2>Capitúlo 1</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <h2>URI para un archivo o recurso externo</h2>
 
-    <h2>Capitúlo 2</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <p> El atributo src requerido especifica la ruta (URL) a la imagen</p>
+    <img src="img_girl.jpg" alt="Girl in a jacket" style="height:auto; width: auto;">
 
-    <h2>Capitúlo 3</h2>
-    <p>Este capitúlo explica ba bla bla</p>
 
-    <h2 id="C4">Capitúlo 4</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--EL ATRIBUTO alt
+    El atributo alt requerido proporciona un texto alternativo para una imagen, si el usuario por alguna razón no 
+    puede verla (debido a una conexión lenta, un error en el atributo src o si el usuario usa un lector de pantalla).
+    El valor del altatributo debe describir la imagen-->
+    <h2>Texto alternativo</h2>
 
-    <h2>Capitúlo 5</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <p>El atributo alt debe reflejar el contenido de la imagen, para que los usuarios que no puedan ver la imagen
+        comprendan
+        qué contiene la imagen:</p>
+    <img src="img_chania.jpg" alt="Flowers in Chania" style="height:auto; width: auto;">
 
-    <h2>Capitúlo 6</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--Si un navegador no puede encontrar una imagen, mostrará el valor del alt atributo-->
+    <p>Si un navegador no puede encontrar la imagen, mostrará el texto alternativo:</p>
+    <img src="wrongname.gif" alt="Flowers in Chania">
 
-    <h2>Capitúlo 7</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--TAMAÑO DE IMAGEN: ANCHO Y ALTO-->
+    <!--Puede usar el atributo style para especificar el ancho y el alto de una imagen.-->
+    <h2>Tamaño de la imagen</h2>
 
-    <h2>Capitúlo 8</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <p>Aquí usamos el atributo de estilo para especificar el ancho y el alto de una imagen:</p>
+    <img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
 
-    <h2>Capitúlo 9</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--Alternativamente, puede usar los atributos widthy height
+    Los atributos width y height siempre definen el ancho y el alto de la imagen en píxeles.-->
+    <h2>Tamaño de la imagen</h2>
 
-    <h2 id="C10">Capitúlo 10</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <p>Aquí especificamos el ancho y alto de una imagen con los atributos ancho y alto:</p>
+    <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600" style="width:500px;height:600px;">
+    <!--Nota: Especifique siempre el ancho y el alto de una imagen. Si no se especifican ancho y alto,
+    la página web puede parpadear mientras se carga la imagen.-->
 
-    <h2>Capitúlo 11</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <h2>Ancho / Altura Atributos o Estilo?</h2>
+    <p>La primera imagen usa el atributo de ancho (establecido en 128 píxeles), pero el estilo en la sección de
+        encabezado lo anula, y
+        establece el ancho al 100%.</p>
+    <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+    <p>La segunda imagen usa el atributo de estilo para establecer el ancho en 128 píxeles,
+        esto no será anulado por el estilo en la sección del encabezado:</p>
+    <img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
 
-    <h2>Capitúlo 12</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--IMAGENES EN OTRA CARPETA
+    Si tiene sus imágenes en una subcarpeta, debe incluir el nombre de la carpeta en el srcatributo-->
+    <p>Es común almacenar imágenes en una subcarpeta. Luego debe incluir el nombre de la carpeta en el atributo src:</p>
+    <img src="imagenes/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
 
-    <h2>Capitúlo 13</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--IMAGENES EN OTRO SERVIDOR-->
+    <!--Algunos sitios web almacenan sus imágenes en otro servidor.
+    En realidad, puede acceder a imágenes desde cualquier dirección web en el mundo-->
+    <h2>Imágenes en otro servidor</h2>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"
+        style="width:104px;height:142px;">
 
-    <h2>Capitúlo 14</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--IMAGENES ANIMADAS-->
+    <!--HTML permite GIF animados-->
+    <h2>Imágenes animadas</h2>
+    <p>HTML permite imágenes en movimiento:</p>
+    <img src="programming.gif" alt="Hombre computadora " style="width:100px;height:100px;">
 
-    <h2>Capitúlo 15</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--IMAGEN COMO UN ENLACE-->
+    <!--Para usar una imagen como enlace, coloque la etiqueta <img> dentro de la etiqueta <a>-->
+    <h2>Imagen como un enlace</h2>
+    <p>La imagen es un enlace. Puedes hacer clic en él.</p>
+    <a href="https://www.w3schools.com/">
+        <img src="smiley.gif" alt="tutorial HTML " style="width:42px;height:42px;">
+    </a>
 
-    <h2>Capitúlo 16</h2>
-    <p>Este capitúlo explica ba bla bla</p>
-
-    <h2>Capitúlo 17</h2>
-    <p>Este capitúlo explica ba bla bla</p>
-
-    <h2>Chapter 18</h2>
-    <p>Este capitúlo explica ba bla bla</p>
-
-    <h2>Capitúlo 19</h2>
-    <p>Este capitúlo explica ba bla bla</p>
-
-    <h2>Capitúlo 20</h2>
-    <p>Este capitúlo explica ba bla bla</p>
-
-    <h2>Capitúlo 21</h2>
-    <p>Este capitúlo explica ba bla bla</p>
-
-    <h2>Capitúlo 22</h2>
-    <p>Este capitúlo explica ba bla bla</p>
-
-    <h2>Capitúlo 23</h2>
-    <p>Este capitúlo explica ba bla bla</p>
+    <!--IMAGEN FLOTANTE-->
+    <!--Use la propiedad CSS float para dejar que la imagen flote a la derecha o a la izquierda de un texto-->
+    <h2>Imágenes flotantes</h2>
+    <p><strong>Flota la imagen a la derecha:</strong></p>
+    <p>
+        <img src="smiley.gif" alt="cara sonriente" style="float:right;width:42px;height:42px;">
+        Un párrafo con una imagen flotante. Un párrafo con una imagen flotante. Un párrafo con una imagen flotante.
+    </p>
+    <p><strong>Flota la imagen a la izquierda:</strong></p>
+    <p>
+        <img src="smiley.gif" alt="cara sonriente" style="float:left;width:42px;height:42px;">
+        Un párrafo con una imagen flotante. Un párrafo con una imagen flotante. Un párrafo con una imagen flotante.
+    </p>
 </body>
 
 </html>
