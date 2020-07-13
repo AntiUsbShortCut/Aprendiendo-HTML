@@ -5,40 +5,30 @@
     <title>Aprendiendo-HTML5</title>
     <meta charset="utf-8">
 
-    <!--COLORES DE ENLACE HTML-->
-    <!--Por defecto, aparecerá un enlace como este (en todos los navegadores):
-    Un enlace no visitado está subrayado y azul
-    Un enlace visitado está subrayado y morado
-    Un enlace activo está subrayado y rojo-->
+    <!--BOTONES DE ENLACE HTML-->
+    <!--Un enlace también se puede diseñar como un botón, mediante CSS-->
     <style>
-        a:link {
-            color: green;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
+        a:link,
         a:visited {
-            color: pink;
-            background-color: transparent;
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
             text-decoration: none;
+            display: inline-block;
         }
 
-        a:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
+        a:hover,
         a:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
+            background-color: red;
         }
     </style>
 </head>
 
 <body>
-    <a href="https://www.w3schools.com/html/html_images.asp" target="_blank">imagenes HTML</a>
+    <h2>Botón de enlace</h2>
+    <p>Un enlace diseñado como un botón:</p>
+    <a href="https://www.w3schools.com/html/html_images.asp" target="_blank">Esto es un link</a>
 </body>
 
 </html>
