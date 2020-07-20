@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Etiqueta style propiedad background-image en body repetido</title>
+    <!--REPETIR FONDO-->
+    <!--Si la imagen de fondo es más pequeña que el elemento, la imagen se repetirá, horizontal y verticalmente, hasta
+    que llegue al final del elemento-->
+    <style>
+        body {
+            background-image: url('img_girl.jpg');
+            background-size: 50px;
+        }
+
+        h2 {
+            color: red;
+            background: white;
+        }
+
+        p {
+            color: red;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Repetición de fondo</h2>
+
+    <p>De forma predeterminada, la imagen de fondo se repetirá si es más pequeña que el elemento donde se especifica, en
+        este caso el elemento body.</p>
+</body>
+
+</html>

@@ -4,73 +4,83 @@
 <head>
   <title>Aprendiendo-HTML5</title>
   <meta charset="utf-8">
-
 </head>
 
 <body>
-  <!--MAPAS DE IMAGEN-->
-  <!--La etiqueta HTML <map>define un mapa de imagen. Un mapa de imagen es una imagen con áreas en las que se 
-  puede hacer clic. Las áreas se definen con una o más <area>etiquetas.-->
-  <h2>Mapas de imágenes</h2>
-  <p>Haga clic en la computadora, el teléfono o la taza de café para ir a una nueva página y leer más sobre el tema:</p>
-  <!--LA IMAGEN-->
-  <!--La imagen se inserta con la etiqueta <img>. La única diferencia con respecto a otras imágenes es que debe 
-  agregar un atributo usemap-->
-  <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
-  <!--El valor usemap comienza con una etiqueta hash #seguida del nombre del mapa de imagen y se usa para crear 
-  una relación entre la imagen y el mapa de imagen.-->
+  <!--IMAGEN DE FONDO EN UN ELEMENTO HTML-->
+  <!--Para agregar una imagen de fondo en un elemento HTML, use el atributo HTML style  y la propiedad CSS 
+  background-image-->
+  <h2>Imagen de fondo</h2>
 
-  <!--CREAR MAPA DE IMAGEN-->
-  <!--Luego, agrega un elemento <map>.
-  El elemento <map> se utiliza para crear un mapa de imagen y se vincula a la imagen mediante el atributo name
-  requerido. El atributo name debe tener el mismo valor que el atributo usemap de <img>.-->
-  <map name="workmap">
-    <!--LAS AREAS-->
-    <!--Luego, agregue las áreas en las que se puede hacer clic.
-    Un área en la que se puede hacer clic se define usando un <area>elemento.-->
-    <!--FORMA
-    rect - define una región rectangular
-    circle - define una región circular
-    poly - define una región poligonal
-    default - define toda la región
-    También debe definir algunas coordenadas para poder colocar el área en la que se puede hacer clic en la imagen-->
-    <!--FORMA = "rect"-->
-    <!--Las coordenadas para shape="rect"vienen en pares, una para el eje x1, x2 y otra para el eje y1, y2.-->
-    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-    <!--Forma = "circle"-->
-    <!--Para agregar un área circular, primero ubique las coordenadas x e y del centro del círculo, 
-    Luego especifique el radio del círculo-->
-    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
-  </map>
-  <!--Forma = "poly"-->
-  <!--Contiene varios puntos de coordenadas, lo que crea una forma formado con líneas rectas (un polígono).-->
-  <h2>Mapas de imágenes</h2>
-  <p>Haga clic en el croissant para ir a una nueva página y leer más sobre el tema:</p>
-  <img src="frenchfood.jpg" alt="French Food" usemap="#foodmap" width="450" height="675">
-  <map name="foodmap">
-    <area shape="poly"
-      coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147"
-      alt="Croissant" href="croissant.htm">
-  </map>
+  <p>Una imagen de fondo para un elemento div:</p>
 
-  <!--MAPA DE INAMGEN Y JAVASCRIPT-->
-  <!--Un área en la que se puede hacer clic también puede activar una función de JavaScript.
-  Agregue un clickevento al elemento <area> para ejecutar una función de JavaScript-->
-  <h2>Mapas de imágenes</h2>
-  <p>Haga clic en la region JUNIN para ejecutar una función JavaScript:</p>
-  <img src="mapa_copaperu.jpg" alt="Peru" usemap="#perumap">
-  <map name="perumap">
-    <area shape="poly"
-      coords="184,380,191,379,190,373,203,375,208,372,211,374,216,367,221,369,224,366,246,370,247,374,251,377,258,375,265,375,272,368,278,372,280,384,273,396,279,401,275,411,267,419,256,417,248,410,229,410,227,418,215,430,210,420,210,410,202,407,199,407,193,399,183,381"
-      alt="Junín" href="http://junin-peru.com/" onclick="myFunction()">
-  </map>
+  <div style="background-image: url('img_girl.jpg');">
+    Puede especificar imágenes de fondo<br>
+    para cualquier elemento HTML visible.<br>
+    En este ejemplo, la imagen de fondo<br>
+    se especifica para un elemento div.<br>
+    De forma predeterminada, la imagen de fondo<br>
+    se repetirá en la(s) dirección(es)<br>
+    donde es más pequeño que el elemento<br>
+    donde se especifica. (Intente cambiar el tamaño de la<br>
+    ventana del navegador para ver cómo el<br>
+    imagen de fondo se comporta.
+  </div>
 
-  <script>
-    function myFunction() {
-      alert("¡Hiciste clic en la region JUNIN!");
-    }
-  </Script>
+  <p>Una imagen de fondo para un elemento p:</p>
+
+  <p style="background-image: url('img_girl.jpg');">
+    Puede especificar imágenes de fondo<br>
+    para cualquier elemento HTML visible.<br>
+    En este ejemplo, la imagen de fondo<br>
+    se especifica para un elemento div.<br>
+    De forma predeterminada, la imagen de fondo<br>
+    se repetirá en la(s) dirección(es)<br>
+    donde es más pequeño que el elemento<br>
+    donde se especifica. (Intente cambiar el tamaño de la<br>
+    ventana del navegador para ver cómo el<br>
+    imagen de fondo se comporta.
+  </p>
+
+  <h2>Imagen de fondo</h2>
+
+  <p>Una imagen de fondo para un elemento div con la etiqueta style en la seccion head:</p>
+  <a href="Etiquetastyle1.html" target="_blank">Etiqueta style background-image en div</a>
+
+  <h2>Imagen de fondo</h2>
+
+  <p>De forma predeterminada, la imagen de fondo se repetirá si es más pequeña que el elemento donde se especifica, en
+    este caso el elemento body.</p>
+
+  <a href="Etiquetastyle2.html" target="_blank">Etiqueta style background-image en body repetida grande</a>
+
+  <h2>Repetición de fondo</h2>
+
+  <p>De forma predeterminada, la imagen de fondo se repetirá si es más pequeña que el elemento donde se especifica, en
+    este caso el elemento body.</p>
+
+  <a href="Etiquetastyle3.html" target="_blank">Etiqueta style background-image en body repetida pequeña</a>
+
+  <h2>Fondo de pantalla sin repetición</h2>
+
+  <p>Puede evitar que la imagen se repita estableciendo la propiedad background-repeat en "no-repeat".</p>
+
+  <a href="Etiquetastyle4.html" target="_blank">Etiqueta style background-image en body sin repetición</a>
+
+  <h2>Cubierta de fondo</h2>
+
+  <p>Establezca la propiedad background-size en "cover" y la imagen de fondo cubrirá todo el elemento, en este caso el
+    elemento body.</p>
+
+  <a href="Etiquetastyle5.html" target="_blank">Etiqueta style background-image en body cubierto</a>
+
+  <h2>Estiramiento de fondo</h2>
+
+  <p>Si desea que la imagen de fondo se estire para ajustarse a todo el elemento, puede establecer la
+    background-sizepropiedad en 100% 100%</p>
+
+  <a href="Etiquetastyle6.html" target="_blank">Etiqueta style background-image en body estiramiento</a>
+</body>
 </body>
 
 </html>
