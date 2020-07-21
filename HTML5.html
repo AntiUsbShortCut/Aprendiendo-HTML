@@ -7,80 +7,56 @@
 </head>
 
 <body>
-  <!--IMAGEN DE FONDO EN UN ELEMENTO HTML-->
-  <!--Para agregar una imagen de fondo en un elemento HTML, use el atributo HTML style  y la propiedad CSS 
-  background-image-->
-  <h2>Imagen de fondo</h2>
+  
+  <!--ELEMENTO HTML PICTURE -->
+  <!--El elemento HTML <picture> nos permite mostrar diferentes imágenes para diferentes dispositivos 
+  o tamaños de pantalla.
+  El elemento HTML <picture> brinda a los desarrolladores web más flexibilidad para especificar recursos de imágenes.
+  El elemento <picture> contiene uno o más elementos <source>, cada uno de los cuales hace referencia a
+  diferentes imágenes a través del atributo srcset. De esta forma, el navegador puede elegir la imagen que mejor
+  se adapte a la vista y/o dispositivo actual.
+  Cada elemento <source> tiene un atributo media que define cuándo la imagen es la más adecuada.-->
+  <h2>El elemento picture</h2>
+  <picture>
+    <source media="(min-width: 850px)" srcset="img_food.jpg">
+    <source media="(min-width: 665px)" srcset="img_car.jpg">
+    <img src="img_girl.jpg" alt="chica" style="width:auto;">
+  </picture>
+  <p>Cambie el tamaño del navegador para ver diferentes versiones de la imagen cargando en diferentes tamaños de ventana
+    gráfica.
+    El explorador busca el primer elemento de origen donde la consulta de medios coincide con el ancho actual de la
+    ventana gráfica del usuario,
+    y recupera la imagen especificada en el atributo srcset.</p>
 
-  <p>Una imagen de fondo para un elemento div:</p>
-
-  <div style="background-image: url('img_girl.jpg');">
-    Puede especificar imágenes de fondo<br>
-    para cualquier elemento HTML visible.<br>
-    En este ejemplo, la imagen de fondo<br>
-    se especifica para un elemento div.<br>
-    De forma predeterminada, la imagen de fondo<br>
-    se repetirá en la(s) dirección(es)<br>
-    donde es más pequeño que el elemento<br>
-    donde se especifica. (Intente cambiar el tamaño de la<br>
-    ventana del navegador para ver cómo el<br>
-    imagen de fondo se comporta.
-  </div>
-
-  <p>Una imagen de fondo para un elemento p:</p>
-
-  <p style="background-image: url('img_girl.jpg');">
-    Puede especificar imágenes de fondo<br>
-    para cualquier elemento HTML visible.<br>
-    En este ejemplo, la imagen de fondo<br>
-    se especifica para un elemento div.<br>
-    De forma predeterminada, la imagen de fondo<br>
-    se repetirá en la(s) dirección(es)<br>
-    donde es más pequeño que el elemento<br>
-    donde se especifica. (Intente cambiar el tamaño de la<br>
-    ventana del navegador para ver cómo el<br>
-    imagen de fondo se comporta.
+  <p>El elemento img es necesario como la última etiqueta secundaria del bloque de declaración de imagen.
+    El elemento img se utiliza para proporcionar compatibilidad con versiones anteriores para los navegadores que no
+    admiten el elemento picture, o
+    si ninguna de las etiquetas de origen coincide.
   </p>
+  <p><strong>Nota:</strong> El elemento picture no es compatible con IE12 y versiones anteriores o Safari 9.0 y
+    versiones anteriores.</p>
 
-  <h2>Imagen de fondo</h2>
+  <!--CUANDO USAR EL ELEMENTO PICTURE-->
+  <!--Hay dos propósitos principales para el <picture>elemento:
+    1. Ancho de banda
+    Si tiene una pantalla o dispositivo pequeño, no es necesario cargar un archivo de imagen grande. El navegador
+    utilizará el primer <source> elemento con valores de atributo coincidentes e ignorará cualquiera de los 
+    siguientes elementos.
+    2. Soporte de formato
+    Es posible que algunos navegadores o dispositivos no admitan todos los formatos de imagen. Al usar el 
+    <picture>elemento, puede agregar imágenes de todos los formatos, y el navegador usará el primer formato que 
+    reconozca e ignorará cualquiera de los siguientes elementos.-->
+  <h2>El elemento picture</h2>
 
-  <p>Una imagen de fondo para un elemento div con la etiqueta style en la seccion head:</p>
-  <a href="Etiquetastyle1.html" target="_blank">Etiqueta style background-image en div</a>
+  <picture>
+    <source srcset="img_avatar.png">
+    <source srcset="img_girl.jpg">
+    <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+  </picture>
 
-  <h2>Imagen de fondo</h2>
+  <p>El elemento picture se puede utilizar cuando el formato de imagen no es compatible con todos los dispositivos.</p>
 
-  <p>De forma predeterminada, la imagen de fondo se repetirá si es más pequeña que el elemento donde se especifica, en
-    este caso el elemento body.</p>
-
-  <a href="Etiquetastyle2.html" target="_blank">Etiqueta style background-image en body repetida grande</a>
-
-  <h2>Repetición de fondo</h2>
-
-  <p>De forma predeterminada, la imagen de fondo se repetirá si es más pequeña que el elemento donde se especifica, en
-    este caso el elemento body.</p>
-
-  <a href="Etiquetastyle3.html" target="_blank">Etiqueta style background-image en body repetida pequeña</a>
-
-  <h2>Fondo de pantalla sin repetición</h2>
-
-  <p>Puede evitar que la imagen se repita estableciendo la propiedad background-repeat en "no-repeat".</p>
-
-  <a href="Etiquetastyle4.html" target="_blank">Etiqueta style background-image en body sin repetición</a>
-
-  <h2>Cubierta de fondo</h2>
-
-  <p>Establezca la propiedad background-size en "cover" y la imagen de fondo cubrirá todo el elemento, en este caso el
-    elemento body.</p>
-
-  <a href="Etiquetastyle5.html" target="_blank">Etiqueta style background-image en body cubierto</a>
-
-  <h2>Estiramiento de fondo</h2>
-
-  <p>Si desea que la imagen de fondo se estire para ajustarse a todo el elemento, puede establecer la
-    background-sizepropiedad en 100% 100%</p>
-
-  <a href="Etiquetastyle6.html" target="_blank">Etiqueta style background-image en body estiramiento</a>
-</body>
+  <p>El dispositivo utilizará el primer formato de imagen que admita, e ignorará el resto de las imágenes.</p>
 </body>
 
 </html>
