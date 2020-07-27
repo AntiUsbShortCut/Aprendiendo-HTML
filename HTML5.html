@@ -7,76 +7,93 @@
 </head>
 
 <body>
-  <!--LISTA HTML DESORDENADA-->
-  <!--Una lista desordenada comienza con la etiqueta <ul>. Cada elemento de la lista comienza con la etiqueta <li>.
-  Los elementos de la lista se marcarán con viñetas (pequeños círculos negros) de forma predeterminada-->
-  <h2>Una lista HTML desordenada</h2>
+  <!--LISTA HTML ORDENADA-->
+  <!--Una lista ordenada comienza con la etiqueta <ol>. Cada elemento de la lista comienza con la etiqueta <li>.
+  Los elementos de la lista se marcarán con números de forma predeterminada-->
+  <h2>Una lista HTML ordenada</h2>
 
-  <ul>
+  <ol>
     <li>Café</li>
     <li>Té</li>
     <li>Leche</li>
-  </ul>
+  </ol>
 
-  <!--LISTA HTML DESORDENADA: SELECCIONE EL MARCADOR DE ELEMENTO DE LISTA-->
-  <!--La list-style-typepropiedad CSS se utiliza para definir el estilo del marcador del elemento de la lista. Puede
-  tener uno de los siguientes valores:-->
-  <h2>Lista desordenada con viñetas de disco</h2>
+  <!--LISTA HTML ORDENADA: EL ATRIBUTO TYPE-->
+  <!--El atributo type de la etiqueta <ol>, define el tipo de marcador de elemento de lista-->
+  <h2>Lista ordenada con números</h2>
 
-  <ul style="list-style-type: disc;">
+  <ol type="1">
     <li>Café</li>
     <li>Té</li>
     <li>Leche</li>
-  </ul>
+  </ol>
 
-  <h2>Lista desordenada con viñetas circulares</h2>
-
-  <ul style="list-style-type: circle;">
+  <h2>Lista ordenada con letras mayusculas</h2>
+  <ol type="A">
     <li>Café</li>
     <li>Té</li>
     <li>Leche</li>
-  </ul>
+  </ol>
 
-  <h2>Lista desordenada con viñetas cuadradas</h2>
-
-  <ul style="list-style-type: square;">
+  <h2>Lista ordenada con letras minusculas</h2>
+  <ol type="a">
     <li>Café</li>
     <li>Té</li>
     <li>Leche</li>
-  </ul>
+  </ol>
 
-  <h2>Lista desordenada sin viñetas</h2>
-
-  <ul style="list-style-type: none;">
+  <h2>Lista ordenada con números romanos en mayusculas</h2>
+  <ol type="I">
     <li>Café</li>
     <li>Té</li>
     <li>Leche</li>
-  </ul>
+  </ol>
+
+  <h2>Lista ordenada con números romanos en minusculas</h2>
+  <ol type="i">
+    <li>Café</li>
+    <li>Té</li>
+    <li>Leche</li>
+  </ol>
+
+  <!--CONTROL DE CONTEO DE LISTAS-->
+  <!--Por defecto, una lista ordenada comenzará a contar desde 1. Si desea comenzar a contar desde un número
+  especificado, puede usar el atributo start:-->
+  <h2>El atributo start</h2>
+  <P>De forma predeterminada, una lista ordenada comenzará a contar a partir de 1. Utilice el atributo start para
+    empezar a contar a partir de un número especificado:</P>
+  <ol start="50">
+    <li>Café</li>
+    <li>Té</li>
+    <li>Leche</li>
+  </ol>
+
+  <ol type="I" start="50">
+    <li>Café</li>
+    <li>Té</li>
+    <li>Leche</li>
+  </ol>
 
   <!--LISTAS HTML ANIDADAS-->
-  <!--Las listas se pueden anidar (lista dentro de la lista)-->
-  <!--Nota: Un elemento de lista (<li>) puede contener una nueva lista y otros elementos HTML, como imágenes y
-  enlaces, etc-->
+  <!--Nota: Un elemento de lista ( <li>) puede contener una nueva lista y otros elementos HTML, como imágenes y
+  enlaces, etc.-->
   <h2>Una lista anidada</h2>
-  <p>Las listas se pueden anidar (lista dentro de la lista):</p>
-
-  <ul>
+  <P>Las listas se pueden anidar (lista dentro de la lista):</P>
+  <ol>
     <li>Café</li>
     <li>Té
-      <ul>
+      <ol>
         <li>Té negro</li>
         <li>Té verde</li>
-      </ul>
+      </ol>
     </li>
     <li>Leche
-      <ul>
+      <ol>
         <li>Leche descremada</li>
         <li>Leche sin lactosa</li>
-      </ul>
+      </ol>
     </li>
-  </ul>
-  <h1>Lista horizontal con propiedades CSS</h1>
-  <a href="ListaHorizontalConCss.html">Lista Horizontal</a>
+  </ol>
 </body>
 
 </html>
