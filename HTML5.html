@@ -7,93 +7,19 @@
 </head>
 
 <body>
-  <!--LISTA HTML ORDENADA-->
-  <!--Una lista ordenada comienza con la etiqueta <ol>. Cada elemento de la lista comienza con la etiqueta <li>.
-  Los elementos de la lista se marcarán con números de forma predeterminada-->
-  <h2>Una lista HTML ordenada</h2>
+  <!--LISTA DE DESCRIPCION HTML-->
+  <!--HTML también admite listas de descripción.
+  Una lista de descripción es una lista de términos, con una descripción de cada término.
+  La etiqueta <dl> define la lista de descripción, la etiqueta <dt> define el término (nombre) y la 
+  etiqueta <dd> describe cada término-->
+  <h2>Una lista de descripciones</h2>
 
-  <ol>
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <!--LISTA HTML ORDENADA: EL ATRIBUTO TYPE-->
-  <!--El atributo type de la etiqueta <ol>, define el tipo de marcador de elemento de lista-->
-  <h2>Lista ordenada con números</h2>
-
-  <ol type="1">
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <h2>Lista ordenada con letras mayusculas</h2>
-  <ol type="A">
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <h2>Lista ordenada con letras minusculas</h2>
-  <ol type="a">
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <h2>Lista ordenada con números romanos en mayusculas</h2>
-  <ol type="I">
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <h2>Lista ordenada con números romanos en minusculas</h2>
-  <ol type="i">
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <!--CONTROL DE CONTEO DE LISTAS-->
-  <!--Por defecto, una lista ordenada comenzará a contar desde 1. Si desea comenzar a contar desde un número
-  especificado, puede usar el atributo start:-->
-  <h2>El atributo start</h2>
-  <P>De forma predeterminada, una lista ordenada comenzará a contar a partir de 1. Utilice el atributo start para
-    empezar a contar a partir de un número especificado:</P>
-  <ol start="50">
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <ol type="I" start="50">
-    <li>Café</li>
-    <li>Té</li>
-    <li>Leche</li>
-  </ol>
-
-  <!--LISTAS HTML ANIDADAS-->
-  <!--Nota: Un elemento de lista ( <li>) puede contener una nueva lista y otros elementos HTML, como imágenes y
-  enlaces, etc.-->
-  <h2>Una lista anidada</h2>
-  <P>Las listas se pueden anidar (lista dentro de la lista):</P>
-  <ol>
-    <li>Café</li>
-    <li>Té
-      <ol>
-        <li>Té negro</li>
-        <li>Té verde</li>
-      </ol>
-    </li>
-    <li>Leche
-      <ol>
-        <li>Leche descremada</li>
-        <li>Leche sin lactosa</li>
-      </ol>
-    </li>
-  </ol>
+  <dl>
+    <dt>Café</dt>
+    <dd>- bebida caliente negro</dd>
+    <dt>Leche</dt>
+    <dd>- bebida fría blanca</dd>
+  </dl>
 </body>
 
 </html>
