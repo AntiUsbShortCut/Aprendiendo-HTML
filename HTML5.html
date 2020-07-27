@@ -18,30 +18,65 @@
     <li>Leche</li>
   </ul>
 
-  <!--LISTA HTML ORDENADA-->
-  <!--Una lista ordenada comienza con la etiqueta <ol>. Cada elemento de la lista comienza con la etiqueta <li>.
-  Los elementos de la lista se marcarán con números de forma predeterminada-->
-  <h2>Una lista HTML ordenada</h2>
+  <!--LISTA HTML DESORDENADA: SELECCIONE EL MARCADOR DE ELEMENTO DE LISTA-->
+  <!--La list-style-typepropiedad CSS se utiliza para definir el estilo del marcador del elemento de la lista. Puede
+  tener uno de los siguientes valores:-->
+  <h2>Lista desordenada con viñetas de disco</h2>
 
-  <ol>
+  <ul style="list-style-type: disc;">
     <li>Café</li>
     <li>Té</li>
     <li>Leche</li>
-  </ol>
+  </ul>
 
-  <!--LISTA DE DESCRIPCION HTML-->
-  <!--HTML también admite listas de descripción.
-  Una lista de descripción es una lista de términos, con una descripción de cada término.
-  La etiqueta <dl> define la lista de descripción, la etiqueta <dt> define el término (nombre) y la 
-  etiqueta <dd> describe cada término-->
-  <h2>Una lista de descripciones</h2>
+  <h2>Lista desordenada con viñetas circulares</h2>
 
-  <dl>
-    <dt>Café</dt>
-    <dd>- bebida caliente negro</dd>
-    <dt>Leche</dt>
-    <dd>- bebida fría blanca</dd>
-  </dl>
+  <ul style="list-style-type: circle;">
+    <li>Café</li>
+    <li>Té</li>
+    <li>Leche</li>
+  </ul>
+
+  <h2>Lista desordenada con viñetas cuadradas</h2>
+
+  <ul style="list-style-type: square;">
+    <li>Café</li>
+    <li>Té</li>
+    <li>Leche</li>
+  </ul>
+
+  <h2>Lista desordenada sin viñetas</h2>
+
+  <ul style="list-style-type: none;">
+    <li>Café</li>
+    <li>Té</li>
+    <li>Leche</li>
+  </ul>
+
+  <!--LISTAS HTML ANIDADAS-->
+  <!--Las listas se pueden anidar (lista dentro de la lista)-->
+  <!--Nota: Un elemento de lista (<li>) puede contener una nueva lista y otros elementos HTML, como imágenes y
+  enlaces, etc-->
+  <h2>Una lista anidada</h2>
+  <p>Las listas se pueden anidar (lista dentro de la lista):</p>
+
+  <ul>
+    <li>Café</li>
+    <li>Té
+      <ul>
+        <li>Té negro</li>
+        <li>Té verde</li>
+      </ul>
+    </li>
+    <li>Leche
+      <ul>
+        <li>Leche descremada</li>
+        <li>Leche sin lactosa</li>
+      </ul>
+    </li>
+  </ul>
+  <h1>Lista horizontal con propiedades CSS</h1>
+  <a href="ListaHorizontalConCss.html">Lista Horizontal</a>
 </body>
 
 </html>
