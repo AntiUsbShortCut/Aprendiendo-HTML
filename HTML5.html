@@ -4,55 +4,147 @@
 <head>
   <title>Aprendiendo-HTML5</title>
   <meta charset="utf-8">
+
+  <style>
+    .city {
+      background-color: tomato;
+      color: white;
+      border: 2px solid black;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .city1 {
+      background-color: tomato;
+      color: white;
+      padding: 10px;
+    }
+
+    .city2 {
+      background-color: tomato;
+      color: white;
+      padding: 10px;
+    }
+
+    .city3 {
+      background-color: tomato;
+      color: white;
+      padding: 10px;
+    }
+
+    .main {
+      text-align: center;
+    }
+
+    .note {
+      font-size: 120%;
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
-  <!--ELEMENTO BLOQUE Y EN LINEA HTML-->
-  <!--Cada elemento HTML tiene un valor de visualización predeterminado, según el tipo de elemento que sea.
-  Hay dos valores de visualización: bloque Y en linea.-->
+  <!--USANDO EL ATRIBUTO HTML CLASS-->
+  <!--El atributo class se usa a menudo para señalar un nombre de clase en una hoja de estilo. También puede ser
+  utilizado por un JavaScript para acceder y manipular elementos con el nombre de clase específico.
 
-  <!--ELEMENTOS A NIVEL BLOQUE-->
-  <!--Un elemento de nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible (se
-  extiende hacia la izquierda y la derecha tanto como sea posible).-->
-  <div style="border: 1px solid black">Hola Mundo</div>
+  En el siguiente ejemplo tenemos tres elementos <div> con un atributo class con el valor de "city". Los tres
+  elementos <div> tendrán un estilo igual de acuerdo con la .city definición de estilo en la sección del encabezado-->
 
-  <p>El elemento DIV es un elemento de bloque, y siempre comenzará en una nueva línea y ocupará todo el ancho disponible
-    (se extiende hacia la izquierda y la derecha en la medida de lo posible).</p>
-  <!--Aquí están los elementos a nivel de bloque en HTML:
-  <address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form>
-  <h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>-->
-
-  <!--ELEMENTOS EN LINEA-->
-  <!--Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho que sea necesario-->
-  <p>Este es un lapso en línea <span style="border: 1px solid black">Hola Mundo</span> elemento dentro de un párrafo.
-  </p>
-
-  <p>El elemento SPAN es un elemento en línea y no se iniciará en una nueva línea y solo ocupará la mayor anchura
-    posible.</p>
-  <!--Aquí están los elementos en línea en HTML:
-  <a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object>
-  <output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>-->
-
-  <!--EL ELEMENTO <div>-->
-  <!--El elemento <div> se usa a menudo como contenedor para otros elementos HTML.
-  El lemento <div> tiene atributos que no son necesarios, pero style, class y id son comunes.
-  Cuando se usa junto con CSS, el elemento <div> se puede usar para diseñar bloques de contenido-->
-  <h1>El elemento div</h1>
-  <div style="background-color:black;color:white;padding:20px;">
+  <div class="city">
     <h2>Londres</h2>
-    <p>Londres es la capital de Inglaterra. Es la ciudad más poblada del Reino Unido, con un área metropolitana de más
-      de 13 millones de habitantes.</p>
-    <p>De pie en el río Támesis, Londres ha sido un asentamiento importante durante dos milenios, su historia se remonta
-      a su fundación por los romanos, que lo llamaron Londinium.</p>
+    <p>Londres es la capital de Inglaterra.</p>
   </div>
-  <!--EL ELEMENTO <span>-->
-  <!--El elemento <span> es un contenedor en línea que se usa para marcar una parte de un texto o una parte de un documento.
-  El elemento <span> tiene atributos que no son necesarios, pero style, class y id son comunes.
-  Cuando se usa junto con CSS, el elemento <span> se puede usar para dar estilo a partes del texto-->
-  <h1>El elemento span</h1>
 
-  <p>Mi madre tiene ojos <span style="color:blue;font-weight:bold">azules</span> y mi padre tiene ojos <span
-      style="color:darkolivegreen;font-weight:bold">verdes oscuros</span>.</p>
+  <div class="city">
+    <h2>Paris</h2>
+    <p>París es la capital de Francia.</p>
+  </div>
+
+  <div class="city">
+    <h2>Tokyo</h2>
+    <p>Tokio es la capital de Japón.</p>
+  </div>
+
+  <!--En el siguiente ejemplo tenemos dos elementos <span> con un atributo class con el valor de "note". Ambos
+  elementos <span> tendrán el mismo estilo de acuerdo con la definición .note de estilo en la sección del
+  encabezado-->
+  <h1>Mi <span class="note">Importante</span> Encabezado</h1>
+  <p>Esto es algunos de los <span class="note">importantes</span> textos.</p>
+  <!--Consejo: El atributo class se puede usar en cualquier elemento HTML.
+  Nota: ¡El nombre de la clase distingue entre mayúsculas y minúsculas!-->
+
+  <!--LA SINTAXIS PARA class-->
+  <!--Para crear una clase; escriba un carácter de punto (.), seguido de un nombre de clase. Luego, defina las
+  propiedades CSS entre llaves {}-->
+  <h2>El atributo class</h2>
+  <p>Utilice CSS para aplicar estilo a los elementos con el nombre de clase "city1":</p>
+
+  <h2 class="city1">Londres</h2>
+  <p>Londres es la capital de Inglaterra.</p>
+
+  <h2 class="city1">Paris</h2>
+  <p>París es la capital de Francia.</p>
+
+  <h2 class="city1">Tokyo</h2>
+  <p>Tokio es la capital de Japón.</p>
+
+  <!--CLASES MULTIPLES-->
+  <!--Los elementos HTML pueden pertenecer a más de una clase.
+
+  Para definir varias clases, separe los nombres de las clases con un espacio, por ejemplo, <div class = "city main">.
+  El elemento tendrá un estilo de acuerdo con todas las clases especificadas.
+
+  En el siguiente ejemplo, el primer elemento <h2> pertenece tanto a la clase city como a la clase main, y obtendrá
+  los estilos CSS de ambas clases-->
+  <h2>Múltiples clases</h2>
+  <p>Aquí, los tres elementos h2 pertenecen a la clase "city2". Además, Londres también pertenece a la clase "main",
+    que alinea el texto al centro.</p>
+
+  <h2 class="city2 main">London</h2>
+  <h2 class="city2">Paris</h2>
+  <h2 class="city2">Tokyo</h2>
+
+  <!--DIFERENTES ELEMENTOS PUEDEN COMPARTIR LA MISMA CLASE-->
+  <!--Diferentes elementos HTML pueden apuntar al mismo nombre de clase.
+
+  En el siguiente ejemplo, tanto <h2> y <p> puntos para la clase "city3" y compartirán el mismo estilo-->
+  <h2>Diferentes elementos pueden compartir la misma clase</h2>
+
+  <p>Incluso si los dos elementos no tienen el mismo nombre de etiqueta, ambos pueden apuntar a la misma clase, y
+    obtener el mismo Estilo CSS:</p>
+
+  <h2 class="city3">Paris</h2>
+  <p class="city3">París es la capital de Francia.</p>
+
+  <!--USO DEL ATRIBUTO CLASS EN JAVASCRIPT-->
+  <!--JavaScript también puede usar el nombre de la clase para realizar ciertas tareas para elementos específicos.
+  
+  JavaScript puede acceder a elementos con un nombre de clase específico con el
+  método getElementsByClassName()-->
+
+  <h2>Uso del atributo de class en JavaScript</h2>
+  <p>Haga clic en el botón para ocultar todos los elementos con el nombre de clase "ciudad":</p>
+
+  <button onclick="myFunction()">Ocultar elementos</button>
+
+  <h2 class="city">Londres</h2>
+  <p>Londres es la capital de Inglaterra.</p>
+
+  <h2 class="city">Paris</h2>
+  <p>París es la capital de Francia.</p>
+
+  <h2 class="city">Tokyo</h2>
+  <p>Tokio es la capital de Japón.</p>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementsByClassName("city");
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+    }
+  </script>
 </body>
 
 </html>
