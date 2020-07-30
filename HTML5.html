@@ -4,130 +4,62 @@
 <head>
   <title>Aprendiendo-HTML5</title>
   <meta charset="utf-8">
-
   <style>
-    .city {
-      background-color: tomato;
-      color: white;
-      border: 2px solid black;
-      margin: 20px;
-      padding: 20px;
-    }
-
-    .city1 {
-      background-color: tomato;
-      color: white;
-      padding: 10px;
-    }
-
-    .city2 {
-      background-color: tomato;
-      color: white;
-      padding: 10px;
-    }
-
-    .city3 {
-      background-color: tomato;
-      color: white;
-      padding: 10px;
-    }
-
-    .main {
+    #myHeader {
+      background-color: lightblue;
+      color: black;
+      padding: 40px;
       text-align: center;
     }
 
-    .note {
-      font-size: 120%;
-      color: red;
+    /* Estilo del elemento con el identificador "myHeader" */
+    #myHeader1 {
+      background-color: lightblue;
+      color: black;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Estilo de todos los elementos con el nombre de clase "ciudad" */
+    .city {
+      background-color: tomato;
+      color: white;
+      padding: 10px;
     }
   </style>
+
 </head>
 
 <body>
-  <!--USANDO EL ATRIBUTO HTML CLASS-->
-  <!--El atributo class se usa a menudo para señalar un nombre de clase en una hoja de estilo. También puede ser
-  utilizado por un JavaScript para acceder y manipular elementos con el nombre de clase específico.
+  <!--USANDO EL ATRIBUTO ID-->
+  <!--El atributo id especifica una identificación única para un elemento HTML. El valor del atributo id debe ser único 
+  dentro del documento HTML.
 
-  En el siguiente ejemplo tenemos tres elementos <div> con un atributo class con el valor de "city". Los tres
-  elementos <div> tendrán un estilo igual de acuerdo con la .city definición de estilo en la sección del encabezado-->
+  El atributo id se usa para señalar una declaración de estilo específica en una hoja de estilo. También es utilizado
+  por JavaScript para acceder y manipular el elemento con la identificación específica.
 
-  <div class="city">
-    <h2>Londres</h2>
-    <p>Londres es la capital de Inglaterra.</p>
-  </div>
+  La sintaxis para id es: escribir un carácter de hash (#), seguido de un nombre de id. Luego, defina las propiedades
+  CSS entre llaves {}.
 
-  <div class="city">
-    <h2>Paris</h2>
-    <p>París es la capital de Francia.</p>
-  </div>
+  En el siguiente ejemplo tenemos un elemento <h1> que apunta al nombre de identificación "myHeader". Este elemento <h1>
+  tendrá un estilo de acuerdo con la definición de estilo #myHeader en la sección del encabezado-->
+  <h2>El atributo id</h2>
+  <p>Utilice CSS para aplicar estilo a un elemento con el identificador "myHeader":</p>
 
-  <div class="city">
-    <h2>Tokyo</h2>
-    <p>Tokio es la capital de Japón.</p>
-  </div>
+  <h1 id="myHeader">Mi encabezado</h1>
+  <!--Nota: ¡El nombre de identificación distingue entre mayúsculas y minúsculas!
+  Nota: El nombre de identificación debe contener al menos un carácter y no debe contener espacios en blanco (espacios, tabulaciones, etc.).-->
 
-  <!--En el siguiente ejemplo tenemos dos elementos <span> con un atributo class con el valor de "note". Ambos
-  elementos <span> tendrán el mismo estilo de acuerdo con la definición .note de estilo en la sección del
-  encabezado-->
-  <h1>Mi <span class="note">Importante</span> Encabezado</h1>
-  <p>Esto es algunos de los <span class="note">importantes</span> textos.</p>
-  <!--Consejo: El atributo class se puede usar en cualquier elemento HTML.
-  Nota: ¡El nombre de la clase distingue entre mayúsculas y minúsculas!-->
+  <!--DIFERENCIA ENTRE CLASE E IDENTIFICACION-->
+  <!--Varios elementos HTML pueden usar un nombre de clase, mientras que un nombre HTML solo debe ser usado por un elemento HTML dentro de la página-->
+  <h2>Diferencia entre clase e ID</h2>
+  <p>Un nombre de clase puede ser utilizado por varios elementos HTML, mientras que un nombre id sólo debe ser utilizado
+    por un elemento HTML en la página:</p>
 
-  <!--LA SINTAXIS PARA class-->
-  <!--Para crear una clase; escriba un carácter de punto (.), seguido de un nombre de clase. Luego, defina las
-  propiedades CSS entre llaves {}-->
-  <h2>El atributo class</h2>
-  <p>Utilice CSS para aplicar estilo a los elementos con el nombre de clase "city1":</p>
+  <!--Un elemento con una identificación única -->
+  <h1 id="myHeader1">Mi ciudad</h1>
 
-  <h2 class="city1">Londres</h2>
-  <p>Londres es la capital de Inglaterra.</p>
-
-  <h2 class="city1">Paris</h2>
-  <p>París es la capital de Francia.</p>
-
-  <h2 class="city1">Tokyo</h2>
-  <p>Tokio es la capital de Japón.</p>
-
-  <!--CLASES MULTIPLES-->
-  <!--Los elementos HTML pueden pertenecer a más de una clase.
-
-  Para definir varias clases, separe los nombres de las clases con un espacio, por ejemplo, <div class = "city main">.
-  El elemento tendrá un estilo de acuerdo con todas las clases especificadas.
-
-  En el siguiente ejemplo, el primer elemento <h2> pertenece tanto a la clase city como a la clase main, y obtendrá
-  los estilos CSS de ambas clases-->
-  <h2>Múltiples clases</h2>
-  <p>Aquí, los tres elementos h2 pertenecen a la clase "city2". Además, Londres también pertenece a la clase "main",
-    que alinea el texto al centro.</p>
-
-  <h2 class="city2 main">London</h2>
-  <h2 class="city2">Paris</h2>
-  <h2 class="city2">Tokyo</h2>
-
-  <!--DIFERENTES ELEMENTOS PUEDEN COMPARTIR LA MISMA CLASE-->
-  <!--Diferentes elementos HTML pueden apuntar al mismo nombre de clase.
-
-  En el siguiente ejemplo, tanto <h2> y <p> puntos para la clase "city3" y compartirán el mismo estilo-->
-  <h2>Diferentes elementos pueden compartir la misma clase</h2>
-
-  <p>Incluso si los dos elementos no tienen el mismo nombre de etiqueta, ambos pueden apuntar a la misma clase, y
-    obtener el mismo Estilo CSS:</p>
-
-  <h2 class="city3">Paris</h2>
-  <p class="city3">París es la capital de Francia.</p>
-
-  <!--USO DEL ATRIBUTO CLASS EN JAVASCRIPT-->
-  <!--JavaScript también puede usar el nombre de la clase para realizar ciertas tareas para elementos específicos.
-  
-  JavaScript puede acceder a elementos con un nombre de clase específico con el
-  método getElementsByClassName()-->
-
-  <h2>Uso del atributo de class en JavaScript</h2>
-  <p>Haga clic en el botón para ocultar todos los elementos con el nombre de clase "ciudad":</p>
-
-  <button onclick="myFunction()">Ocultar elementos</button>
-
+  <!-- Múltiples elementos con la misma clase. -->
   <h2 class="city">Londres</h2>
   <p>Londres es la capital de Inglaterra.</p>
 
@@ -137,12 +69,96 @@
   <h2 class="city">Tokyo</h2>
   <p>Tokio es la capital de Japón.</p>
 
+  <!--MARCADORES HTML CON ID Y ENLACES-->
+  <!--Los marcadores HTML se utilizan para permitir a los lectores saltar a partes específicas de una página web.
+  Los marcadores pueden ser útiles si su página es muy larga.
+  Para usar un marcador, primero debe crearlo y luego agregarle un enlace.
+  Luego, cuando se hace clic en el enlace, la página se desplazará a la ubicación con el marcador-->
+  <h2>Marcadores HTML con ID y enlaces</h2>
+  <p><a href="#C4">Saltar al capitulo 4</a></p>
+  <p><a href="#C10">Saltar al capitulo 10</a></p>
+
+  <h2>Capitulo 1</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 2</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 3</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2 id="C4">Capitulo 4</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 5</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 6</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 7</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 8</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 9</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2 id="C10">Capitulo 10</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulor 11</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 12</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 13</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 14</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 15</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 16</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 17</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 18</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 19</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 20</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 21</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 22</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <h2>Capitulo 23</h2>
+  <p>Este capitulo explica ba bla bla</p>
+
+  <!--USANDO EL ATRIBUTO ID EN JAVASCRIPT-->
+  <!--El atributo id también puede ser utilizado por JavaScript para realizar algunas tareas para ese elemento específico.
+  JavaScript puede acceder a un elemento con una identificación específica con el método getElementById()-->
+  <h2>Usando el atributo id en JavaScript</h2>
+  <p>JavaScript puede acceder a un elemento con una identificación especificada mediante el método getElementById():</p>
+
+  <h1 id="myHeader2">Hola Mundo!</h1>
+  <button onclick="displayResult()">Cambiar texto</button>
+
   <script>
-    function myFunction() {
-      var x = document.getElementsByClassName("city");
-      for (var i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
+    function displayResult() {
+      document.getElementById("myHeader2").innerHTML = "¡Que tengas un buen día!";
     }
   </script>
 </body>
