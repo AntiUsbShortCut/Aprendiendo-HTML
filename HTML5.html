@@ -4,163 +4,58 @@
 <head>
   <title>Aprendiendo-HTML5</title>
   <meta charset="utf-8">
-  <style>
-    #myHeader {
-      background-color: lightblue;
-      color: black;
-      padding: 40px;
-      text-align: center;
-    }
-
-    /* Estilo del elemento con el identificador "myHeader" */
-    #myHeader1 {
-      background-color: lightblue;
-      color: black;
-      padding: 40px;
-      text-align: center;
-    }
-
-    /* Estilo de todos los elementos con el nombre de clase "ciudad" */
-    .city {
-      background-color: tomato;
-      color: white;
-      padding: 10px;
-    }
-  </style>
-
 </head>
 
 <body>
-  <!--USANDO EL ATRIBUTO ID-->
-  <!--El atributo id especifica una identificación única para un elemento HTML. El valor del atributo id debe ser único 
-  dentro del documento HTML.
+  <!--SINTAXIS DE IFRAME HTML-->
+  <!--La etiqueta HTML <iframe> especifica un marco en línea.
+  Se usa un marco en línea para incrustar otro documento dentro del documento HTML actual.-->
+  <h2>IFRAME HTML</h2>
+  <p>Iframe sin referencia a otra pagina o enlace</p>
+  <p>Cabe resaltar que paginas con proteccion iframe no se pueden mostrar</p>
+  <iframe src="url" title="descripcion"></iframe>
+  <!--Consejo: es una buena práctica incluir siempre un atributo title para <iframe>. Los lectores de pantalla lo usan
+  para leer cuál es el contenido del iframe.-->
 
-  El atributo id se usa para señalar una declaración de estilo específica en una hoja de estilo. También es utilizado
-  por JavaScript para acceder y manipular el elemento con la identificación específica.
+  <!--IFRAME - ESTABLECER ALTURA Y ANCHO-->
+  <!--Use los atributos heighty widthpara especificar el tamaño del iframe.
+  La altura y el ancho se especifican en píxeles de forma predeterminada-->
+  <h2>Iframes HTML</h2>
+  <p>Puede usar los atributos de alto y ancho para especificar el tamaño del iframe:</p>
 
-  La sintaxis para id es: escribir un carácter de hash (#), seguido de un nombre de id. Luego, defina las propiedades
-  CSS entre llaves {}.
+  <iframe src="demo_iframe.htm" height="200" width="300" title="Ejemplo Iframe "></iframe>
 
-  En el siguiente ejemplo tenemos un elemento <h1> que apunta al nombre de identificación "myHeader". Este elemento <h1>
-  tendrá un estilo de acuerdo con la definición de estilo #myHeader en la sección del encabezado-->
-  <h2>El atributo id</h2>
-  <p>Utilice CSS para aplicar estilo a un elemento con el identificador "myHeader":</p>
+  <!--O puede agregar el atributo style y usar las propiedades CSS height y width-->
+  <h2>Iframes HTML</h2>
+  <p>También puede usar las propiedades de alto y ancho de CSS para especificar el tamaño del iframe:</p>
 
-  <h1 id="myHeader">Mi encabezado</h1>
-  <!--Nota: ¡El nombre de identificación distingue entre mayúsculas y minúsculas!
-  Nota: El nombre de identificación debe contener al menos un carácter y no debe contener espacios en blanco (espacios, tabulaciones, etc.).-->
+  <iframe src="demo_iframe.htm" style="height:300px;width:300px" title="Ejemplo Iframe"></iframe>
 
-  <!--DIFERENCIA ENTRE CLASE E IDENTIFICACION-->
-  <!--Varios elementos HTML pueden usar un nombre de clase, mientras que un nombre HTML solo debe ser usado por un elemento HTML dentro de la página-->
-  <h2>Diferencia entre clase e ID</h2>
-  <p>Un nombre de clase puede ser utilizado por varios elementos HTML, mientras que un nombre id sólo debe ser utilizado
-    por un elemento HTML en la página:</p>
+  <!--IFRAME - ELIMINAR EL BORDE-->
+  <!--Por defecto, un iframe tiene un borde alrededor.
+  Para eliminar el borde, agregue el atributo style y use la propiedad border CSS-->
+  <h2>Eliminar el borde del iframe</h2>
+  <p>Para eliminar el borde predeterminado del iframe, use CSS</p>
 
-  <!--Un elemento con una identificación única -->
-  <h1 id="myHeader1">Mi ciudad</h1>
+  <iframe src="demo_iframe.htm" style="border:none;" title="Ejemplo Iframe"></iframe>
 
-  <!-- Múltiples elementos con la misma clase. -->
-  <h2 class="city">Londres</h2>
-  <p>Londres es la capital de Inglaterra.</p>
+  <!--Con CSS, también puede cambiar el tamaño, el estilo y el color del borde del iframe-->
+  <h2>Borde de iframe personalizado</h2>
+  <p>Con CSS, también puede cambiar el tamaño, el estilo y el color del borde del iframe:</p>
 
-  <h2 class="city">Paris</h2>
-  <p>París es la capital de Francia.</p>
+  <iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>
 
-  <h2 class="city">Tokyo</h2>
-  <p>Tokio es la capital de Japón.</p>
+  <!--IFRAME - OBJETIVO DE UN ENLACE-->
+  <!--Se puede usar un iframe como marco objetivo para un enlace.
+  El atributo target del enlace debe referirse al atributo name del iframe-->
+  <h2>Iframe - Objetivo para un enlace</h2>
 
-  <!--MARCADORES HTML CON ID Y ENLACES-->
-  <!--Los marcadores HTML se utilizan para permitir a los lectores saltar a partes específicas de una página web.
-  Los marcadores pueden ser útiles si su página es muy larga.
-  Para usar un marcador, primero debe crearlo y luego agregarle un enlace.
-  Luego, cuando se hace clic en el enlace, la página se desplazará a la ubicación con el marcador-->
-  <h2>Marcadores HTML con ID y enlaces</h2>
-  <p><a href="#C4">Saltar al capitulo 4</a></p>
-  <p><a href="#C10">Saltar al capitulo 10</a></p>
+  <iframe src="demo_iframe.htm" name="iframe_a" style="height:300px;width:100%" title="Ejemplo Iframe"></iframe>
 
-  <h2>Capitulo 1</h2>
-  <p>Este capitulo explica ba bla bla</p>
+  <a href="https://upla.edu.pe/" target="iframe_a">upla.edu.pe</a>
 
-  <h2>Capitulo 2</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 3</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2 id="C4">Capitulo 4</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 5</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 6</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 7</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 8</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 9</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2 id="C10">Capitulo 10</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulor 11</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 12</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 13</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 14</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 15</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 16</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 17</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 18</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 19</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 20</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 21</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 22</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <h2>Capitulo 23</h2>
-  <p>Este capitulo explica ba bla bla</p>
-
-  <!--USANDO EL ATRIBUTO ID EN JAVASCRIPT-->
-  <!--El atributo id también puede ser utilizado por JavaScript para realizar algunas tareas para ese elemento específico.
-  JavaScript puede acceder a un elemento con una identificación específica con el método getElementById()-->
-  <h2>Usando el atributo id en JavaScript</h2>
-  <p>JavaScript puede acceder a un elemento con una identificación especificada mediante el método getElementById():</p>
-
-  <h1 id="myHeader2">Hola Mundo!</h1>
-  <button onclick="displayResult()">Cambiar texto</button>
-
-  <script>
-    function displayResult() {
-      document.getElementById("myHeader2").innerHTML = "¡Que tengas un buen día!";
-    }
-  </script>
+  <p>Cuando el atributo de destino de un vínculo coincide con el nombre de un iframe, el vínculo se abrirá en el iframe.
+  </p>
 </body>
 
 </html>
