@@ -7,55 +7,99 @@
 </head>
 
 <body>
-  <!--SINTAXIS DE IFRAME HTML-->
-  <!--La etiqueta HTML <iframe> especifica un marco en línea.
-  Se usa un marco en línea para incrustar otro documento dentro del documento HTML actual.-->
-  <h2>IFRAME HTML</h2>
-  <p>Iframe sin referencia a otra pagina o enlace</p>
-  <p>Cabe resaltar que paginas con proteccion iframe no se pueden mostrar</p>
-  <iframe src="url" title="descripcion"></iframe>
-  <!--Consejo: es una buena práctica incluir siempre un atributo title para <iframe>. Los lectores de pantalla lo usan
-  para leer cuál es el contenido del iframe.-->
+  <!--HTML JAVASCRIPT-->
+  <!--JavaScript hace que las páginas HTML sean más dinámicas e interactivas.-->
+  <h2>Mi primer javascript</h2>
 
-  <!--IFRAME - ESTABLECER ALTURA Y ANCHO-->
-  <!--Use los atributos heighty widthpara especificar el tamaño del iframe.
-  La altura y el ancho se especifican en píxeles de forma predeterminada-->
-  <h2>Iframes HTML</h2>
-  <p>Puede usar los atributos de alto y ancho para especificar el tamaño del iframe:</p>
+  <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+    Haga clic en mí para mostrar Fecha y hora.</button>
 
-  <iframe src="demo_iframe.htm" height="200" width="300" title="Ejemplo Iframe "></iframe>
+  <p id="demo"></p>
 
-  <!--O puede agregar el atributo style y usar las propiedades CSS height y width-->
-  <h2>Iframes HTML</h2>
-  <p>También puede usar las propiedades de alto y ancho de CSS para especificar el tamaño del iframe:</p>
+  <!--LA ETIQUETA HTML SCRIPT-->
+  <!--La etiqueta HTML <script> se usa para definir un script del lado del cliente (JavaScript).
+  El elemento <script> contiene declaraciones de script o apunta a un archivo de script externo a través del
+  atributo src.
+  Los usos comunes de JavaScript son la manipulación de imágenes, la validación de formularios y los cambios
+  dinámicos de contenido.
+  Para seleccionar un elemento HTML, JavaScript utiliza con mayor frecuencia el
+  método document.getElementById().
+  Este ejemplo de JavaScript escribe "¡Hola, JavaScript!" en un elemento HTML con id = "demo"-->
+  <h2>Use JavaScript para cambiar el texto</h2>
+  <p>Este ejemplo escribe "¡Hola JavaScript!" en un elemento HTML con id = "demo":</p>
 
-  <iframe src="demo_iframe.htm" style="height:300px;width:300px" title="Ejemplo Iframe"></iframe>
+  <p id="demo1"></p>
 
-  <!--IFRAME - ELIMINAR EL BORDE-->
-  <!--Por defecto, un iframe tiene un borde alrededor.
-  Para eliminar el borde, agregue el atributo style y use la propiedad border CSS-->
-  <h2>Eliminar el borde del iframe</h2>
-  <p>Para eliminar el borde predeterminado del iframe, use CSS</p>
+  <script>
+    document.getElementById("demo1").innerHTML = "¡Hola javascript!";
+  </script>
 
-  <iframe src="demo_iframe.htm" style="border:none;" title="Ejemplo Iframe"></iframe>
+  <!--UNA MUESTRA DE JAVASCRIPT-->
+  <!--JavaScript puede cambiar el contenido-->
+  <h2>Mi primer javascript</h2>
 
-  <!--Con CSS, también puede cambiar el tamaño, el estilo y el color del borde del iframe-->
-  <h2>Borde de iframe personalizado</h2>
-  <p>Con CSS, también puede cambiar el tamaño, el estilo y el color del borde del iframe:</p>
+  <p>JavaScript puede cambiar el contenido de un elemento HTML:</p>
 
-  <iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>
+  <button type="button" onclick="myFunction()">¡Haz click en mi!</button>
 
-  <!--IFRAME - OBJETIVO DE UN ENLACE-->
-  <!--Se puede usar un iframe como marco objetivo para un enlace.
-  El atributo target del enlace debe referirse al atributo name del iframe-->
-  <h2>Iframe - Objetivo para un enlace</h2>
+  <p id="demo2">Esta es una demostración.</p>
 
-  <iframe src="demo_iframe.htm" name="iframe_a" style="height:300px;width:100%" title="Ejemplo Iframe"></iframe>
+  <script>
+    function myFunction() {
+      document.getElementById("demo2").innerHTML = "¡Hola javascript!";
+    }
+  </script>
 
-  <a href="https://upla.edu.pe/" target="iframe_a">upla.edu.pe</a>
+  <!--JavaScript puede cambiar estilos-->
+  <h2>Mi primer javascript</h2>
 
-  <p>Cuando el atributo de destino de un vínculo coincide con el nombre de un iframe, el vínculo se abrirá en el iframe.
+  <p id="demo3">JavaScript puede cambiar el estilo de un elemento HTML.</p>
+
+  <script>
+    function myFunction() {
+      document.getElementById("demo3").style.fontSize = "25px";
+      document.getElementById("demo3").style.color = "red";
+      document.getElementById("demo3").style.backgroundColor = "yellow";
+    }
+  </script>
+
+  <button type="button" onclick="myFunction()">¡Haz click en mi!</button>
+
+  <!--JavaScript puede cambiar los atributos-->
+  <h2>Mi primer javascript</h2>
+  <p>Aquí, un JavaScript cambia el valor del atributo src (fuente) de una imagen.</p>
+
+  <script>
+    function light(sw) {
+      var pic;
+      if (sw == 0) {
+        pic = "pic_bulboff.gif"
+      } else {
+        pic = "pic_bulbon.gif"
+      }
+      document.getElementById('myImage').src = pic;
+    }
+  </script>
+
+  <img alt="Imagen" id="myImage" src="pic_bulboff.gif" width="100" height="180">
+
+  <p>
+    <button type="button" onclick="light(1)">Luz encendida</button>
+    <button type="button" onclick="light(0)">Luz apagada</button>
   </p>
+
+  <!--LA ETIQUETA HTML NOSCRIPT-->
+  <!--La etiqueta HTML <noscript> define un contenido alternativo que se mostrará a los usuarios que hayan
+  deshabilitado los scripts en su navegador o que tengan un navegador que no admita scripts-->
+  <p id="demo4"></p>
+
+  <script>
+    document.getElementById("demo4").innerHTML = "¡Hola javascript!";
+  </script>
+
+  <noscript>Lo sentimos, su navegador no es compatible con JavaScript.</noscript>
+
+  <p>Un navegador sin soporte para JavaScript mostrará el texto escrito dentro del elemento noscript.</p>
 </body>
 
 </html>
