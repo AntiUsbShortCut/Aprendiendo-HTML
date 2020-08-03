@@ -7,99 +7,42 @@
 </head>
 
 <body>
-  <!--HTML JAVASCRIPT-->
-  <!--JavaScript hace que las páginas HTML sean más dinámicas e interactivas.-->
-  <h2>Mi primer javascript</h2>
+  <h1 style="text-align: center;">RUTAS DE ARCHIVOS HTML</h1>
+  <!--RUTAS DE ARCHIVO HTML-->
+  <!--Una ruta de archivo describe la ubicación de un archivo en la estructura de carpetas de un sitio web.
+  Las rutas de archivo se utilizan al vincular a archivos externos, como:
+  páginas web
+  Imágenes
+  Hojas de estilo
+  JavaScripts-->
+  
+  <!--RUTAS DE ARCHIVOS ABSOLUTAS-->
+  <!--Una ruta de archivo absoluta es la URL completa de un archivo-->
+  <h2>Uso de una ruta de archivo URL completa</h2>
+  <img src="https://www.w3schools.com/images/picture.jpg" alt="Montaña1" style="width:300px">
 
-  <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
-    Haga clic en mí para mostrar Fecha y hora.</button>
+  <!--RUTAS DE ARCHIVOS RELATIVOS-->
+  <!--Una ruta de archivo relativa apunta a un archivo relativo a la página actual.
+  En el siguiente ejemplo, la ruta del archivo apunta a un archivo en la carpeta de imágenes ubicada en la raíz de la
+  web actual-->
+  <h2>Uso de una ruta de archivo relativa ubicada en la raíz de la web actual</h2>
+  <img src="/imagenes/picture.jpg" alt="Montaña2" style="width:300px">
 
-  <p id="demo"></p>
+  <!--En el siguiente ejemplo, la ruta del archivo apunta a un archivo en la carpeta de imágenes ubicada en la carpeta
+  actual-->
+  <h2>Uso de una ruta de archivo relativa ubicada en la carpeta actual</h2>
+  <img src="imagenes/picture.jpg" alt="Montaña3" style="width:300px">
 
-  <!--LA ETIQUETA HTML SCRIPT-->
-  <!--La etiqueta HTML <script> se usa para definir un script del lado del cliente (JavaScript).
-  El elemento <script> contiene declaraciones de script o apunta a un archivo de script externo a través del
-  atributo src.
-  Los usos comunes de JavaScript son la manipulación de imágenes, la validación de formularios y los cambios
-  dinámicos de contenido.
-  Para seleccionar un elemento HTML, JavaScript utiliza con mayor frecuencia el
-  método document.getElementById().
-  Este ejemplo de JavaScript escribe "¡Hola, JavaScript!" en un elemento HTML con id = "demo"-->
-  <h2>Use JavaScript para cambiar el texto</h2>
-  <p>Este ejemplo escribe "¡Hola JavaScript!" en un elemento HTML con id = "demo":</p>
+  <!--En el siguiente ejemplo, la ruta del archivo apunta a un archivo en la carpeta de imágenes ubicada en la carpeta
+  un nivel más arriba de la carpeta actual-->
+  <h2>Uso de una ruta de archivo relativa ubicada en la carpeta un nivel más arriba de la carpeta actual </h2>
+  <img src="../picture.jpg" alt="Montaña4" style="width:300px">
 
-  <p id="demo1"></p>
-
-  <script>
-    document.getElementById("demo1").innerHTML = "¡Hola javascript!";
-  </script>
-
-  <!--UNA MUESTRA DE JAVASCRIPT-->
-  <!--JavaScript puede cambiar el contenido-->
-  <h2>Mi primer javascript</h2>
-
-  <p>JavaScript puede cambiar el contenido de un elemento HTML:</p>
-
-  <button type="button" onclick="myFunction()">¡Haz click en mi!</button>
-
-  <p id="demo2">Esta es una demostración.</p>
-
-  <script>
-    function myFunction() {
-      document.getElementById("demo2").innerHTML = "¡Hola javascript!";
-    }
-  </script>
-
-  <!--JavaScript puede cambiar estilos-->
-  <h2>Mi primer javascript</h2>
-
-  <p id="demo3">JavaScript puede cambiar el estilo de un elemento HTML.</p>
-
-  <script>
-    function myFunction() {
-      document.getElementById("demo3").style.fontSize = "25px";
-      document.getElementById("demo3").style.color = "red";
-      document.getElementById("demo3").style.backgroundColor = "yellow";
-    }
-  </script>
-
-  <button type="button" onclick="myFunction()">¡Haz click en mi!</button>
-
-  <!--JavaScript puede cambiar los atributos-->
-  <h2>Mi primer javascript</h2>
-  <p>Aquí, un JavaScript cambia el valor del atributo src (fuente) de una imagen.</p>
-
-  <script>
-    function light(sw) {
-      var pic;
-      if (sw == 0) {
-        pic = "pic_bulboff.gif"
-      } else {
-        pic = "pic_bulbon.gif"
-      }
-      document.getElementById('myImage').src = pic;
-    }
-  </script>
-
-  <img alt="Imagen" id="myImage" src="pic_bulboff.gif" width="100" height="180">
-
-  <p>
-    <button type="button" onclick="light(1)">Luz encendida</button>
-    <button type="button" onclick="light(0)">Luz apagada</button>
-  </p>
-
-  <!--LA ETIQUETA HTML NOSCRIPT-->
-  <!--La etiqueta HTML <noscript> define un contenido alternativo que se mostrará a los usuarios que hayan
-  deshabilitado los scripts en su navegador o que tengan un navegador que no admita scripts-->
-  <p id="demo4"></p>
-
-  <script>
-    document.getElementById("demo4").innerHTML = "¡Hola javascript!";
-  </script>
-
-  <noscript>Lo sentimos, su navegador no es compatible con JavaScript.</noscript>
-
-  <p>Un navegador sin soporte para JavaScript mostrará el texto escrito dentro del elemento noscript.</p>
+  <!--Mejores prácticas
+  Se recomienda utilizar rutas de archivo relativas (si es posible).
+  Cuando utilice rutas de archivos relativas, sus páginas web no estarán vinculadas a su URL base actual. Todos los
+  enlaces funcionarán en su propia computadora (localhost), así como en su dominio público actual y sus futuros
+  dominios públicos.-->
 </body>
 
 </html>
