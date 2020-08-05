@@ -1,112 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!--EL ELEMENTO HTML HEAD-->
-<!--El elemento <head> es un contenedor de metadatos (datos sobre datos) y se coloca entre la etiqueta <html> y la 
-etiqueta <body>.
-Los metadatos HTML son datos sobre el documento HTML. Los metadatos no se muestran.
-Los metadatos generalmente definen el título del documento, el juego de caracteres, los estilos, los scripts y otra
-metainformación.-->
-
 <head>
-  <!--ELEMENTO HTML META-->
-  <!--El elemento <meta> se usa generalmente para especificar el conjunto de caracteres, la descripción de la página, las
-  palabras clave, el autor del documento y la configuración de la ventana gráfica.
-  Los metadatos no se mostrarán en la página, pero los navegadores los usan (cómo mostrar el contenido o recargar
-  la página), los motores de búsqueda (palabras clave) y otros servicios web.-->
-  <!--Defina el conjunto de caracteres utilizado-->
   <meta charset="utf-8">
-  <!--Defina una descripción de su página web-->
   <meta name="description" content="En esta pagina se esta Aprendiendo-HTML5">
-  <!--Definir palabras clave para motores de búsqueda-->
   <meta name="keywords" content="HTML, CSS, JavaScript y Git">
-  <!--Definir el autor de una página-->
   <meta name="author" content="Alexander Jeanpaul Salazar Marquez">
-  <!--Actualizar documento cada 30 segundos-->
   <meta http-equiv="refresh" content="30">
-  <!--CONFIGURACION DE LA VENTANA GRAFICA-->
-  <!--La ventana gráfica es el área visible del usuario de una página web. Varía según el dispositivo: será más pequeño
-  en un teléfono móvil que en la pantalla de una computadora.
-  Debe incluir el siguiente elemento <meta> en todas sus páginas web-->
-  <!--Configuración de la ventana gráfica para que su sitio web se vea bien en todos los dispositivos-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Esto le da al navegador instrucciones sobre cómo controlar las dimensiones y la escala de la página.
-  La parte width=device-width establece el ancho de la página para seguir el ancho de pantalla del dispositivo (que variará según el dispositivo).
-  La parte initial-scale=1.0 establece el nivel de zoom inicial cuando el navegador carga por primera vez la página.-->
-
-  <!--EL ELEMENTO HTML TITLE-->
-  <!--El elemento <title> define el título del documento. El título debe ser solo de texto y se muestra en la barra de
-  título del navegador o en la pestaña de la página.
-
-  ¡La etiqueta <title> es necesaria en los documentos HTML!
-
-  ¡El contenido del título de una página es muy importante para la optimización de motores de búsqueda (SEO)! Los
-  algoritmos de los motores de búsqueda utilizan el título de la página para decidir el orden cuando se enumeran las
-  páginas en los resultados de búsqueda.
-
-  El elemento <title>:
-
-  define un título en la barra de herramientas del navegador
-  proporciona un título para la página cuando se agrega a favoritos
-  muestra un título para la página en los resultados del motor de búsqueda
-  Por lo tanto, trate de hacer que el título sea lo más preciso y significativo posible.-->
   <title>Aprendiendo-HTML5</title>
-
-  <!--EL ELEMENTO HTML STYLE-->
-  <!--El elemento <style> se usa para definir información de estilo para una sola página HTML-->
-  <style>
-    h2 {
-      background-color: powderblue;
-    }
-
-    h3 {
-      color: red;
-    }
-
-    h4 {
-      color: blue;
-    }
-  </style>
-
-  <!--EL ELEMENTO HTML LINK-->
-  <!--El elemento <link> define la relación entre el documento actual y un recurso externo.
-  La etiqueta <link> se usa con mayor frecuencia para vincular a hojas de estilo externas-->
-  <link rel="stylesheet" href="mystyle.css">
-  <!--EL ELEMENTO HTML SCRIPT-->
-  <!--El elemento <script> se usa para definir JavaScripts del lado del cliente.
-  El siguiente JavaScript escribe "¡Hola JavaScript!" en un elemento HTML con id = "demo"-->
-  <script>
-    function myFunction() {
-      document.getElementById("demo").innerHTML = "Hello JavaScript!";
-    }
-  </script>
-
-  <!--EL ELEMENTO HTML BASE-->
-  <!--El elemento <base> especifica la URL base y / o destino para todas las URL relativas en una página.
-  La etiqueta <base> debe tener un href o un atributo de destino presente, o ambos.
-  ¡Solo puede haber un único elemento <base> en un documento!-->
-  <base href="https://www.w3schools.com/" target="_blank">
 </head>
 
 <body>
-  <h1>Este es un Encabezado 1.</h1>
-  <h2>Este es un Encabezado 2.</h2>
-  <h3>Este es un Encabezado 3.</h3>
-  <h4>Este es un Encabezado 4.</h4>
-  <p>Este es un párrafo.</p>
-
-  <p id="demo">A Parrafo</p>
-  <button type="button" onclick="myFunction()">Pruebalo</button>
-
-  <h1>El elemento base</h1>
-
-  <p><img src="images/stickman.gif" width="24" height="39" alt="Stickman"> - Tenga en cuenta que sólo hemos especificado
-    una dirección relativa para la imagen. Puesto que hemos especificado una URL base en la sección head, el navegador
-    buscará la imagen en"https://www.w3schools.com/images/stickman.gif".</p>
-
-  <p><a href="tags/tag_base.asp">Etiqueta base HTML</a> - Tenga en cuenta que el enlace se abre en una nueva ventana,
-    incluso si no tiene ningún atributo de destino "_blank". Esto se debe a que el atributo de destino del elemento base
-    se establece en "_blank".</p>
+  <h1 style="text-align: center;">ELEMENTOS Y TECNICAS DE DISEÑO HTML</h1>
+  <h2>TECNICAS DE DISEÑO HTML</h2>
+  <h3>Marco CSS</h3>
+  <a href="Diseño_framework.html">Marcos CSS</a>
+  <h3>Propiedad flotante CSS</h3>
+  <a href="Diseño_float.html">Propiedad flotante CSS</a>
+  <h3>CSS flexbox</h3>
+  <a href="Diseño_flexbox.html">CSS flexbox</a>
+  <h3>Rejilla CSS</h3>
+  <a href="Diseño_grid.html">Rejilla CSS</a>
 </body>
 
 </html>
