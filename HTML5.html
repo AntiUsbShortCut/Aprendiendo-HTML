@@ -7,222 +7,70 @@
   <meta name="keywords" content="HTML, CSS, JavaScript y Git">
   <meta name="author" content="Alexander Jeanpaul Salazar Marquez">
   <meta http-equiv="refresh" content="30">
-  <!--CONFIGURACION DE LA VENTANA GRAFICA-->
-  <!--Para crear un sitio web responsivo, agregue la siguiente etiqueta <meta> a todas sus páginas web-->
-  <!--Esto establecerá la ventana gráfica de su página, que le dará al navegador instrucciones sobre cómo controlar
-  las dimensiones y la escala de la página.-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo-HTML5</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    .left {
-      background-color: #2196F3;
-      padding: 20px;
-      float: left;
-      width: 20%;
-      /* El ancho es del 20%, de forma predeterminada */
-    }
-
-    .main {
-      background-color: #f1f1f1;
-      padding: 20px;
-      float: left;
-      width: 60%;
-      /* El ancho es 60%, por defecto */
-    }
-
-    .right {
-      background-color: #4CAF50;
-      padding: 20px;
-      float: left;
-      width: 20%;
-      /* El ancho es del 20%, de forma predeterminada */
-    }
-
-    /* Utilice una consulta de medios para agregar un punto de interrupción a 800px: */
-    @media screen and (max-width:800px) {
-
-      .left,
-      .main,
-      .right {
-        width: 100%;
-        /* El ancho es 100%, cuando la ventana gráfica es 800px o menor */
-      }
-    }
-  </style>
-  <!--Haciendo referencia a framework W3.CSS-->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!--Haciendo referencia a framework Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <!--DISEÑO WEB RESPONSIVO HTML-->
-  <!--¡El diseño web receptivo se trata de crear páginas web que se vean bien en todos los dispositivos!
-  Un diseño web receptivo se ajustará automáticamente para diferentes tamaños de pantalla y ventanas gráficas.-->
-
-  <!--¿Qué es el diseño web receptivo?-->
-  <!--Responsive Web Design se trata de usar HTML y CSS para redimensionar, ocultar, reducir o ampliar
-  automáticamente un sitio web, para que se vea bien en todos los dispositivos (computadoras de escritorio, tabletas y teléfonos)-->
-  <h2>Configuración de la ventana gráfica</h2>
-  <p>Este ejemplo no hace realmente nada, aparte de mostrarle cómo agregar el elemento meta de la ventana gráfica.</p>
-
-  <!--IMAGENES RECEPTIVAS-->
-  <!--Las imágenes receptivas son imágenes que se adaptan bien a cualquier tamaño de navegador.-->
-
-  <!--Usando la propiedad width-->
-  <!--Si la propiedad CSS width se establece en 100%, la imagen responderá y se escalará hacia arriba y hacia abajo-->
+  <!--ELEMENTOS DE CODIGO DE COMPUTADORA HTML-->
+  <!--HTML contiene varios elementos para definir la entrada del usuario y el código de la computadora.-->
+  <h1 style="text-align: center;">CODIGO DE COMPUTADORA HTML</h1>
+  <h2>Código informático</h2>
+  <p>Algunos códigos de programación:</p>
+  <code>
+  x = 5;<br>
+  y = 6;<br>
+  z = x + y;
+  </code>
   <hr>
 
-  <h2>Imagen responsiva</h2>
-  <p>Cuando la propiedad de ancho CSS se establece en un valor de porcentaje, la imagen se escalará hacia arriba y hacia
-    abajo al cambiar el tamaño de la ventana del explorador. Cambie el tamaño de la ventana del navegador para ver el
-    efecto.</p>
-  <img src="img_girl.jpg" alt="chica" style="width:100%;">
-  <hr>
-  <!--Tenga en cuenta que en el ejemplo anterior, la imagen se puede ampliar para que sea más grande que su tamaño
-  original. Una solución mejor, en muchos casos, será usar en su lugar la propiedad max-width.-->
-
-  <!--Usando la propiedad max-width-->
-  <!--Si la propiedad max-width se establece en 100%, la imagen se reducirá si es necesario, pero nunca se ampliará
-  para ser más grande que su tamaño original-->
-  <h2>Imagen responsiva</h2>
-  <p>"Ancho máximo: 100% " evita que la imagen sea más grande que su tamaño original. Sin embargo, si hace que la
-    ventana del navegador sea más pequeña, la imagen seguirá bajando la escala.</p>
-  <p>Cambie el tamaño de la ventana del navegador para ver el efecto.</p>
-
-  <img src="img_girl.jpg" alt="chica" style="max-width:100%;height:auto;">
+  <!--HTML <kbd> para entrada de teclado-->
+  <!--El elemento HTML <kbd> se usa para definir la entrada del teclado. El contenido interior se muestra en la fuente 
+  monoespacio predeterminada del navegador.-->
+  <h2>El elemento kbd</h2>
+  <p>El elemento kbd se utiliza para definir la entrada del teclado:</p>
+  <p>Guarde el documento pulsando <kbd>Ctrl + S</kbd></p>
   <hr>
 
-  <!--Mostrar diferentes imágenes dependiendo del ancho del navegador-->
-  <!--El elemento HTML <picture> le permite definir diferentes imágenes para diferentes tamaños de ventana del navegador.
-  Cambie el tamaño de la ventana del navegador para ver cómo cambia la imagen a continuación según el ancho-->
-  <h2>Mostrar diferentes imágenes dependiendo del ancho del navegador</h2>
-  <p>Cambie el tamaño del ancho del navegador y la imagen cambiará a 600px y 1500px.</p>
-
-  <picture>
-    <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
-    <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
-    <source srcset="flowers.jpg">
-    <img src="img_flowers.jpg" alt="Flowers" style="width:auto;">
-  </picture>
+  <!--HTML <samp> para la salida del programa-->
+  <!--El elemento HTML <samp> se utiliza para definir la salida de muestra de un programa de computadora. El contenido 
+  interior se muestra en la fuente monoespacio predeterminada del navegador.-->
+  <h2>El elemento samp</h2>
+  <p>El elemento samp se utiliza para definir la salida de ejemplo de un programa informático.</p>
+  <p>Mensaje de mi ordenador:</p>
+  <p><samp>Archivo no encontrado.<br>Presione F1 para continuar</samp></p>
   <hr>
 
-  <!--Tamaño de texto responsive-->
-  <!--El tamaño del texto se puede establecer con una unidad "vw", lo que significa el "ancho de la ventana gráfica".
-  De esa forma, el tamaño del texto seguirá el tamaño de la ventana del navegador-->
-  <h1 style="font-size:10vw;">Imagen responsiva</h1>
-
-  <p style="font-size:5vw;">Cambie el tamaño de la ventana del explorador para ver cómo se escala el tamaño del texto.
-  </p>
-
-  <p style="font-size:5vw;">Utilice la unidad "vw" al ajustar el tamaño del texto. 10vw establecerá el tamaño en 10% del
-    ancho de la ventana gráfica.
-  </p>
-
-  <p>La ventana gráfica es el tamaño de la ventana del navegador. 1vw a 1% del ancho de la ventana gráfica. Si la
-    ventana gráfica es de 50 cm de ancho, 1vw es 0,5 cm.</p>
-  <hr>
-  <!--Preguntas de los medios-->
-  <!--Además de cambiar el tamaño del texto y las imágenes, también es común usar consultas de medios en páginas web responsivas.
-  Con las consultas de medios, puede definir estilos completamente diferentes para diferentes tamaños de navegador.
-  Ejemplo: cambie el tamaño de la ventana del navegador para ver que los tres elementos div a continuación se
-  mostrarán horizontalmente en pantallas grandes y se apilarán verticalmente en pantallas pequeñas-->
-  <h2>Consultas de medios</h2>
-  <p>Cambie el tamaño de la ventana del navegador.</p>
-
-  <p>Asegúrese de alcanzar el punto de interrupción a 800px al cambiar el tamaño de este fotograma.</p>
-
-  <div class="left">
-    <p>Menú izquierdo</p>
-  </div>
-
-  <div class="main">
-    <p>Contenido principal</p>
-  </div>
-
-  <div class="right">
-    <p>Menú derecho</p>
-  </div>
-
-  <hr>
-  <!--Pagina web responsiva: ejemplo completo-->
-  <!--Una página web receptiva debería verse bien en pantallas de escritorio grandes y en teléfonos móviles pequeños.-->
-  <h2>Pagina web responsiva</h2>
-  <p>Una página web receptiva debería verse bien en pantallas de escritorio grandes y en teléfonos móviles pequeños.</p>
-  <a href="Pagina_web_responsiva.html">Pagina web responsiva completa</a>
+  <!--HTML <code> para código de computadora-->
+  <!--El elemento HTML <code> se usa para definir una pieza de código de computadora. El contenido interior se
+  muestra en la fuente monoespacio predeterminada del navegador.-->
+  <h2>El elemento de código</h2>
+  <p>Ejemplo de código de programación:</p>
+  <code>
+  x = 5;
+  y = 6;
+  z = x + y;
+  </code>
+  <!--Tenga en cuenta que el elemento <code> no conserva espacios en blanco adicionales y saltos de línea.
+  Para solucionar esto, puede colocar el elemento <code> dentro de un elemento <pre>-->
+  <p>El elemento de code no conserva el espacio en blanco ni los saltos de línea.</p>
+  <p>Para solucionar este problema, puede colocar el elemento de code dentro de un elemento pre:</p>
+  <pre>
+  <code>
+x = 5;
+y = 6;
+z = x + y;
+  </code>
+  </pre>
   <hr>
 
-  <!--Diseño responsivo: frameworks-->
-  <!--Todos los marcos CSS populares ofrecen un diseño receptivo.
-  Son gratuitos y fáciles de usar.-->
-  <!--W3.CSS-->
-  <!--W3.CSS es un marco CSS moderno con soporte para escritorio, tableta y diseño móvil de forma predeterminada.
-  W3.CSS es más pequeño y más rápido que los marcos CSS similares.
-  W3.CSS está diseñado para ser una alternativa de alta calidad a Bootstrap.
-  W3.CSS está diseñado para ser independiente de jQuery o cualquier otra biblioteca de JavaScript.-->
-  <h2>Diseño responsivo: frameworks W3.CSS</h2>
-  <p>Todos los marcos CSS populares ofrecen un diseño receptivo. Son gratuitos y fáciles de usar.</p>
-  <div class="w3-container w3-green">
-    <h1>W3Schools Demo</h1>
-    <p>¡Cambie el tamaño de esta página adaptable!</p>
-  </div>
+  <!--HTML <var> para variables-->
+  <!--El elemento HTML <var> se usa para definir una variable en la programación o en una expresión matemática. El
+  contenido dentro generalmente se muestra en cursiva.-->
+  <h2>El elemento var</h2>
 
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <h2>Londres</h2>
-      <p>Londres es la capital de Inglaterra.</p>
-      <p>Es la ciudad más poblada del Reino Unido,
-        con un área metropolitana de más de 13 millones de habitantes.</p>
-    </div>
-
-    <div class="w3-third">
-      <h2>Paris</h2>
-      <p>París es la capital de Francia.</p>
-      <p>El área de París es uno de los centros de población más grandes de Europa,
-        con más de 12 millones de habitantes.</p>
-    </div>
-
-    <div class="w3-third">
-      <h2>Tokyo</h2>
-      <p>Tokio es la capital de Japón.</p>
-      <p>Es el centro del área metropolitana de Tokio, y el área metropolitana más poblada del mundo.</p>
-    </div>
-  </div>
-  <hr>
-
-  <!--Bootstrap-->
-  <!--Otro framework CSS popular es Bootstrap. Bootstrap usa HTML, CSS y jQuery para crear páginas web receptivas.-->
-  <h2>Diseño responsivo: frameworks Bootstrap</h2>
-  <p>Otro marco CSS popular es Bootstrap. Bootstrap usa HTML, CSS y jQuery para crear páginas web receptivas.</p>
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Mi primera página de Bootstrap</h1>
-      <p>¡Cambia el tamaño de esta página adaptable para ver el efecto!</p>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <h3>Columna 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>Columna 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>Columna 3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-    </div>
-  </div>
+  <p>El área de un triángulo es: 1/2 x <var>b</var> x <var>h</var>, dónde <var>b</var> es la base, y <var> h</var> es
+    la altura vertical.</p>
 </body>
 
 </html>
