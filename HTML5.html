@@ -9,68 +9,220 @@
   <meta http-equiv="refresh" content="30">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo-HTML5</title>
+  <style>
+    .all-browsers {
+      margin: 0;
+      padding: 5px;
+      background-color: lightgray;
+    }
+
+    .all-browsers>h2,
+    .browser {
+      margin: 10px;
+      padding: 5px;
+    }
+
+    .browser {
+      background: white;
+    }
+
+    .browser>h3,
+    p {
+      margin: 4px;
+      font-size: 90%;
+    }
+
+    .aparte {
+      width: 30%;
+      padding-left: 15px;
+      margin-left: 15px;
+      float: right;
+      font-style: italic;
+      background-color: lightgray;
+    }
+  </style>
+  <base href="https://www.w3schools.com/" target="_blank">
 </head>
 
 <body>
-  <!--ELEMENTOS DE CODIGO DE COMPUTADORA HTML-->
-  <!--HTML contiene varios elementos para definir la entrada del usuario y el código de la computadora.-->
-  <h1 style="text-align: center;">CODIGO DE COMPUTADORA HTML</h1>
-  <h2>Código informático</h2>
-  <p>Algunos códigos de programación:</p>
-  <code>
-  x = 5;<br>
-  y = 6;<br>
-  z = x + y;
-  </code>
+  <!--ELEMENTOS SEMANTICOS HTML-->
+  <!--Un elemento semántico describe claramente su significado tanto para el navegador como para el desarrollador.
+  Ejemplos de elementos no semánticos : div y span- No dice nada sobre su contenido.
+  Ejemplos de semánticas elementos: form, table y article- define claramente su contenido.-->
+  <h1 style="text-align: center;">ELEMENTOS SEMANTICOS HTML</h1>
+
+  <!--Elemento HTML <section>-->
+  <!--El elemento <section> define una sección en un documento.
+  Según la documentación HTML del W3C: "Una sección es una agrupación temática de contenido, generalmente con un encabezado".
+  Una página web normalmente se puede dividir en secciones para introducción, contenido e información de contacto.-->
+  <h2>1.- Elemento HTML section</h2>
+  <section>
+    <h3>WWF</h3>
+    <p>El Fondo Mundial para la Naturaleza (WWF) es una organización internacional que trabaja en temas relacionados con
+      la conservación, investigación y restauración del medio ambiente, anteriormente denominado Fondo Mundial para la
+      Naturaleza. WWF fue fundada en 1961.</p>
+  </section>
+
+  <section>
+    <h3>Símbolo panda de WWF </h3>
+    <p>El Panda se ha convertido en el símbolo de WWF. El conocido logotipo de panda de WWF se originó a partir de un
+      panda llamado Chi Chi que fue transferido del Zoológico de Beijing al Zoológico de Londres en el mismo año del
+      establecimiento de WWF.</p>
+  </section>
   <hr>
 
-  <!--HTML <kbd> para entrada de teclado-->
-  <!--El elemento HTML <kbd> se usa para definir la entrada del teclado. El contenido interior se muestra en la fuente 
-  monoespacio predeterminada del navegador.-->
-  <h2>El elemento kbd</h2>
-  <p>El elemento kbd se utiliza para definir la entrada del teclado:</p>
-  <p>Guarde el documento pulsando <kbd>Ctrl + S</kbd></p>
+  <!--Elemento HTML <article>-->
+  <!--El elemento <article> especifica contenido independiente y autónomo.
+  Un artículo debe tener sentido por sí solo, y debe ser posible distribuirlo independientemente del resto del sitio web.
+  Ejemplos de dónde se puede usar un elemento <article>:
+  Publicación del foro
+  Entrada en el blog
+  Artículo de periódico-->
+  <h2>2.- Elemento HTML article</h2>
+
+  <article>
+    <h3>Google Chrome</h3>
+    <p>Google Chrome es un navegador web desarrollado por Google, lanzado en 2008. Chrome es el navegador web más
+      popular del mundo hoy en día!</p>
+  </article>
+
+  <article>
+    <h3>Mozilla Firefox</h3>
+    <p>Mozilla Firefox es un navegador web de código abierto desarrollado por Mozilla. Firefox ha sido el segundo
+      navegador web más popular desde enero de 2018.</p>
+  </article>
+
+  <article>
+    <h3>Microsoft Edge</h3>
+    <p>Microsoft Edge es un navegador web desarrollado por Microsoft, lanzado en 2015. Microsoft Edge reemplazó a
+      Internet Explorer.</p>
+  </article>
   <hr>
 
-  <!--HTML <samp> para la salida del programa-->
-  <!--El elemento HTML <samp> se utiliza para definir la salida de muestra de un programa de computadora. El contenido 
-  interior se muestra en la fuente monoespacio predeterminada del navegador.-->
-  <h2>El elemento samp</h2>
-  <p>El elemento samp se utiliza para definir la salida de ejemplo de un programa informático.</p>
-  <p>Mensaje de mi ordenador:</p>
-  <p><samp>Archivo no encontrado.<br>Presione F1 para continuar</samp></p>
+  <!--Use CSS para aplicar estilo al elemento <article>-->
+  <article class="all-browsers">
+    <h2>Navegadores más populares</h2>
+    <article class="browser">
+      <h3>Google Chrome</h3>
+      <p>Google Chrome es un navegador web desarrollado por Google, lanzado en 2008. Chrome es el navegador web más
+        popular del mundo hoy en día!</p>
+    </article>
+    <article class="browser">
+      <h3>Mozilla Firefox</h3>
+      <p>Mozilla Firefox es un navegador web de código abierto desarrollado por Mozilla. Firefox ha sido el segundo
+        navegador web más popular desde enero de 2018.</p>
+    </article>
+    <article class="browser">
+      <h3>Microsoft Edge</h3>
+      <p>Microsoft Edge es un navegador web desarrollado por Microsoft, lanzado en 2015. Microsoft Edge reemplazó a
+        Internet Explorer.</p>
+    </article>
+  </article>
   <hr>
 
-  <!--HTML <code> para código de computadora-->
-  <!--El elemento HTML <code> se usa para definir una pieza de código de computadora. El contenido interior se
-  muestra en la fuente monoespacio predeterminada del navegador.-->
-  <h2>El elemento de código</h2>
-  <p>Ejemplo de código de programación:</p>
-  <code>
-  x = 5;
-  y = 6;
-  z = x + y;
-  </code>
-  <!--Tenga en cuenta que el elemento <code> no conserva espacios en blanco adicionales y saltos de línea.
-  Para solucionar esto, puede colocar el elemento <code> dentro de un elemento <pre>-->
-  <p>El elemento de code no conserva el espacio en blanco ni los saltos de línea.</p>
-  <p>Para solucionar este problema, puede colocar el elemento de code dentro de un elemento pre:</p>
-  <pre>
-  <code>
-x = 5;
-y = 6;
-z = x + y;
-  </code>
-  </pre>
+  <!--¿Anidando <article> en <sección> o viceversa?-->
+  <!--El elemento <article> especifica contenido independiente y autónomo.
+  El elemento <section> define la sección en un documento.
+  ¿Podemos usar las definiciones para decidir cómo anidar esos elementos? ¡No podemos!
+  Por lo tanto, encontrará páginas HTML con elementos <section> que contienen elementos <article> y
+  elementos <article> que contienen elementos <section>.-->
+
+  <!--Elemento HTML <header>-->
+  <!--El elemento <header> representa un contenedor para contenido introductorio o un conjunto de enlaces de navegación.
+  Un elemento <header> generalmente contiene:
+  uno o más elementos de encabezado (<h1> - <h6>)
+  - logotipo o icono
+  - información de autoría
+  Nota: Puede tener varios elementos <header> en un documento HTML. Sin embargo, <header>no puede ser
+  colocado dentro de un <footer>, <address> o en otro elemento <header>.-->
+  <h2>3.- Elemento HTML header</h2>
+  <article>
+    <header>
+      <h3>¿Qué hace WWF?</h3>
+      <p>Misión de WWF:</p>
+    </header>
+    <p>La misión de WWF es detener la degradación del entorno natural de nuestro planeta y construir un futuro en el que
+      los seres humanos vivan en armonía con la naturaleza.</p>
+  </article>
   <hr>
 
-  <!--HTML <var> para variables-->
-  <!--El elemento HTML <var> se usa para definir una variable en la programación o en una expresión matemática. El
-  contenido dentro generalmente se muestra en cursiva.-->
-  <h2>El elemento var</h2>
+  <!--Elemento HTML <footer>-->
+  <!--El elemento <footer> define un pie de página para un documento o sección.
+  Un elemento <footer> generalmente contiene:
+  - información de autoría
+  - informacion registrada
+  - Información del contacto
+  - mapa del sitio
+  - volver al principio enlaces
+  - documentos relacionados
+  Puede tener varios elementos <footer> en un documento.-->
+  <h2>4.- Elemento HTML footer</h2>
+  <footer>
+    <p>Author: Alexander Jeanpaul Salazar Marquez</p>
+    <p><a href="mailto:alexader123qwe@gmail.com">alexader123qwe@gmail.com</a></p>
+  </footer>
+  <hr>
 
-  <p>El área de un triángulo es: 1/2 x <var>b</var> x <var>h</var>, dónde <var>b</var> es la base, y <var> h</var> es
-    la altura vertical.</p>
+  <!--Elemento HTML <nav>-->
+  <!--El elemento <nav> define un conjunto de enlaces de navegación.-->
+  <!--Tenga en cuenta que NO todos los enlaces de un documento deben estar dentro de un elemento <nav>. El
+  elemento <nav> está destinado solo para el bloque principal de enlaces de navegación.
+  Los navegadores, como los lectores de pantalla para usuarios discapacitados, pueden usar este elemento para
+  determinar si se debe omitir la representación inicial de este contenido.-->
+  <h2>5.- Elemento HTML nav</h2>
+  <nav>
+    <a href="/html/">HTML</a> |
+    <a href="/css/">CSS</a> |
+    <a href="/js/">JavaScript</a> |
+    <a href="/jquery/">jQuery</a>
+  </nav>
+  <hr>
+
+  <!--Elemento HTML <aside>-->
+  <!--El elemento <aside> define algo de contenido aparte del contenido en el que se coloca (como una barra lateral).
+  El contenido <aside> debe estar indirectamente relacionado con el contenido circundante.-->
+  <h2>6.- Elemento HTML aside</h2>
+  <p>Mi familia y yo visitamos el centro de Epcot este verano. El clima era agradable, y Epcot era increíble! Tuve un
+    gran verano junto con mi familia!</p>
+
+  <aside>
+    <h4>Centro Epcot</h4>
+    <p>Epcot es un parque temático de Walt Disney World Resort que ofrece emocionantes atracciones, pabellones
+      internacionales, galardonados fuegos artificiales y eventos especiales de temporada.</p>
+  </aside>
+
+  <!--Use CSS para diseñar el elemento <aside>-->
+  <p>Mi familia y yo visitamos el centro de Epcot este verano. El clima era agradable, y Epcot era increíble! Tuve un
+    gran verano junto con mi familia!</p>
+
+  <aside class="aparte">
+    <p>Epcot es un parque temático de Walt Disney World Resort que ofrece emocionantes atracciones, pabellones
+      internacionales, galardonados fuegos artificiales y eventos especiales de temporada.</p>
+  </aside>
+
+  <p>Mi familia y yo visitamos el centro de Epcot este verano. El clima era agradable, y Epcot era increíble! Tuve un
+    gran verano junto con mi familia!</p>
+  <p>Mi familia y yo visitamos el centro de Epcot este verano. El clima era agradable, y Epcot era increíble! Tuve un
+    gran verano junto con mi familia!</p>
+  <hr>
+
+  <!--Elementos HTML <figure> y <figcaption>-->
+  <!--La etiqueta <figure> especifica contenido autónomo, como ilustraciones, diagramas, fotos, listados de códigos, etc.
+  La etiqueta <figcaption> define un título para un elemento <figure>. El elemento <figcaption> se puede colocar
+  como el primero o como el último hijo de un elemento <figure>.
+  El elemento <img> define la imagen / ilustración real.-->
+  <h2>7.- Elementos HTML figure y figcaption</h2>
+  <h2>Lugares para visitar</h2>
+
+  <p>La vista más famosa de Puglia son las casas cónicas únicas (Trulli) que se encuentran en los alrededores de
+    Alberobello, declarado Patrimonio de la Humanidad por la UNESCO.</p>
+
+  <figure>
+    <img src="/html/pic_trulli.jpg" alt="Trulli" style="width:100%">
+    <figcaption>Fig.1 - Trulli, Puglia, Italia.</figcaption>
+  </figure>
+  <!--¿Por qué elementos semánticos?-->
+  <!--Según el W3C: "Una Web semántica permite que los datos se compartan y reutilicen en aplicaciones, empresas y comunidades".-->
 </body>
 
 </html>
