@@ -9,354 +9,216 @@
   <meta http-equiv="refresh" content="30">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo-HTML5</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+
+    th {
+      text-align: left;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 style="text-align: center;">GUIA DE ESTILO HTML Y CONVENCIONES DE CODIFICACION</h1>
-  <p>Un código HTML coherente, limpio y ordenado facilita que otros lean y comprendan su código.<br>
-    A continuación, se incluyen algunas pautas y consejos para crear un buen código HTML.
-  </p>
-  <p style="color: red; font-family:Georgia, 'Times New Roman', Times, serif;">- Los ejemplos estan comentados en el
-    codigo HTML
-  </p>
+  <h1 style="text-align: center;">Entidades HTML</h1>
+  <p>Los caracteres reservados en HTML deben reemplazarse con entidades de caracteres.</p>
+  <hr>
 
-  <h2>1.- Declarar siempre el tipo de documento</h2>
-  <p>Siempre declare el tipo de documento como la primera línea de su documento.</p>
-  <!--<!DOCTYPE html>-->
-
-  <h2>2.- Usar nombres de elementos en minúscula</h2>
-  <p>HTML permite mezclar letras mayúsculas y minúsculas en los nombres de los elementos.<br>
-    Sin embargo, recomendamos usar nombres de elementos en minúsculas, porque:<br>
-    - Mezclar nombres en mayúsculas y minúsculas se ve mal<br>
-    - Los desarrolladores normalmente usan nombres en minúsculas<br>
-    - Minúsculas se ve más limpio<br>
-    - Las minúsculas son más fáciles de escribir
+  <h2>1.- Entidades HTML</h2>
+  <p>Algunos caracteres están reservados en HTML.<br>
+    Si usa los signos menor que (&lt;) o mayor que (&gt;) en su texto, el navegador puede mezclarlos con etiquetas.<br>
+    Las entidades de caracteres se utilizan para mostrar caracteres reservados en HTML.<br>
   </p>
-  <!--BUENO:
-  <body>
-  <p>Esto es un parrafo.</p>
-  </body>
-  -->
-  <!--MALO:
-  <BODY>
-  <P>Esto es un parrafo.</P>
-  </BODY>
-  -->
-
-  <h2>3.- Cerrar todos los elementos HTML</h2>
-  <p>En HTML, no es necesario cerrar todos los elementos (por ejemplo, el elemento p).<br>
-    Sin embargo, recomendamos cerrar todos los elementos HTML, como este:
+  <!--
+    &entity_name;
+    OR
+    &#entity_number;-->
+  <p>Para mostrar un signo menor que (&lt;) debemos escribir: & lt; o & #60;</p>
+  <p>
+    <strong>Ventaja</strong> de utilizar un nombre de entidad: el nombre de una entidad es fácil de recordar.<br>
+    <strong>Desventaja</strong> de usar un nombre de entidad: es posible que los navegadores no admitan todos los
+    nombres de entidad,<br>
+    pero la compatibilidad con los números de entidad es buena.
   </p>
-  <!--BUENO:
-  <section>
-  <p>This is a paragraph.</p>
-  <p>This is a paragraph.</p>
-  </section>
-  -->
-  <!--MALO:
-  <section>
-  <p>This is a paragraph.
-  <p>This is a paragraph.
-  </section>
-  -->
+  <hr>
 
-  <h2>4.- Usar nombres de atributo en minúsculas</h2>
-  <p>HTML permite mezclar letras mayúsculas y minúsculas en los nombres de los atributos.<br>
-    Sin embargo, recomendamos usar nombres de atributos en minúsculas, porque:<br>
-    - Mezclar nombres en mayúsculas y minúsculas se ve mal<br>
-    - Los desarrolladores normalmente usan nombres en minúsculas<br>
-    - Aspecto minúsculo más limpio<br>
-    - Las minúsculas son más fáciles de escribir
+  <h2>2.- Espacio irrompible</h2>
+  <p>
+    Una entidad de uso común en HTML es el espacio que no se divide: & nbsp;<br>
+    Un espacio que no se rompe es un espacio que no se rompe en una nueva línea.<br>
+    Dos palabras separadas por un espacio que no se separa se pegarán juntas (no se romperán en una nueva línea).<br>
+    Esto es útil cuando romper las palabras puede ser perturbador.<br>
+    Ejemplos:<br>
+    - § 10<br>
+    - 10 km / h<br>
+    - 10 p. M.<br>
+    Otro uso común del espacio no divisible es evitar que los navegadores trunquen espacios en las páginas HTML.<br>
+    Si escribe 10 espacios en su texto, el navegador eliminará 9 de ellos. Para agregar espacios reales a su texto,<br>
+    puede usar el & nbsp; entidad de carácter.
   </p>
-  <!--BUENO:
-  <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
-  -->
-  <!--MALO:
-  <a HREF="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
-  -->
-
-  <h2>5.- Cotizar siempre valores de atributo</h2>
-  <p>HTML permite valores de atributo sin comillas.<br>
-    Sin embargo, recomendamos citar los valores de los atributos porque:<br>
-    - Los desarrolladores normalmente citan valores de atributos<br>
-    - Los valores cotizados son más fáciles de leer<br>
-    - DEBE usar comillas si el valor contiene espacios
-  </p>
-  <!--BUENO:
-  <table class="striped">
-  -->
-  <!--MALO:
-  <table class=striped>
-  -->
-  <!--MUY MAL:(Esto no funcionará, porque el valor contiene espacios)
-  <table class=table striped>
-  -->
-
-  <h2>6.- Especifique siempre alt, ancho y alto para imágenes</h2>
-  <p>Especifique siempre el atributo alt de las imágenes. Este atributo es importante si la imagen por alguna razón<br>
-    no se puede mostrar.<br>
-    Además, siempre defina el width y height de las imágenes. Esto reduce el parpadeo, porque el navegador puede<br>
-    reservar espacio para la imagen antes de cargarla.
-  </p>
-  <!--BUENO:
-  <img src="html5.gif" alt="HTML5" style="width:128px;height:128px">
-  -->
-  <!--MALO:
-  <img src="html5.gif">
-  -->
-
-  <h2>7.- Espacios y signos iguales</h2>
-  <p>HTML permite espacios alrededor de signos iguales. Pero sin espacio es más fácil de leer y agrupa mejor las
-    entidades.
-  </p>
-  <!--BUENO:
-  <link rel="stylesheet" href="styles.css">
-  -->
-  <!--MALO:
-  <link rel = "stylesheet" href = "styles.css">
-  -->
-
-  <h2>8.-Evite las líneas de código largas</h2>
-  <p>Cuando se utiliza un editor HTML, NO es conveniente desplazarse hacia la derecha y hacia la izquierda para leer<br>
-    el código HTML.<br>
-    Intenta evitar líneas de código demasiado largas.
+  <p>
+    <strong>Sugerencia:</strong> El guión que no se separa ( & # 8209; ) se utiliza para definir un carácter de<br>
+    guión (-) que no se divide en una nueva línea.
   </p>
 
-  <h2>9.- Líneas en blanco e indentación</h2>
-  <p>No agregue líneas en blanco, espacios o sangrías sin una razón.<br>
-    Para facilitar la lectura, agregue líneas en blanco para separar bloques de código lógicos o grandes.<br>
-    Para facilitar la lectura, agregue dos espacios de sangría. No utilice la tecla de tabulación.
-  </p>
-  <!--BUENO:
-  <body>
-
-  <h1>Famous Cities</h1>
-
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
-  and the most populous metropolitan area in the world.
-  It is the seat of the Japanese government and the Imperial Palace,
-  and the home of the Japanese Imperial Family.</p>
-
-  </body>
-  -->
-  <!--MALO:
-  <body>
-
-    <h1>Famous Cities</h1>
-
-    <h2>Tokyo</h2>
-
-    <p>
-      Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
-      and the most populous metropolitan area in the world.
-      It is the seat of the Japanese government and the Imperial Palace,
-      and the home of the Japanese Imperial Family.
-    </p>
-
-  </body>
-  -->
-  <!--BUEN EJEMPLO DE TABLA:
-  <table>
+  <h2>3.- Algunas entidades de caracteres HTML útiles</h2>
+  <table style="width:50%">
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th>Resultado</th>
+      <th>Descripcion</th>
+      <th>Nombre de entidad</th>
+      <th>Numero de entidad</th>
     </tr>
     <tr>
-      <td>A</td>
-      <td>Description of A</td>
+      <td>&nbsp;</td>
+      <td>espacio irrompible</td>
+      <td>& nbsp;</td>
+      <td>& #160;</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>Description of B</td>
+      <td>&lt;</td>
+      <td>menos que</td>
+      <td>& lt;</td>
+      <td>& #60;</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>mayor que</td>
+      <td>& gt;</td>
+      <td>& #62;</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>ampersand</td>
+      <td>& amp;</td>
+      <td>& #38;</td>
+    </tr>
+    <tr>
+      <td>&quot;</td>
+      <td>comillas dobles</td>
+      <td>& quot;</td>
+      <td>& #34;</td>
+    </tr>
+    <tr>
+      <td>&apos;</td>
+      <td>comillas simples (apóstrofo)</td>
+      <td>& apos;</td>
+      <td>& #39;</td>
+    </tr>
+    <tr>
+      <td>&cent;</td>
+      <td>centavo</td>
+      <td>& cent;</td>
+      <td>& #162;</td>
+    </tr>
+    <tr>
+      <td>&pound;</td>
+      <td>libra</td>
+      <td>& pound;</td>
+      <td>& #163;</td>
+    </tr>
+    <tr>
+      <td>&yen;</td>
+      <td>yen</td>
+      <td>& yen;</td>
+      <td>& #165;</td>
+    </tr>
+    <tr>
+      <td>&euro;</td>
+      <td>euro</td>
+      <td>& euro;</td>
+      <td>& #8364;</td>
+    </tr>
+    <tr>
+      <td>&copy;</td>
+      <td>derechos de autor</td>
+      <td>& copy;</td>
+      <td>& #169;</td>
+    </tr>
+    <tr>
+      <td>&reg;</td>
+      <td>marca registrada</td>
+      <td>& reg;</td>
+      <td>& #174;</td>
     </tr>
   </table>
-  -->
-  <!--BUEN EJEMPLO DE LISTA:
-  <ul>
-    <li>London</li>
-    <li>Paris</li>
-    <li>Tokyo</li>
-  </ul>
-  -->
-  <h2>10.- Nunca omita el elemento title</h2>
-  <p>El elemento title es obligatorio en HTML.<br>
-    ¡El contenido del título de una página es muy importante para la optimización de motores de búsqueda (SEO)!<br>
-    Los algoritmos de los motores de búsqueda utilizan el título de la página para decidir el orden cuando se<br>
-    enumeran las páginas en los resultados de búsqueda.<br>
-    El elemento title:<br>
-    - define un título en la barra de herramientas del navegador<br>
-    - proporciona un título para la página cuando se agrega a favoritos<br>
-    - muestra un título para la página en los resultados del motor de búsqueda<br>
-    Por lo tanto, intente que el título sea lo más preciso y significativo posible:
-  </p>
-  <!--<title>Guía de estilo HTML y convenciones de codificación</title>-->
+  <p>Nota: Los nombres de las entidades distinguen entre mayúsculas y minúsculas.</p>
+  <hr>
 
-  <h2>11.-¿Omitiendo html y body?</h2>
-  <p>Una página HTML se validará sin las etiquetas html y body</p>
-  <!--
-  <!DOCTYPE html>
-  <head>
-    <title>Page Title</title>
-  </head>
-
-  <h1>This is a heading</h1>
-  <p>This is a paragraph.</p>
-  -->
-  <p>Sin embargo, recomendamos encarecidamente agregar siempre las etiquetas html y body.<br>
-    Omitir body puede producir errores en navegadores antiguos.<br>
-    Omitiendo html y body también puede bloquear el software DOM y XML.
-  </p>
-
-  <h2>12.- ¿Omitiendo head?</h2>
-  <p>La etiqueta HTML head también se puede omitir.<br>
-    Los navegadores agregarán todos los elementos antes body, a un elemento head predeterminado.
-  </p>
-  <!--
-  <!DOCTYPE html>
-  <html>
-  <title>Page Title</title>
-  <body>
-
-  <h1>This is a heading</h1>
-  <p>This is a paragraph.</p>
-
-  </body>
-  </html>
-  -->
-  <p>Sin embargo, recomendamos usar la etiqueta head.</p>
-
-  <h2>13.- ¿Cerrar elementos HTML vacíos?</h2>
-  <p>En HTML, es opcional cerrar elementos vacíos.</p>
-  <!--PERMITIDO
-  <meta charset="utf-8">
-  -->
-  <!--TAMBIEN PERMITIDO
-  <meta charset="utf-8" />
-  -->
-  <p>Si espera que el software XML / XHTML acceda a su página, mantenga la barra de cierre (/), ya que es necesaria<br>
-    en XML y XHTML.
-  </p>
-
-  <h2>14.- Agregar el atributo lang</h2>
-  <p>Siempre debe incluir el atributo lang dentro de la etiqueta html, para declarar el idioma de la página web.<br>
-    Esto está destinado a ayudar a los motores de búsqueda y navegadores.
-  </p>
-  <!--
-  <!DOCTYPE html>
-  <html lang="en-us">
-  <head>
-    <title>Page Title</title>
-  </head>
-  <body>
-
-  <h1>This is a heading</h1>
-  <p>This is a paragraph.</p>
-
-  </body>
-  </html>
-  -->
-  <h2>15.- Metadatos</h2>
-  <p>Para garantizar una interpretación adecuada y una indexación correcta del motor de búsqueda, tanto el idioma<br>
-    como la codificación de caracteres deben definirse lo antes posible en un documento HTML
-  </p>
-  <!--
-  <!DOCTYPE html>
-  <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Page Title</title>
-  </head>
-  -->
-  <h2>16.- Configuración de la ventana gráfica</h2>
-  <p>La ventana gráfica es el área visible del usuario de una página web. Varía según el dispositivo: será más<br>
-    pequeño en un teléfono móvil que en una pantalla de computadora. Debes incluir el siguiente elemento meta en<br>
-    todas tus páginas web
-  </p>
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-  <p>Esto le da al navegador instrucciones sobre cómo controlar las dimensiones y la escala de la página.<br>
-    La parte width=device-width establece el ancho de la página para seguir el ancho de la pantalla del dispositivo<br>
-    (que variará según el dispositivo).<br>
-    La parte initial-scale=1.0 establece el nivel de zoom inicial cuando el navegador carga por primera vez la página.
-  </p>
-
-  <h2>17.- Comentarios HTML</h2>
-  <p>Los comentarios cortos deben escribirse en una línea</p>
-  <!-- Este es un comentario -->
-  <p>Los comentarios largos deben escribirse sangrados con dos espacios.</p>
-  <!--
-    Este es un ejemplo de comentario largo. Este es un ejemplo de comentario largo.
-    Este es un ejemplo de comentario largo. Este es un ejemplo de comentario largo.
-  -->
-
-  <h2>18.- Usar hojas de estilo</h2>
-  <p>Utilice una sintaxis simple para vincular a hojas de estilo (el atributo type no es necesario)</p>
-  <!--<link rel="stylesheet" href="styles.css">-->
-  <p>Las reglas CSS cortas se pueden escribir comprimidas</p>
-  <!--p.intro {font-family:Verdana;font-size:16em;}-->
-  <p>Las reglas de CSS largas deben escribirse en varias líneas</p>
-  <!--
-    body {
-      background-color: lightgrey;
-      font-family: "Arial Black", Helvetica, sans-serif;
-      font-size: 16em;
-      color: black;
-    }
-  -->
+  <h2>4.- Combinando marcas diacríticas</h2>
   <p>
-    -Coloque el soporte de apertura en la misma línea que el selector<br>
-    -Use un espacio antes del soporte de apertura<br>
-    -Use dos espacios de sangría<br>
-    -Utilice punto y coma después de cada par propiedad-valor, incluido el último<br>
-    -Solo use comillas alrededor de los valores si el valor contiene espacios<br>
-    -Coloque el corchete de cierre en una nueva línea, sin espacios iniciales
+    Una marca diacrítica es un "glifo" agregado a una letra.<br>
+    Algunas marcas diacríticas, como grave (̀) y aguda (́) se denominan acentos.<br>
+    Las marcas diacríticas pueden aparecer tanto arriba como debajo de una letra, dentro de una letra y entre dos<br>
+    letras.<br>
+    Las marcas diacríticas se pueden usar en combinación con caracteres alfanuméricos para producir un carácter que<br>
+    no está presente en el conjunto de caracteres (codificación) utilizado en la página.
   </p>
-
-  <h2>19.-Cargando JavaScript en HTML</h2>
-  <p>Utilice una sintaxis simple para cargar scripts externos (el atributo type no es necesario)</p>
-  <!--<script src="myscript.js">-->
-
-  <h2>20.- Acceder a elementos HTML con JavaScript</h2>
-  <p>El uso de código HTML "desordenado" puede provocar errores de JavaScript.</p>
-  <!--
-    getElementById("Demo").innerHTML = "Hello";
-    getElementById("demo").innerHTML = "Hello";
-  -->
-
-  <h2>21.- Usar nombres de archivo en minúsculas</h2>
-  <p>Algunos servidores web (Apache, Unix) distinguen entre mayúsculas y minúsculas en los nombres de archivo: no se<br>
-    puede acceder a "london.jpg" como "London.jpg".<br>
-    Otros servidores web (Microsoft, IIS) no distinguen entre mayúsculas y minúsculas: se puede acceder a<br>
-    "london.jpg" como "London.jpg".<br>
-    Si usa una combinación de mayúsculas y minúsculas, debe tener en cuenta esto.<br>
-    Si pasa de un servidor que no distingue entre mayúsculas y minúsculas a un servidor que distingue entre<br>
-    mayúsculas y minúsculas, ¡incluso los pequeños errores romperán su web!<br>
-    Para evitar estos problemas, utilice siempre los nombres de archivo en minúsculas.
-  </p>
-
-  <h2>22.- Extensiones de archivo</h2>
-  <p>Los archivos HTML deben tener una extensión .html o .htm .<br>
-    Los archivos CSS deben tener una extensión .css .<br>
-    Los archivos JavaScript deben tener una extensión .js .
-  </p>
-
-  <h2>23.- ¿Diferencias entre .htm y .html?</h2>
-  <p>¡No hay diferencia entre las extensiones de archivo .htm y .html!<br>
-    Ambos serán tratados como HTML por cualquier navegador web y servidor web.
-  </p>
-
-  <h2>Nombres de archivo predeterminados</h2>
-  <p>
-    Cuando una URL no especifica un nombre de archivo al final (como "https://www.w3schools.com/"), el servidor<br>
-    simplemente agrega un nombre de archivo predeterminado, como "index.html", "index.htm", " default.html "o"<br>
-    default.htm ".<br>
-
-    Si su servidor está configurado solo con "index.html" como nombre de archivo predeterminado, su archivo debe<br>
-    llamarse "index.html" y no "default.html".<br>
-
-    Sin embargo, los servidores se pueden configurar con más de un nombre de archivo predeterminado; normalmente,<br>
-    puede configurar tantos nombres de archivo predeterminados como desee.
-  </p>
+  <table style="width:50%">
+    <tr>
+      <th>Marca</th>
+      <th>Caracter</th>
+      <th>Construir</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>&#768;</td>
+      <td>a</td>
+      <td>a& #768;</td>
+      <td>a&#768;</td>
+    </tr>
+    <tr>
+      <td>&#769;</td>
+      <td>a</td>
+      <td>a& #769;</td>
+      <td>a&#769;</td>
+    </tr>
+    <tr>
+      <td>&#770;</td>
+      <td>a</td>
+      <td>a& #770;</td>
+      <td>a&#770;</td>
+    </tr>
+    <tr>
+      <td>&#771;</td>
+      <td>a</td>
+      <td>a& #771;</td>
+      <td>a&#771;</td>
+    </tr>
+    <tr>
+      <td>&#768;</td>
+      <td>O</td>
+      <td>O& #768;</td>
+      <td>O&#768;</td>
+    </tr>
+    <tr>
+      <td>&#769;</td>
+      <td>O</td>
+      <td>O& #769;</td>
+      <td>O&#769;</td>
+    </tr>
+    <tr>
+      <td>&#770;</td>
+      <td>O</td>
+      <td>O& #770;</td>
+      <td>O&#770;</td>
+    </tr>
+    <tr>
+      <td>&#771;</td>
+      <td>O</td>
+      <td>O& #771;</td>
+      <td>O&#771;</td>
+    </tr>
+  </table>
 </body>
 
 </html>
