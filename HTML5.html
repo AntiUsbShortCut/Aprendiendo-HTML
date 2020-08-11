@@ -9,216 +9,34 @@
   <meta http-equiv="refresh" content="30">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo-HTML5</title>
-  <style>
-    table,
-    th,
-    td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-
-    th,
-    td {
-      padding: 5px;
-    }
-
-    th {
-      text-align: left;
-    }
-  </style>
 </head>
 
 <body>
-  <h1 style="text-align: center;">Entidades HTML</h1>
-  <p>Los caracteres reservados en HTML deben reemplazarse con entidades de caracteres.</p>
+  <h1 style="text-align: center;">SIMBOLOS HTML</h1>
+  <p>Los símbolos que no están presentes en su teclado también se pueden agregar usando entidades.</p>
+
+  <h2>1.- Entidades de símbolo HTML</h2>
+  <p>
+    Las entidades HTML se describieron en el capítulo anterior.<br>
+    Muchos símbolos matemáticos, técnicos y monetarios no están presentes en un teclado normal.<br>
+    Para agregar tales símbolos a una página HTML, puede usar el nombre de la entidad o el número de la<br>
+    entidad (una referencia decimal o hexadecimal) para el símbolo.
+  </p>
+  <p>Yo exhibiré &euro;</p>
+  <p>Yo exhibiré &#8364;</p>
+  <p>Yo exhibiré &#x20AC;</p>
   <hr>
 
-  <h2>1.- Entidades HTML</h2>
-  <p>Algunos caracteres están reservados en HTML.<br>
-    Si usa los signos menor que (&lt;) o mayor que (&gt;) en su texto, el navegador puede mezclarlos con etiquetas.<br>
-    Las entidades de caracteres se utilizan para mostrar caracteres reservados en HTML.<br>
-  </p>
-  <!--
-    &entity_name;
-    OR
-    &#entity_number;-->
-  <p>Para mostrar un signo menor que (&lt;) debemos escribir: & lt; o & #60;</p>
-  <p>
-    <strong>Ventaja</strong> de utilizar un nombre de entidad: el nombre de una entidad es fácil de recordar.<br>
-    <strong>Desventaja</strong> de usar un nombre de entidad: es posible que los navegadores no admitan todos los
-    nombres de entidad,<br>
-    pero la compatibilidad con los números de entidad es buena.
-  </p>
+  <h2>2.- Algunos símbolos matemáticos compatibles con HTML</h2>
+  <img src="Simbolos_matematicos.jpg" alt="Simbolos matematicos" style="width: 877px; height: 436px;">
   <hr>
 
-  <h2>2.- Espacio irrompible</h2>
-  <p>
-    Una entidad de uso común en HTML es el espacio que no se divide: & nbsp;<br>
-    Un espacio que no se rompe es un espacio que no se rompe en una nueva línea.<br>
-    Dos palabras separadas por un espacio que no se separa se pegarán juntas (no se romperán en una nueva línea).<br>
-    Esto es útil cuando romper las palabras puede ser perturbador.<br>
-    Ejemplos:<br>
-    - § 10<br>
-    - 10 km / h<br>
-    - 10 p. M.<br>
-    Otro uso común del espacio no divisible es evitar que los navegadores trunquen espacios en las páginas HTML.<br>
-    Si escribe 10 espacios en su texto, el navegador eliminará 9 de ellos. Para agregar espacios reales a su texto,<br>
-    puede usar el & nbsp; entidad de carácter.
-  </p>
-  <p>
-    <strong>Sugerencia:</strong> El guión que no se separa ( & # 8209; ) se utiliza para definir un carácter de<br>
-    guión (-) que no se divide en una nueva línea.
-  </p>
-
-  <h2>3.- Algunas entidades de caracteres HTML útiles</h2>
-  <table style="width:50%">
-    <tr>
-      <th>Resultado</th>
-      <th>Descripcion</th>
-      <th>Nombre de entidad</th>
-      <th>Numero de entidad</th>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>espacio irrompible</td>
-      <td>& nbsp;</td>
-      <td>& #160;</td>
-    </tr>
-    <tr>
-      <td>&lt;</td>
-      <td>menos que</td>
-      <td>& lt;</td>
-      <td>& #60;</td>
-    </tr>
-    <tr>
-      <td>&gt;</td>
-      <td>mayor que</td>
-      <td>& gt;</td>
-      <td>& #62;</td>
-    </tr>
-    <tr>
-      <td>&amp;</td>
-      <td>ampersand</td>
-      <td>& amp;</td>
-      <td>& #38;</td>
-    </tr>
-    <tr>
-      <td>&quot;</td>
-      <td>comillas dobles</td>
-      <td>& quot;</td>
-      <td>& #34;</td>
-    </tr>
-    <tr>
-      <td>&apos;</td>
-      <td>comillas simples (apóstrofo)</td>
-      <td>& apos;</td>
-      <td>& #39;</td>
-    </tr>
-    <tr>
-      <td>&cent;</td>
-      <td>centavo</td>
-      <td>& cent;</td>
-      <td>& #162;</td>
-    </tr>
-    <tr>
-      <td>&pound;</td>
-      <td>libra</td>
-      <td>& pound;</td>
-      <td>& #163;</td>
-    </tr>
-    <tr>
-      <td>&yen;</td>
-      <td>yen</td>
-      <td>& yen;</td>
-      <td>& #165;</td>
-    </tr>
-    <tr>
-      <td>&euro;</td>
-      <td>euro</td>
-      <td>& euro;</td>
-      <td>& #8364;</td>
-    </tr>
-    <tr>
-      <td>&copy;</td>
-      <td>derechos de autor</td>
-      <td>& copy;</td>
-      <td>& #169;</td>
-    </tr>
-    <tr>
-      <td>&reg;</td>
-      <td>marca registrada</td>
-      <td>& reg;</td>
-      <td>& #174;</td>
-    </tr>
-  </table>
-  <p>Nota: Los nombres de las entidades distinguen entre mayúsculas y minúsculas.</p>
+  <h2>Algunas letras griegas compatibles con HTML</h2>
+  <img src="Letras_griegas.jpg" alt="Letras griegas" style="width: 878px; height: 280px;">
   <hr>
 
-  <h2>4.- Combinando marcas diacríticas</h2>
-  <p>
-    Una marca diacrítica es un "glifo" agregado a una letra.<br>
-    Algunas marcas diacríticas, como grave (̀) y aguda (́) se denominan acentos.<br>
-    Las marcas diacríticas pueden aparecer tanto arriba como debajo de una letra, dentro de una letra y entre dos<br>
-    letras.<br>
-    Las marcas diacríticas se pueden usar en combinación con caracteres alfanuméricos para producir un carácter que<br>
-    no está presente en el conjunto de caracteres (codificación) utilizado en la página.
-  </p>
-  <table style="width:50%">
-    <tr>
-      <th>Marca</th>
-      <th>Caracter</th>
-      <th>Construir</th>
-      <th>Resultado</th>
-    </tr>
-    <tr>
-      <td>&#768;</td>
-      <td>a</td>
-      <td>a& #768;</td>
-      <td>a&#768;</td>
-    </tr>
-    <tr>
-      <td>&#769;</td>
-      <td>a</td>
-      <td>a& #769;</td>
-      <td>a&#769;</td>
-    </tr>
-    <tr>
-      <td>&#770;</td>
-      <td>a</td>
-      <td>a& #770;</td>
-      <td>a&#770;</td>
-    </tr>
-    <tr>
-      <td>&#771;</td>
-      <td>a</td>
-      <td>a& #771;</td>
-      <td>a&#771;</td>
-    </tr>
-    <tr>
-      <td>&#768;</td>
-      <td>O</td>
-      <td>O& #768;</td>
-      <td>O&#768;</td>
-    </tr>
-    <tr>
-      <td>&#769;</td>
-      <td>O</td>
-      <td>O& #769;</td>
-      <td>O&#769;</td>
-    </tr>
-    <tr>
-      <td>&#770;</td>
-      <td>O</td>
-      <td>O& #770;</td>
-      <td>O&#770;</td>
-    </tr>
-    <tr>
-      <td>&#771;</td>
-      <td>O</td>
-      <td>O& #771;</td>
-      <td>O&#771;</td>
-    </tr>
-  </table>
+  <h2>Algunas otras entidades compatibles con HTML</h2>
+  <img src="Entidades_compatibles.jpg" alt="Entidades compatibles" style="width: 878px; height: 512px;">
 </body>
 
 </html>
