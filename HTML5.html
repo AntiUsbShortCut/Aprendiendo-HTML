@@ -12,104 +12,50 @@
 </head>
 
 <body>
-  <h1 style="text-align: center;">USAR EMOJIS EN HTML</h1>
-  <p>Los emojis son personajes del conjunto de caracteres UTF-8: 😄 😍 💗</p>
+  <h1 style="text-align: center;">CODIFICACION HTML (JUEGOS DE CARACTERES)</h1>
+  <p>Para mostrar una página HTML correctamente, un navegador web debe saber qué juego de caracteres utilizar.</p>
   <hr>
 
-  <h2>1.- ¿Qué son los emojis?</h2>
-  <p>
-    Los emojis parecen imágenes o iconos, pero no lo son.<br>
-
-    Son letras (caracteres) del juego de caracteres UTF-8 (Unicode).<br>
-
-    UTF-8 cubre casi todos los personajes y símbolos del mundo.
-  </p>
+  <h2>1.- De ASCII a UTF-8</h2>
+  <pre style="font-family: 'Times New Roman', Times, serif">
+ASCII fue el primer estándar de codificación de caracteres. ASCII definió 128 caracteres diferentes que podrían
+usarse en Internet: números (0-9), letras en inglés (AZ) y algunos caracteres especiales como! $ + - () @ &lt;>.
+ISO-8859-1 era el juego de caracteres predeterminado para HTML 4. Este juego de caracteres admitía 256 códigos
+de caracteres diferentes. HTML 4 también es compatible con UTF-8.
+ANSI (Windows-1252) fue el juego de caracteres original de Windows. ANSI es idéntico a ISO-8859-1, excepto que
+ANSI tiene 32 caracteres adicionales.
+El juego de caracteres predeterminado para HTML5 es UTF-8, que cubre casi todos los caracteres y símbolos del mundo.
+  </pre>
   <hr>
 
   <h2>2.- El atributo de juego de caracteres HTML</h2>
-  <p>
-    Para mostrar una página HTML correctamente, un navegador web debe conocer el juego de caracteres utilizado en la<br>
-    página.<br>
-    Esto se especifica en la etiqueta meta<br>
-    <!--<meta charset="UTF-8">-->
-    Si no se especifica, UTF-8 es el juego de caracteres predeterminado en HTML.
-  </p>
+  <pre style="font-family: 'Times New Roman', Times, serif">
+Para mostrar una página HTML correctamente, un navegador web debe conocer el juego de caracteres utilizado en la página.
+Esto se especifica en la etiqueta meta
+  </pre>
+  <!--<meta charset="UTF-8">-->
   <hr>
 
-  <h2>3.- Personajes UTF-8</h2>
-  <p>
-    Muchos caracteres UTF-8 no se pueden escribir en un teclado, pero siempre se pueden mostrar usando números<br>
-    (llamados números de entidad):<br>
-    - A es 65<br>
-    - B es 66<br>
-    - C es 67<br>
-  </p>
-  <!--
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <meta charset="UTF-8">
-    </head>
-    <body>
-
-    <p>Yo exhibiré A B C</p>
-    <p>Yo exhibiré &#65; &#66; &#67;</p>
-
-    </body>
-    </html>
-  -->
-  <p>
-    Ejemplo explicado<br>
-    El elemento meta charset="UTF-8" define el juego de caracteres.<br>
-    Los caracteres A, B y C se muestran con los números 65, 66 y 67.<br>
-    Para que el navegador comprenda que está mostrando un carácter, debe comenzar el número de entidad con & # y<br>
-    terminarlo con; (punto y coma).<br>
-  </p>
-  <hr>
-
-  <h2>3.- Personajes Emoji</h2>
-  <p>Los emojis también son personajes del alfabeto UTF-8:<br>
-    😄 es 128516<br>
-    😍 es 128525<br>
-    💗 es 128151
-  </p>
-  <!--
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <meta charset="UTF-8">
-    </head>
-    <body>
-
-    <h1>Mi primer Emoji</h1>
-    <p>&#128512;</p>
-
-    </body>
-    </html>
-  -->
-  <p>Dado que los emojis son caracteres, se pueden copiar, mostrar y dimensionar como cualquier otro carácter en HTML.
-  </p>
-  <!--
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <meta charset="UTF-8">
-    </head>
-    <body>
-
-    <h1>Tamaño de Emojis</h1>
-
-    <p style="font-size:48px">
-    &#128512; &#128516; &#128525; &#128151;
-    </p>
-
-    </body>
-    </html>
-  -->
-  <hr>
-
-  <h2>Algunos símbolos emoji en UTF-8</h2>
-  <img src="Simbolos_emoji.jpg" alt="Simbolos emoji" style="width: 882px; height: 476px;">
+  <h2>3.-Diferencias entre conjuntos de caracteres</h2>
+  <h3>El conjunto de caracteres ANSI (Windows-1252)</h3>
+  <pre style="font-family: 'Times New Roman', Times, serif">
+ANSI es idéntico a ASCII para los valores de 0 a 127.
+ANSI tiene un conjunto de caracteres patentado para los valores de 128 a 159.
+ANSI es idéntico a UTF-8 para los valores de 160 a 255.
+  </pre>
+  <h3>El conjunto de caracteres ISO-8859-1</h3>
+  <pre style="font-family: 'Times New Roman', Times, serif">
+ISO-8859-1 es idéntico a ASCII para los valores de 0 a 127.
+ISO-8859-1 no usa los valores de 128 a 159.
+ISO-8859-1 es idéntico a UTF-8 para los valores de 160 a 255.
+  </pre>
+  <h3>El conjunto de caracteres UTF-8</h3>
+  <pre style="font-family: 'Times New Roman', Times, serif">
+UTF-8 es idéntico a ASCII para los valores de 0 a 127.
+UTF-8 no usa los valores de 128 a 159. 
+UTF-8 es idéntico a ANSI y 8859-1 para los valores de 160 a 255.
+UTF-8 continúa desde el valor 256 con más de 10 000 caracteres diferentes.
+  </pre>
 </body>
 
 </html>
