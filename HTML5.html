@@ -9,96 +9,149 @@
   <meta http-equiv="refresh" content="30">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo-HTML5</title>
-  <style>
-    table,
-    th,
-    td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-
-    th {
-      text-align: left;
-    }
-  </style>
 </head>
 
 <body>
-  <h1 style="text-align: center;">LOCALIZADORES DE RECURSOS UNIFORMES HTML</h1>
+  <h1 style="text-align: center;">HTML FRENTE A XHTML</h1>
+  <p>XHTML es una versión de HTML más estricta y basada en XML.</p>
+  <p style="color: red;">- LOS EJEMPLOS ESTAN COMENTADOS EN EL CODIGO HTML</p>
+  <hr>
+
+  <h2>1.- ¿Qué es XHTML?</h2>
   <p>
-    Una URL es otra palabra para una dirección web.<br>
-    Una URL puede estar compuesta de palabras (por ejemplo, w3schools.com) o una dirección de Protocolo<br>
-    de Internet(IP)(por ejemplo, 192.68.20.50).<br>
-    La mayoría de las personas ingresan el nombre cuando navegan, porque los nombres son más fáciles de<br>
-    recordar que los números.
+    - XHTML son las siglas de E X tensible H yper T ext M arkup L anguage <br>
+    - XHTML es una versión de HTML más estricta y basada en XML<br>
+    - XHTML es HTML definido como una aplicación XML<br>
+    - XHTML es compatible con los principales navegadores<br>
   </p>
   <hr>
-  <h2>1.- URL: localizador uniforme de recursos</h2>
+
+  <h2>2.- ¿Por qué XHTML?</h2>
   <p>
-    Los navegadores web solicitan páginas de servidores web mediante una URL.<br>
-    Un localizador uniforme de recursos (URL) se utiliza para abordar un documento (u otros datos) en la web.<br>
-    Una dirección web como https://www.w3schools.com/html/default.asp sigue estas reglas de sintaxis:<br>
-    esquema://prefijo.dominio:puerto/ruta/nombre_de_archivo
+    XML es un lenguaje de marcado en el que todos los documentos deben marcarse correctamente (estar "bien<br>
+    formados"). XHTML fue desarrollado para hacer HTML más extensible y flexible para trabajar con otros formatos de<br>
+    datos (como XML). Además, los navegadores ignoran los errores en las páginas HTML e intentan mostrar el sitio<br>
+    web incluso si tiene algunos errores en el marcado. Entonces XHTML viene con un manejo de errores mucho más<br>
+    estricto.
+  </p>
+  <hr>
+
+  <h2>3.- Las diferencias más importantes con HTML</h2>
+  <p>
+    - !DOCTYPE es obligatorio<br>
+    - El atributo xmlns en html es obligatorio<br>
+    - html, head, title y body son obligatorios<br>
+    - Los elementos siempre deben estar correctamente anidados<br>
+    - Los elementos siempre deben estar cerrados<br>
+    - Los elementos siempre deben estar en minúsculas<br>
+    - Los nombres de los atributos siempre deben estar en minúsculas<br>
+    - Los valores de atributo siempre deben estar entrecomillados<br>
+    - La minimización de atributos está prohibida<br>
+  </p>
+  <hr>
+  <hr>
+
+  <h3>3.1.- XHTML - ! DOCTYPE .... es obligatorio</h3>
+  <p>
+    Un documento XHTML debe tener una declaración XHTML !DOCTYPE.<br>
+    Los elementos html, head, title y body también deben estar presentes, y el atributo xmlns en html debe<br>
+    especificar el espacio de nombres xml para el documento.
   </p>
   <!--
-    Explicación:
-    esquema : define el tipo de servicio de Internet (el más común es http o https )
-    prefijo : define un prefijo de dominio (el predeterminado para http es www )
-    dominio : define el nombre de dominio de Internet (como w3schools.com)
-    puerto : define el número de puerto en el host (el valor predeterminado para http es 80 )
-    ruta : define una ruta en el servidor (si se omite: el directorio raíz del sitio)
-    nombre de archivo : define el nombre de un documento o recurso
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <title>Title of document</title>
+    </head>
+    <body>
+
+      some content here...
+
+    </body>
+    </html>
   -->
   <hr>
-  <h2>2.- Esquemas de URL comunes</h2>
-  <p>La siguiente tabla enumera algunos esquemas comunes:</p>
-  <table>
-    <tr>
-      <th>Esquema</th>
-      <th>Corto para</th>
-      <th>Usado para</th>
-    </tr>
-    <tr>
-      <td>http</td>
-      <td>Protocolo de Transferencia de Hipertexto</td>
-      <td>Páginas web habituales. No encriptado</td>
-    </tr>
-    <tr>
-      <td>https</td>
-      <td>Protocolo seguro de transferencia de hipertexto</td>
-      <td>Páginas web seguras. Cifrado</td>
-    </tr>
-    <tr>
-      <td>ftp</td>
-      <td>Protocolo de transferencia de archivos</td>
-      <td>Descarga o carga de archivos</td>
-    </tr>
-    <tr>
-      <td>file</td>
-      <td></td>
-      <td>Un archivo en tu computadora</td>
-    </tr>
-  </table>
+
+  <h3>3.2.- Los elementos XHTML deben estar correctamente anidados</h3>
+  <p>En XHTML, los elementos siempre deben estar correctamente anidados entre sí.</p>
+  <!--CORRECTO 
+    <b><i>Some text</i></b>
+  -->
+  <!--INCORRECTO
+    <b><i>Some text</b></i>
+  -->
   <hr>
 
-  <h2>3.- Codificación de URL</h2>
-  <p>
-    Las URL solo se pueden enviar a través de Internet utilizando el juego de caracteres ASCII . Si una URL contiene<br>
-    caracteres fuera del conjunto ASCII, la URL debe convertirse.<br>
-    La codificación de URL convierte los caracteres que no son ASCII a un formato que se puede transmitir a través<br>
-    de Internet.<br>
-    La codificación de URL reemplaza los caracteres que no son ASCII por un "%" seguido de dígitos hexadecimales.<br>
-    Las URL no pueden contener espacios. La codificación de URL normalmente reemplaza un espacio con un signo más<br>
-    (+) o %20.
-  </p>
+  <h3>3.3.- Los elementos XHTML siempre deben estar cerrados</h3>
+  <p>En XHTML, los elementos siempre deben estar cerrados.</p>
+  <!--CORRECTO 
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+  -->
+  <!--INCORRECTO
+    <p>This is a paragraph
+    <p>This is another paragraph
+  -->
   <hr>
 
-  <h2>4.-Ejemplos de codificación ASCII</h2>
-  <p>
-    Su navegador codificará la entrada, de acuerdo con el conjunto de caracteres utilizado en su página.
-    El juego de caracteres predeterminado en HTML5 es UTF-8.
-  </p>
-  <img src="Codificacion_url.jpg" alt="Codificacion URL" style="width: 879px; height: 434px;">
+  <h3>3.4.- Los elementos vacíos XHTML siempre deben estar cerrados</h3>
+  <p>En XHTML, los elementos vacíos siempre deben estar cerrados.</p>
+  <!--CORRECTO 
+    A break: <br />
+    A horizontal rule: <hr />
+    An image: <img src="happy.gif" alt="Happy face" />
+  -->
+  <!--INCORRECTO
+    A break: <br>
+    A horizontal rule: <hr>
+    An image: <img src="happy.gif" alt="Happy face">
+  -->
+  <hr>
+
+  <h3>3.5.- Los elementos XHTML deben estar en minúsculas</h3>
+  <p>En XHTML, los nombres de los elementos siempre deben estar en minúsculas.</p>
+  <!--CORRECTO 
+    <body>
+    <p>This is a paragraph</p>
+    </body>
+  -->
+  <!--INCORRECTO
+    <BODY>
+    <P>This is a paragraph</P>
+    </BODY>
+  -->
+  <hr>
+
+  <h3>3.6.- Los nombres de los atributos XHTML deben estar en minúsculas</h3>
+  <p>En XHTML, los nombres de los atributos siempre deben estar en minúsculas.</p>
+  <!--CORRECTO 
+    <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+  -->
+  <!--INCORRECTO
+    <a HREF="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+  -->
+  <hr>
+
+  <h3>3.7.- Los valores de atributo XHTML deben estar entre comillas</h3>
+  <p>En XHTML, los valores de los atributos siempre deben estar entrecomillados.</p>
+  <!--CORRECTO 
+    <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+  -->
+  <!--INCORRECTO
+    <a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>
+  -->
+  <hr>
+
+  <h3>3.8.- La minimización de atributos XHTML está prohibida</h3>
+  <p>En XHTML, la minimización de atributos está prohibida.</p>
+  <!--CORRECTO 
+    <input type="checkbox" name="vehicle" value="car" checked="checked" />
+    <input type="text" name="lastname" disabled="disabled" />
+  -->
+  <!--INCORRECTO
+    <input type="checkbox" name="vehicle" value="car" checked />
+    <input type="text" name="lastname" disabled />
+  -->
 </body>
 
 </html>
