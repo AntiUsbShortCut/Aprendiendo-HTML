@@ -9,53 +9,96 @@
   <meta http-equiv="refresh" content="30">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo-HTML5</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th {
+      text-align: left;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 style="text-align: center;">CODIFICACION HTML (JUEGOS DE CARACTERES)</h1>
-  <p>Para mostrar una página HTML correctamente, un navegador web debe saber qué juego de caracteres utilizar.</p>
+  <h1 style="text-align: center;">LOCALIZADORES DE RECURSOS UNIFORMES HTML</h1>
+  <p>
+    Una URL es otra palabra para una dirección web.<br>
+    Una URL puede estar compuesta de palabras (por ejemplo, w3schools.com) o una dirección de Protocolo<br>
+    de Internet(IP)(por ejemplo, 192.68.20.50).<br>
+    La mayoría de las personas ingresan el nombre cuando navegan, porque los nombres son más fáciles de<br>
+    recordar que los números.
+  </p>
+  <hr>
+  <h2>1.- URL: localizador uniforme de recursos</h2>
+  <p>
+    Los navegadores web solicitan páginas de servidores web mediante una URL.<br>
+    Un localizador uniforme de recursos (URL) se utiliza para abordar un documento (u otros datos) en la web.<br>
+    Una dirección web como https://www.w3schools.com/html/default.asp sigue estas reglas de sintaxis:<br>
+    esquema://prefijo.dominio:puerto/ruta/nombre_de_archivo
+  </p>
+  <!--
+    Explicación:
+    esquema : define el tipo de servicio de Internet (el más común es http o https )
+    prefijo : define un prefijo de dominio (el predeterminado para http es www )
+    dominio : define el nombre de dominio de Internet (como w3schools.com)
+    puerto : define el número de puerto en el host (el valor predeterminado para http es 80 )
+    ruta : define una ruta en el servidor (si se omite: el directorio raíz del sitio)
+    nombre de archivo : define el nombre de un documento o recurso
+  -->
+  <hr>
+  <h2>2.- Esquemas de URL comunes</h2>
+  <p>La siguiente tabla enumera algunos esquemas comunes:</p>
+  <table>
+    <tr>
+      <th>Esquema</th>
+      <th>Corto para</th>
+      <th>Usado para</th>
+    </tr>
+    <tr>
+      <td>http</td>
+      <td>Protocolo de Transferencia de Hipertexto</td>
+      <td>Páginas web habituales. No encriptado</td>
+    </tr>
+    <tr>
+      <td>https</td>
+      <td>Protocolo seguro de transferencia de hipertexto</td>
+      <td>Páginas web seguras. Cifrado</td>
+    </tr>
+    <tr>
+      <td>ftp</td>
+      <td>Protocolo de transferencia de archivos</td>
+      <td>Descarga o carga de archivos</td>
+    </tr>
+    <tr>
+      <td>file</td>
+      <td></td>
+      <td>Un archivo en tu computadora</td>
+    </tr>
+  </table>
   <hr>
 
-  <h2>1.- De ASCII a UTF-8</h2>
-  <pre style="font-family: 'Times New Roman', Times, serif">
-ASCII fue el primer estándar de codificación de caracteres. ASCII definió 128 caracteres diferentes que podrían
-usarse en Internet: números (0-9), letras en inglés (AZ) y algunos caracteres especiales como! $ + - () @ &lt;>.
-ISO-8859-1 era el juego de caracteres predeterminado para HTML 4. Este juego de caracteres admitía 256 códigos
-de caracteres diferentes. HTML 4 también es compatible con UTF-8.
-ANSI (Windows-1252) fue el juego de caracteres original de Windows. ANSI es idéntico a ISO-8859-1, excepto que
-ANSI tiene 32 caracteres adicionales.
-El juego de caracteres predeterminado para HTML5 es UTF-8, que cubre casi todos los caracteres y símbolos del mundo.
-  </pre>
+  <h2>3.- Codificación de URL</h2>
+  <p>
+    Las URL solo se pueden enviar a través de Internet utilizando el juego de caracteres ASCII . Si una URL contiene<br>
+    caracteres fuera del conjunto ASCII, la URL debe convertirse.<br>
+    La codificación de URL convierte los caracteres que no son ASCII a un formato que se puede transmitir a través<br>
+    de Internet.<br>
+    La codificación de URL reemplaza los caracteres que no son ASCII por un "%" seguido de dígitos hexadecimales.<br>
+    Las URL no pueden contener espacios. La codificación de URL normalmente reemplaza un espacio con un signo más<br>
+    (+) o %20.
+  </p>
   <hr>
 
-  <h2>2.- El atributo de juego de caracteres HTML</h2>
-  <pre style="font-family: 'Times New Roman', Times, serif">
-Para mostrar una página HTML correctamente, un navegador web debe conocer el juego de caracteres utilizado en la página.
-Esto se especifica en la etiqueta meta
-  </pre>
-  <!--<meta charset="UTF-8">-->
-  <hr>
-
-  <h2>3.-Diferencias entre conjuntos de caracteres</h2>
-  <h3>El conjunto de caracteres ANSI (Windows-1252)</h3>
-  <pre style="font-family: 'Times New Roman', Times, serif">
-ANSI es idéntico a ASCII para los valores de 0 a 127.
-ANSI tiene un conjunto de caracteres patentado para los valores de 128 a 159.
-ANSI es idéntico a UTF-8 para los valores de 160 a 255.
-  </pre>
-  <h3>El conjunto de caracteres ISO-8859-1</h3>
-  <pre style="font-family: 'Times New Roman', Times, serif">
-ISO-8859-1 es idéntico a ASCII para los valores de 0 a 127.
-ISO-8859-1 no usa los valores de 128 a 159.
-ISO-8859-1 es idéntico a UTF-8 para los valores de 160 a 255.
-  </pre>
-  <h3>El conjunto de caracteres UTF-8</h3>
-  <pre style="font-family: 'Times New Roman', Times, serif">
-UTF-8 es idéntico a ASCII para los valores de 0 a 127.
-UTF-8 no usa los valores de 128 a 159. 
-UTF-8 es idéntico a ANSI y 8859-1 para los valores de 160 a 255.
-UTF-8 continúa desde el valor 256 con más de 10 000 caracteres diferentes.
-  </pre>
+  <h2>4.-Ejemplos de codificación ASCII</h2>
+  <p>
+    Su navegador codificará la entrada, de acuerdo con el conjunto de caracteres utilizado en su página.
+    El juego de caracteres predeterminado en HTML5 es UTF-8.
+  </p>
+  <img src="Codificacion_url.jpg" alt="Codificacion URL" style="width: 879px; height: 434px;">
 </body>
 
 </html>
