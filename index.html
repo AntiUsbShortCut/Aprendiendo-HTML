@@ -2,16 +2,153 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="En esta pagina se esta aprendiendo FORMULARIOS-HTML5">
-  <meta name="keywords" content="HTML, CSS, JavaScript y Git">
-  <meta name="author" content="Alexander Jeanpaul Salazar Marquez">
-  <meta http-equiv="refresh" content="30">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="description" content="En esta pagina se esta aprendiendo FORMULARIOS-HTML5" />
+  <meta name="keywords" content="HTML, CSS, JavaScript y Git" />
+  <meta name="author" content="Alexander Jeanpaul Salazar Marquez" />
+  <meta http-equiv="refresh" content="30" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formularios-HTML5</title>
 </head>
 
 <body>
+  <h1 style="text-align: center;">FORMULARIOS HTML</h1>
+  <p>
+    Se utiliza un formulario HTML para recopilar la entrada del usuario. La entrada del usuario se envía con mayor
+    frecuencia a un servidor para su procesamiento.
+  </p>
+  <h2>1.-El elemento form</h2>
+  <p>El elemento HTML form se utiliza para crear un formulario HTML para la entrada del usuario.</p>
+  <!--
+    <form>
+    .
+    Elementos del formulario
+    .
+    </form>
+  -->
+  <p>
+    El elemento form es un contenedor para diferentes tipos de elementos de entrada, como: campos de texto, casillas de
+    verificación, botones de opción, botones de envío, etc.
+  </p>
+
+  <h2>2.-Atributos de la etiqueta form</h2>
+  <h3>2.1.- El atributo accept-charset</h3>
+  <p>
+    <strong>Definición y uso:</strong><br />
+    El atributo accept-charset especifica las codificaciones de caracteres que se utilizarán para el envío del
+    formulario. El valor predeterminado es la cadena reservada "UNKNOWN" (indica que la codificación es igual a la
+    codificación del documento que contiene el elemento form).<br />
+    <em>Valores Comunes:</em><br />
+    - UTF-8<br />
+    - ISO-8859-1<br />
+  </p>
+  <!--<form accept-charset="character_set">-->
+
+  <h3>2.2.- El atributo action</h3>
+  <p>
+    El atributo action define la acción a realizar cuando se envía el formulario. Por lo general, los datos del
+    formulario se envían a un archivo en el servidor cuando el usuario hace clic en el botón enviar. En el ejemplo
+    anterior,
+    los datos del formulario se envían a un archivo llamado "action_page.php". Este archivo contiene una secuencia de
+    comandos del lado del servidor que maneja los datos del formulario.
+  </p>
+  <!--<form action="/action_page.php">-->
+  <p>Si se omite el atributo action, la acción se establece en la página actual.</p>
+
+  <h3>2.3.- El atributo autocomplete</h3>
+  <p>
+    <strong>Definición y uso:</strong><br />
+    El atributo autocomplete especifica si un formulario debe tener autocompletado activado o desactivado. Cuando la
+    función de autocompletar está activada, el navegador completa automáticamente los valores en función de los valores
+    que el usuario ha introducido anteriormente.<br />
+    <strong>Sugerencia:</strong><br />
+    Es posible tener el autocompletado "activado" para el formulario y "desactivado" para campos de entrada específicos,
+    o viceversa.<br />
+    <em>Valores:</em><br />
+    - on <br />
+    - off <br />
+  </p>
+  <!--<form autocomplete="on|off">-->
+
+  <h3>2.4.- El atributo enctype</h3>
+  <p>
+    <strong>Definición y uso</strong><br />
+    El atributo enctype especifica cómo se deben codificar los datos del formulario al enviarlos al servidor.<br />
+    <strong>Nota:</strong> El atributo enctype solo se puede utilizar si method = "post"
+  </p>
+  <!--<form enctype="value">-->
+
+  <h3>2.5.- El atributo method</h3>
+  <p>
+    <strong>Definición y uso</strong><br />
+    El atributo de método especifica cómo enviar datos de formulario (los datos de formulario se envían a la página
+    especificada en el atributo de acción). Los datos del formulario se pueden enviar como variables de URL (con método
+    = "obtener") o como transacción de publicación HTTP (con método = "publicación").<br />
+    <strong>Notas sobre GET:</strong><br />
+    - Agrega datos de formulario a la URL en pares de nombre / valor<br />
+    - La longitud de una URL es limitada (aproximadamente 3000 caracteres)<br />
+    - ¡Nunca use GET para enviar datos confidenciales! (será visible en la URL)<br />
+    - Útil para envíos de formularios donde un usuario desea marcar el resultado<br />
+    - GET es mejor para datos no seguros, como cadenas de consulta en Google<br />
+    <strong>Notas sobre POST:</strong><br />
+    - Agrega datos de formulario dentro del cuerpo de la solicitud HTTP (los datos no se muestran en la URL)<br />
+    - No tiene limitaciones de tamaño<br />
+    - Los envíos de formularios con POST no se pueden marcar<br />
+    <em>Consejo:</em><br />
+    ¡ Utilice siempre POST si los datos del formulario contienen información confidencial o personal!
+  </p>
+  <!--<form method="get|post">-->
+
+  <h3>2.6.- El atributo name</h3>
+  <p>
+    <strong>Definición y uso</strong><br />
+    El atributo de nombre especifica el nombre de un formulario. El atributo de nombre se usa para hacer referencia a
+    elementos en un JavaScript, o para hacer referencia a datos de formulario después de que se envía un formulario.
+  </p>
+  <!--<form name="text">-->
+
+  <h3>2.7.- El atributo novalidate</h3>
+  <p>
+    <strong>Definición y uso</strong><br />
+    El atributo novalidate es un atributo booleano. Cuando está presente, especifica que los datos del formulario
+    (entrada) no deben validarse cuando se envían.
+  </p>
+  <!--<form novalidate>-->
+
+  <h3>2.8.- El atributo rel</h3>
+  <p>
+    <strong>Definición y uso</strong><br />
+    El atributo rel especifica la relación entre el documento actual y el documento vinculado.<br />
+    <em>Valores:</em><br />
+    - external: Especifica que el documento referenciado no es parte del sitio actual<br />
+    - help: Enlaces a un documento de ayuda<br />
+    - license: Enlaces a información de copyright para el documento<br />
+    - next: El siguiente documento de una selección<br />
+    - nofollow: Enlaces a un documento no respaldado, como un enlace pago. (Google utiliza "nofollow" para especificar
+    que la araña de búsqueda de Google no debe seguir ese enlace)<br />
+    - noopener: Eliminar una vulnerabilidad de seguridad<br />
+    - noreferrer: Especifica que el navegador no debe enviar un encabezado de referencia HTTP si el usuario sigue el
+    hipervínculo<br />
+    - opener:<br />
+    - prev: El documento anterior en una selección<br />
+    - search: Enlaces a una herramienta de búsqueda para el documento
+  </p>
+  <!--<form rel="value">-->
+
+  <h3>2.9.- El atributo target</h3>
+  <p>
+    <strong>Definición y uso</strong><br />
+    El atributo de destino especifica un nombre o una palabra clave que indica dónde mostrar la respuesta que se recibe
+    después de enviar el formulario. El atributo de destino define un nombre o una palabra clave para un contexto de
+    navegación (por ejemplo, pestaña, ventana o marco en línea).<br />
+    <em>Valores:</em><br />
+    _blank: La respuesta se muestra en una nueva ventana o pestaña<br />
+    _self: La respuesta se muestra en el mismo marco (esto es predeterminado)<br />
+    _parent: La respuesta se muestra en el marco principal<br />
+    _top: La respuesta se muestra en todo el cuerpo de la ventana<br />
+    framename: La respuesta se muestra en un iframe con nombre
+  </p>
+  <!--<form target="_blank|_self|_parent|_top|framename">-->
 </body>
 
 </html>
