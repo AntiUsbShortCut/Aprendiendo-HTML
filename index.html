@@ -12,178 +12,267 @@
 </head>
 
 <body>
-  <h1 style="text-align: center;">Elementos de formulario HTML</h1>
-  <p>Este capítulo describe todos los diferentes elementos del formulario HTML.</p>
-  <h2>1.- Los elementos HTML form</h2>
-  <p>
-    El elemento HTML form puede contener uno o más de los siguientes elementos de formulario:<br>
-    - input<br>
-    - label<br>
-    - select<br>
-    - textarea<br>
-    - button<br>
-    - fieldset<br>
-    - legend<br>
-    - datalist<br>
-    - output<br>
-    - option<br>
-    - optgroup<br>
-  </p>
+  <h1 style="text-align: center;">TIPOS DE ENTRADAS HTML</h1>
+  <p>Este capítulo describe los diferentes tipos de elementos HTML input.</p>
 
-  <h3>1.1.- El elemento input</h3>
-  <p>
-    Uno de los elementos de formulario más utilizados es el elemento input.<br>
-    El elemento input se puede mostrar de varias formas, según el atributo type.
-  </p>
+  <h2>1.-Tipo de entrada text</h2>
+  <p>El <strong>input type="text"</strong> define un campo de entrada de texto de una sola línea</p>
   <form>
     <label for="fname">Nombre:</label><br>
-    <input type="text"><br><br>
-    <input type="submit" value="Submit">
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Apellido:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+  </form>
+  <!--
+    Tenga en cuenta que el formulario en sí no es visible.
+    También tenga en cuenta que el ancho predeterminado de un campo de texto es de 20 caracteres.
+  -->
+
+  <h2>1.- Tipo de entrada password</h2>
+  <p>El <strong>input type="password"</strong> define un campo de contraseña</p>
+  <form>
+    <label for="username">Nombre de usuario:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">Contraseña:</label><br>
+    <input type="password" id="pwd" name="pwd"><br><br>
+  </form>
+  <!--
+    Los caracteres en un campo de contraseña están enmascarados (mostrados como asteriscos o círculos).
+  -->
+
+  <h2>2.- Tipo de entrada submit</h2>
+  <p>
+    El <strong>input type="submit"</strong> define un botón para enviar datos de formulario a un administrador de
+    formularios.<br>
+    El gestor de formularios suele ser una página de servidor con un script para procesar datos de entrada.<br>
+    El controlador de formulario se especifica en el atributo action del formulario
+  </p>
+  <form>
+    <input type="submit" value="Enviar">
+  </form>
+  <!--Si omite el atributo de valor del botón de envío, el botón obtendrá un texto predeterminado-->
+
+  <h2>3.- Tipo de entrada reset</h2>
+  <p>
+    El <strong>input type="reset"</strong> define un botón de reinicio que reiniciará todos los valores del formulario a
+    sus valores predeterminados
+  </p>
+  <form>
+    <label for="fname1">Nombre:</label><br>
+    <input type="text" id="fname1" name="fname1" value=""><br>
+    <label for="lname1">Apellido:</label><br>
+    <input type="text" id="lname1" name="lname1" value=""><br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset">
+  </form>
+  <!--
+    Si cambia los valores de entrada y luego hace clic en el botón "Restablecer", los datos del formulario se restablecerán
+    a los valores predeterminados.
+  -->
+
+  <h2>4.- Tipo de entrada radio</h2>
+  <p>
+    El <strong>input type="radio"</strong>define un botón de radio.<br>
+    Los botones de opción permiten al usuario seleccionar SÓLO UNA de un número limitado de opciones
+  </p>
+  <form>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Hombre</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Mujer</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Otro</label><br><br>
+    <input type="submit" value="Enviar">
   </form>
 
-  <h3>1.2.- El elemento label</h3>
+  <h2>5.-Tipo de entrada checkbox</h2>
   <p>
-    El elemento label define una etiqueta para varios elementos de formulario.<br>
-    El elemento label es útil para los usuarios de lectores de pantalla, porque el lector de pantalla leerá en voz
-    alta<br>
-    la etiqueta cuando el usuario se concentre en el elemento de entrada.<br>
-    El elemento label también ayuda a los usuarios que tienen dificultades para hacer clic en regiones muy pequeñas
-    (como<br>
-    botones de opción o casillas de verificación), porque cuando el usuario hace clic en el texto dentro del<br>
-    elemento label, cambia el botón de opción / casilla de verificación.<br>
-    El foratributo de la labeletiqueta debe ser igual al idatributo del input elemento para unirlos.
+    El <strong>input type="checkbox"</strong> define una casilla de verificación.<br>
+    Las casillas de verificación permiten al usuario seleccionar CERO o MÁS opciones de un número limitado de opciones.
   </p>
-
-  <h3>1.3.- El elemento select</h3>
-  <p>El elemento select define una lista desplegable:</p>
-  <form>
-    <label for="cars1">Elige un auto:</label>
-    <select id="cars1" name="cars1">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat">Fiat</option>
-      <option value="audi">Audi</option>
-    </select>
-    <input type="submit">
-  </form>
-  <p>
-    Los elementos option definen una opción que se puede seleccionar.<br>
-    De forma predeterminada, se selecciona el primer elemento de la lista desplegable.<br>
-    Para definir una opción preseleccionada, agregue el atributo selected a la opción:
-  </p>
-  <form>
-    <label for="cars2">Elige un auto:</label>
-    <select id="cars2" name="cars2">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat" selected>Fiat</option>
-      <option value="audi">Audi</option>
-    </select>
-    <input type="submit">
-  </form>
-  <p>
-    <strong>Valores visibles:</strong><br>
-    Utilice el atributo size para especificar el número de valores visibles:
-  </p>
-  <form>
-    <label for="cars3">Elige un auto:</label>
-    <select id="cars3" name="cars3" size="3">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat">Fiat</option>
-      <option value="audi">Audi</option>
-    </select><br><br>
-    <input type="submit">
-  </form>
-  <p>
-    <strong>Permitir múltiples selecciones:</strong><br>
-    Utilice el atributo multiple para permitir que el usuario seleccione más de un valor:
-  </p>
-  <form>
-    <label for="cars4">Elige un auto:</label>
-    <select id="cars4" name="cars4" size="4" multiple>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="fiat">Fiat</option>
-      <option value="audi">Audi</option>
-    </select><br><br>
-    <input type="submit">
-  </form>
-  <p>Mantenga presionado el botón Ctrl (Windows) / Comando (Mac) para seleccionar varias opciones.</p>
-
-  <h3>1.4.- El elemento textarea</h3>
-  <p>El elemento textarea define un campo de entrada de varias líneas (un área de texto):</p>
-  <form>
-    <textarea name="message" rows="10" cols="30">El gato estaba jugando en el jardín.</textarea>
-    <br><br>
-    <input type="submit">
-  </form>
-  <p>
-    El atributo rows especifica el número visible de líneas en un área de texto.<br>
-    El atributo cols especifica el ancho visible de un área de texto.<br>
-    Use CSS para cambiar el tamaño del área de texto:
-  </p>
-  <form>
-    <textarea name="message" style="width:400px; height:300px;">El gato estaba jugando en el jardín.</textarea>
-    <br>
-    <input type="submit">
+  <form>↩
+    <input type="checkbox" id="vehiculo1" name="vehiculo1" value="Bicicleta">↩
+    <label for="vehiculo1"> Tengo una bicicleta</label><br>↩
+    <input type="checkbox" id="vehiculo2" name="vehiculo2" value="Carro">↩
+    <label for="vehiculo2"> Tengo un carro</label><br>↩
+    <input type="checkbox" id="vehiculo3" name="vehiculo3" value="Bote">↩
+    <label for="vehiculo3"> Tengo un bote</label><br><br>↩
+    <input type="submit" value="Submit">↩
   </form>
 
-  <h3>1.5.- El elemento button</h3>
-  <p>El elemento button define un botón en el que se puede hacer clic:</p>
-  <button type="button" onclick="alert('Hola Mundo!')">Haz click en mi!</button>
-  <p>
-    <em>Nota:</em> especifique siempre el atributo type del elemento de botón. Los diferentes navegadores pueden usar
-    diferentes tipos predeterminados para el elemento de botón.
-  </p>
+  <h2>6.- Tipo de entrada button</h2>
+  <p>El <strong>input type="button"</strong> define un botón</p>
+  <input type="button" onclick="alert('Hola Mundo!')" value="Haz click en mi!">
 
-  <h3>1.6.- Los elementos fieldset y legend</h3>
+  <h2>7.- Tipo de entrada color</h2>
   <p>
-    El elemento fieldset se utiliza para agrupar datos relacionados en un formulario.<br>
-    El elemento legend define un título para el elemento fieldset.
+    El <strong>input type="color"</strong>utiliza para campos de entrada que deben contener un color.<br>
+    Según la compatibilidad del navegador, puede aparecer un selector de color en el campo de entrada.
   </p>
   <form>
-    <fieldset>
-      <legend>Datos personales:</legend>
-      <label for="fname">Nombres:</label><br>
-      <input type="text" id="fname" name="fname" value="Alexander Jeanpaul"><br>
-      <label for="lname">Apellidos:</label><br>
-      <input type="text" id="lname" name="lname" value="Salazar Marquez"><br><br>
-      <input type="submit" value="Submit">
-    </fieldset>
+    <label for="favcolor">Selecciona tu color favorito:</label>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+    <input type="submit" value="Enviar">
   </form>
-  <h3>1.7.- El elemento datalist</h3>
-  <p>El elemento datalist especifica una lista de opciones predefinidas para un elemento input.<br>
-    Los usuarios verán una lista desplegable de las opciones predefinidas a medida que ingresan datos.<br>
-    El atributo list del elemento input, debe hacer referencia al atributo id del elemento datalist.
+  <!--Nota: type = "color" no es compatible con Internet Explorer 11 o Safari 9.1 (o versiones anteriores).-->
+
+  <h2>8.- Tipo de entrada date</h2>
+  <p>
+    El <strong>input type="date"</strong> utiliza para campos de entrada que deben contener una fecha.<br>
+    Dependiendo de la compatibilidad del navegador, puede aparecer un selector de fecha en el campo de entrada.
   </p>
   <form>
-    <input list="browsers" name="browser">
-    <datalist id="browsers">
-      <option value="Internet Explorer">
-      <option value="Firefox">
-      <option value="Chrome">
-      <option value="Opera">
-      <option value="Safari">
-    </datalist>
-    <input type="submit">
+    <label for="birthday">Cumpleaños:</label>
+    <input type="date" id="birthday" name="birthday">
+    <input type="submit" value="Enviar">
   </form>
-  <p><em>Nota:</em> La etiqueta datalist no es compatible con Safari anterior a la versión 12.1.</p>
+  <p>También puede usar los atributos miny max para agregar restricciones a las fechas</p>
+  <form>
+    <label for="datemax">Ingrese una fecha antes 1980-01-01:</label>
+    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+    <label for="datemin">Ingrese una fecha posterior 2000-01-01:</label>
+    <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+  <!--Nota: type = "date" no es compatible con Safari o Internet Explorer 11 (o versiones anteriores).-->
 
-  <h3>1.8.- El elemento output</h3>
-  <p>El elemento output representa el resultado de un cálculo (como uno realizado por un script).</p>
-  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-    0
-    <input type="range" id="a" name="a" value="50">
-    100 + 
-    <input type="number" id="b" name="b" value="50">
-    =
-    <output name="x" for="a b"></output>
-    <br><br>
-    <input type="submit">
+  <h2>9.- Tipo de entrada datetime-local</h2>
+  <p>El <strong>input type="datetime-local"</strong> especifica un campo de entrada de fecha y hora, sin zona
+    horaria.<br>
+    Dependiendo de la compatibilidad del navegador, puede aparecer un selector de fecha en el campo de entrada.
+  </p>
+  <form>
+    <label for="birthdaytime">Cumpleaños (fecha y hora):</label>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+    <input type="submit" value="Enviar">
+  </form>
+  <!--Nota: type = "datetime-local" no es compatible con Firefox, Safari o Internet Explorer 12 (o versiones anteriores).-->
+
+  <h2>10.- Tipo de entrada email</h2>
+  <p>
+    El <strong>input type="email"</strong> utilizada para campos de entrada que deben contener una dirección de correo
+    electrónico.<br>
+    Según la compatibilidad del navegador, la dirección de correo electrónico se puede validar automáticamente cuando se
+    envía.<br>
+    Algunos teléfonos inteligentes reconocen el tipo de correo electrónico y agregan ".com" al teclado para que coincida
+    con la entrada del correo electrónico.
+  </p>
+  <form>
+    <label for="email">Ingrese su email:</label>
+    <input type="email" id="email" name="email">
+    <input type="submit" value="Enviar">
   </form>
 
-  <p><strong>Nota:</strong> El elemento de salida no es compatible con Edge anterior a la versión 13.</p>
+  <h2>11.- Tipo de entrada file</h2>
+  <p>El <strong>input type="file"</strong> define un campo de selección de archivo y un botón "Examinar" para la carga
+    de archivos.
+  </p>
+  <form>
+    <label for="myfile">Seleccione un archivo:</label>
+    <input type="file" id="myfile" name="myfile"><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h2>12.- Tipo de entrada month</h2>
+  <p>
+    El <strong>input type="month"</strong> permite al usuario seleccionar un mes y el año.<br>
+    Dependiendo de la compatibilidad del navegador, puede aparecer un selector de fecha en el campo de entrada.
+  </p>
+  <form>
+    <label for="bdaymonth">Cumpleaños (mes y año):</label>
+    <input type="month" id="bdaymonth" name="bdaymonth">
+    <input type="submit" value="Enviar">
+  </form>
+  <!--Nota: type = "month" no es compatible con Firefox, Safari o Internet Explorer 11 (o versiones anteriores).-->
+
+  <h2>13.- Tipo de entrada number</h2>
+  <p>
+    El <strong>input type="number"</strong> define un campo de entrada numérico.<br>
+    También puede establecer restricciones sobre los números que se aceptan.<br>
+    El siguiente ejemplo muestra un campo de entrada numérico, donde puede ingresar un valor de 1 a 5.
+  </p>
+  <form>
+    <label for="quantity">Cantidad (entre 1 y 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+    <input type="submit" value="Enviar">
+  </form>
+  <p>Pasos numéricos<br>
+    Según la compatibilidad del navegador: se aplicarán pasos fijos en el campo de entrada.
+  </p>
+  <form>
+    <label for="quantity1">Cantidad:</label>
+    <input type="number" id="quantity1" name="quantity1" min="0" max="100" step="10" value="30">
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h2>14.- Tipo de entrada range</h2>
+  <p>
+    El <strong>input type="range"</strong> define un control para ingresar un número cuyo valor exacto no es importante
+    (como un control deslizante). Rango
+    por defecto es de 0 a 100. Sin embargo, se puede establecer restricciones en lo que los números son aceptados con
+    los atributos min, max y step
+  </p>
+  <form method="get">
+    <label for="vol">Volumen (entre 0 y 50):</label>
+    <input type="range" id="vol" name="vol" min="0" max="50">
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h2>15.- Tipo de entrada search</h2>
+  <p>
+    El <strong>input type="search"</strong> utiliza para campos de búsqueda (un campo de búsqueda se comporta como un
+    campo de texto normal).
+  </p>
+  <form>
+    <label for="gsearch">Busca en Google:</label>
+    <input type="search" id="gsearch" name="gsearch">
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h2>16.- Tipo de entrada tel</h2>
+  <p>El <strong>input type="tel"</strong> utiliza para campos de entrada que deben contener un número de teléfono.</p>
+  <form>
+    <label for="phone">Enter a phone number:</label><br><br>
+    <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+      required><br><br>
+    <small>Format: 123-45-678</small><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h2>17.- Tipo de entrada time</h2>
+  <p>
+    El <strong>input type="time"</strong> permite al usuario seleccionar una hora (sin zona horaria).<br>
+    Según la compatibilidad del navegador, puede aparecer un selector de tiempo en el campo de entrada.
+  </p>
+  <form action="/action_page.php">
+    <label for="appt">Select a time:</label>
+    <input type="time" id="appt" name="appt">
+    <input type="submit" value="Enviar">
+  </form>
+  <!--Nota: type = "time" no es compatible con Safari o Internet Explorer 12 (o versiones anteriores).-->
+
+  <h2>18.- Tipo de entrada url</h2>
+  <p>El <strong>input type="url"</strong> utiliza para campos de entrada que deben contener una dirección URL.<br>
+    Dependiendo de la compatibilidad del navegador, el campo de URL se puede validar automáticamente cuando se
+    envía.<br>Algunos teléfonos inteligentes reconocen el tipo de URL y agregan ".com" al teclado para que coincida con
+    la entrada de URL.
+  </p>
+  <form>
+    <label for="homepage">Agrega tu página de inicio:</label>
+    <input type="url" id="homepage" name="homepage">
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h2>19.- Tipo de entrada week</h2>
+  <p>
+    El <strong>input type="week"</strong> permite al usuario seleccionar una semana y un año.<br>
+    Dependiendo de la compatibilidad del navegador, puede aparecer un selector de fecha en el campo de entrada.
+  </p>
+  <form>
+    <label for="week">Seleccione una semana:</label>
+    <input type="week" id="week" name="week">
+    <input type="submit" value="Enviar">
+  </form>
 </body>
 
 </html>
