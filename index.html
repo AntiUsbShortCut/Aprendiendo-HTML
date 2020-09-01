@@ -3,142 +3,136 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="En esta pagina se esta aprendiendo FORMULARIOS-HTML5" />
+  <meta name="description" content="En esta pagina se esta aprendiendo GRAFICOS-HTML5" />
   <meta name="keywords" content="HTML, CSS, JavaScript y Git" />
   <meta name="author" content="Alexander Jeanpaul Salazar Marquez" />
   <meta http-equiv="refresh" content="30" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formularios-HTML5</title>
+  <title>Graficos-HTML5</title>
 </head>
 
 <body>
-  <h1 style="text-align: center;">Atributos de entrada HTML form*</h1>
-  <p>Este capítulo describe los diferentes atributos del form* elemento HTML input.</p>
+  <h1 style="text-align: center;">Gráficos HTML Canvas</h1>
+  <p>El elemento HTML canvas se utiliza para dibujar gráficos en una página web.</p>
 
-  <h2>1.- El atributo "form"</h2>
+  <h2>¿Qué es HTML Canvas?</h2>
+  <p>El elemento HTML canvas se utiliza para dibujar gráficos, sobre la marcha, a través de JavaScript.<br>
+    El elemento canvas es solo un contenedor de gráficos. Debe utilizar JavaScript para dibujar realmente los
+    gráficos.<br>
+    Canvas tiene varios métodos para dibujar trazados, cuadros, círculos, texto y agregar imágenes.</p>
+
+  <h2>Ejemplos de lienzo</h2>
   <p>
-    El atributo de form especifica el formulario al que pertenece un elemento de entrada.<br>
-    El valor de este atributo debe ser igual al atributo id del elemento form al que pertenece.
+    Un lienzo es un área rectangular en una página HTML. De forma predeterminada, un lienzo no tiene bordes ni
+    contenido.
   </p>
-  <form id="form1">
-    <label for="fname">Nombre:</label>
-    <input type="text" id="fname" name="fname"><br><br>
-    <input type="submit" value="Enviar">
-  </form>
+  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    Your browser does not support the HTML canvas tag.
+  </canvas>
   <p>
-    El campo "Apellido" a continuación está fuera del elemento del formulario, pero sigue siendo parte del formulario.
-  </p>
-  <label for="lname">Apellido:</label>
-  <input type="text" id="lname" name="lname" form="form1">
-
-  <h2>2.- El atributo "formaction"</h2>
-  <p>
-    El atributo de entrada formaction especifica la URL del archivo que procesará la entrada cuando se envíe el
-    formulario.<br>
-    Nota: este atributo anula el atributo action del elemento form.<br>
-    El atributo formaction funciona con los siguientes tipos de entrada: enviar e imagen.
-  </p>
-  <form action="/action_page.php">
-    <label for="fname1">Nombre:</label>
-    <input type="text" id="fname1" name="fname1"><br><br>
-    <label for="lname1">Apellido:</label>
-    <input type="text" id="lname1" name="lname1"><br><br>
-    <input type="submit" value="Enviar">
-    <input type="submit" formaction="/action_page2.php" value="Enviar como administrador">
-  </form>
-
-  <h2>3.- El atributo "formenctype"</h2>
-  <p>
-    El atributo de entrada formenctype especifica cómo se deben codificar los datos del formulario cuando se envían
-    (solo para formularios con método = "post").<br>
-    Nota: este atributo anula el atributo enctype del elemento form.<br>
-    El atributo formenctype funciona con los siguientes tipos de entrada: enviar e imagen.
-  </p>
-  <form action="/action_page_binary.asp" method="post">
-    <label for="fname2">Nombre:</label>
-    <input type="text" id="fname2" name="fname2"><br><br>
-    <input type="submit" value="Enviar">
-    <input type="submit" formenctype="multipart/form-data" value="Enviar como Multipart/form-data">
-  </form>
-
-  <h2>4.- El atributo "formmethod"</h2>
-  <p>
-    El atributo de entrada formmethod define el método HTTP para enviar datos de formulario a la URL de acción.<br>
-    Nota: este atributo anula el atributo de método del elemento form.<br>
-    El atributo formmethod funciona con los siguientes tipos de entrada: enviar e imagen.<br>
-    Los datos del formulario se pueden enviar como variables de URL (método = "get") o como una transacción de
-    publicación HTTP (método = "post"). <br>
-    Notas sobre el método "get":<br>
-
-    Este método agrega los datos del formulario a la URL en pares de nombre / valor
-    Este método es útil para envíos de formularios donde un usuario desea marcar el resultado.
-    Existe un límite en la cantidad de datos que puede colocar en una URL (varía entre los navegadores), por lo tanto,
-    no puede estar seguro de que todos los datos del formulario se transferirán correctamente.
-    ¡Nunca use el método "get" para pasar información confidencial! (la contraseña u otra información confidencial
-    será visible en la barra de direcciones del navegador)<br>
-    Notas sobre el método "post":<br>
-
-    Este método envía los datos del formulario como una transacción de publicación HTTP
-    Los envíos de formularios con el método "post" no se pueden marcar
-    El método "post" es más sólido y seguro que "get", y "post" no tiene limitaciones de tamaño.
-  </p>
-  <form action="/action_page.php" method="get" target="_blank">
-    <label for="fname3">Nombre:</label>
-    <input type="text" id="fname3" name="fname3"><br><br>
-    <label for="lname3">Apellido:</label>
-    <input type="text" id="lname3" name="lname3"><br><br>
-    <input type="submit" value="Enviar usando GET">
-    <input type="submit" formmethod="post" value="Enviar usando POST">
-  </form>
-
-  <h2>5.- El atributo "formtarget"</h2>
-  <p>
-    El atributo de entrada formtarget especifica un nombre o una palabra clave que indica dónde mostrar la respuesta que
-    se
-    recibe después de enviar el formulario.<br>
-    Nota: este atributo anula el atributo de destino del elemento form.<br>
-    El atributo formtarget funciona con los siguientes tipos de entrada: enviar e imagen.
-  </p>
-  <form>
-    <label for="fname4">Nombre:</label>
-    <input type="text" id="fname4" name="fname4"><br><br>
-    <label for="lname4">Apellido:</label>
-    <input type="text" id="lname4" name="lname4"><br><br>
-    <input type="submit" value="Enviar">
-    <input type="submit" formtarget="_blank" value="Enviar a una nueva ventana/pestaña">
-  </form>
-
-  <h2>6.- El atributo "formnovalidate"</h2>
-  <p>
-    El atributo de entrada formnovalidate especifica que un elemento input no debe validarse cuando se envía.<br>
-    Nota: este atributo anula el atributo novalidate del elemento form.<br>
-    El atributo formnovalidate funciona con los siguientes tipos de entrada: enviar.
-  </p>
-  <form>
-    <label for="email">Introduce tu correo electrónico:</label>
-    <input type="email" id="email" name="email" required><br><br>
-    <input type="submit" value="Enviar">
-    <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validacion">
-  </form>
-  <p>
-    <strong>Nota:</strong> El atributo formnovalidate de la etiqueta de entrada no es compatible con Safari 10 (o
-    anterior).
+    Nota: especifique siempre un atributo id (al que se hará referencia en un script) y un atributo width height para
+    definir el tamaño del lienzo. Para agregar un borde, use el atributo style.
   </p>
 
-  <h2>7.- El atributo "novalidate"</h2>
-  <p>
-    El atributo novalidate es un atributo form.<br>
-    Cuando está presente, novalidate especifica que todos los datos del formulario no deben validarse cuando se envían.
-  </p>
-  <form novalidate>
-    <label for="email1">Introduce tu correo electrónico:</label>
-    <input type="email" id="email1" name="email1" required><br><br>
-    <input type="submit" value="Submit">
-  </form>
-  <p>
-    <strong>Nota:</strong> El atributo novalidate de la etiqueta de formulario no es compatible con Safari 10 (o
-    anterior).
-  </p>
+  <h2>Agregar un JavaScript</h2>
+  <p>Después de crear el área de lienzo rectangular, debe agregar un JavaScript para hacer el dibujo.</p>
+  <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+  </script>
+
+  <h2>Dibuja un circulo</h2>
+  <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas2");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+  </script>
+
+  <h2>Dibujar un texto</h2>
+  <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas3");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 10, 50);
+  </script>
+
+  <h2>Texto de trazo</h2>
+  <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas4");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.strokeText("Hello World", 10, 50);
+  </script>
+
+  <h2>Dibujar degradado lineal</h2>
+  <canvas id="myCanvas5" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas5");
+    var ctx = c.getContext("2d");
+    // Create gradient
+    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+  </script>
+
+  <h2>Dibujar degradado circular</h2>
+  <canvas id="myCanvas6" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas6");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+  </script>
+
+  <h2>Dibujar imagen</h2>
+  <p>Imagen para usar:</p>
+  <img id="scream" src="img_the_scream.jpg" alt="The Scream" width="220" height="277">
+
+  <p>Lienzo para llenar:</p>
+  <canvas id="myCanvas7" width="250" height="300" style="border:1px solid #d3d3d3;">
+    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+
+  <p><button onclick="myCanvas()">Intentalo</button></p>
+
+  <script>
+    function myCanvas() {
+      var c = document.getElementById("myCanvas7");
+      var ctx = c.getContext("2d");
+      var img = document.getElementById("scream");
+      ctx.drawImage(img, 10, 10);
+    }
+  </script>
 </body>
 
 </html>
