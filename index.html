@@ -9,130 +9,110 @@
   <meta http-equiv="refresh" content="30" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Graficos-HTML5</title>
+  <style>
+    table,
+    th,
+    td {
+      max-width: 100%;
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 style="text-align: center;">Gráficos HTML Canvas</h1>
-  <p>El elemento HTML canvas se utiliza para dibujar gráficos en una página web.</p>
+  <h1 style="text-align: center;">Gráficos HTML SVG</h1>
+  <p>SVG define gráficos basados ​​en vectores en formato XML.</p>
 
-  <h2>¿Qué es HTML Canvas?</h2>
-  <p>El elemento HTML canvas se utiliza para dibujar gráficos, sobre la marcha, a través de JavaScript.<br>
-    El elemento canvas es solo un contenedor de gráficos. Debe utilizar JavaScript para dibujar realmente los
-    gráficos.<br>
-    Canvas tiene varios métodos para dibujar trazados, cuadros, círculos, texto y agregar imágenes.</p>
+  <h2>¿Qué es SVG?</h2>
+  <ul>
+    <li>SVG son las siglas de Scalable Vector Graphics</li>
+    <li>SVG se utiliza para definir gráficos para la Web</li>
+    <li>SVG es una recomendación del W3C</li>
+  </ul>
 
-  <h2>Ejemplos de lienzo</h2>
+  <h2>El elemento HTML svg</h2>
   <p>
-    Un lienzo es un área rectangular en una página HTML. De forma predeterminada, un lienzo no tiene bordes ni
-    contenido.
-  </p>
-  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-    Your browser does not support the HTML canvas tag.
-  </canvas>
-  <p>
-    Nota: especifique siempre un atributo id (al que se hará referencia en un script) y un atributo width height para
-    definir el tamaño del lienzo. Para agregar un borde, use el atributo style.
+    El elemento HTML svg es un contenedor para gráficos SVG.<br>
+    SVG tiene varios métodos para dibujar trazados, cuadros, círculos, texto e imágenes gráficas.
   </p>
 
-  <h2>Agregar un JavaScript</h2>
-  <p>Después de crear el área de lienzo rectangular, debe agregar un JavaScript para hacer el dibujo.</p>
-  <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
-    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+  <h2>Círculo SVG</h2>
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  </svg>
 
-  <script>
-    var c = document.getElementById("myCanvas1");
-    var ctx = c.getContext("2d");
-    ctx.moveTo(0, 0);
-    ctx.lineTo(200, 100);
-    ctx.stroke();
-  </script>
+  <h2>Rectángulo SVG</h2>
+  <svg width="400" height="100">
+    <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+  </svg>
 
-  <h2>Dibuja un circulo</h2>
-  <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
-    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+  <h2>Rectángulo redondeado SVG</h2>
+  <svg width="400" height="180">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+      style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+  </svg>
 
-  <script>
-    var c = document.getElementById("myCanvas2");
-    var ctx = c.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-    ctx.stroke();
-  </script>
+  <h2>Estrella SVG</h2>
+  <svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+      style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+  </svg>
 
-  <h2>Dibujar un texto</h2>
-  <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
-    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+  <h2>Logotipo de SVG</h2>
+  <svg height="130" width="500">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+  </svg>
 
-  <script>
-    var c = document.getElementById("myCanvas3");
-    var ctx = c.getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.fillText("Hello World", 10, 50);
-  </script>
+  <h2>Diferencias entre SVG y Canvas</h2>
+  <p style="white-space: pre;">
+SVG es un lenguaje para describir gráficos 2D en XML.
 
-  <h2>Texto de trazo</h2>
-  <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
-    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+Canvas dibuja gráficos 2D sobre la marcha (con JavaScript).
 
-  <script>
-    var c = document.getElementById("myCanvas4");
-    var ctx = c.getContext("2d");
-    ctx.font = "30px Arial";
-    ctx.strokeText("Hello World", 10, 50);
-  </script>
+SVG está basado en XML, lo que significa que cada elemento está disponible dentro del DOM de SVG. Puede adjuntar
+controladores de eventos JavaScript para un elemento.
 
-  <h2>Dibujar degradado lineal</h2>
-  <canvas id="myCanvas5" width="200" height="100" style="border:1px solid #d3d3d3;">
-    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
+En SVG, cada forma dibujada se recuerda como un objeto. Si se cambian los atributos de un objeto SVG, el navegador
+puede volver a renderizar automáticamente la forma.
 
-  <script>
-    var c = document.getElementById("myCanvas5");
-    var ctx = c.getContext("2d");
-    // Create gradient
-    var grd = ctx.createLinearGradient(0, 0, 200, 0);
-    grd.addColorStop(0, "red");
-    grd.addColorStop(1, "white");
-    // Fill with gradient
-    ctx.fillStyle = grd;
-    ctx.fillRect(10, 10, 150, 80);
-  </script>
-
-  <h2>Dibujar degradado circular</h2>
-  <canvas id="myCanvas6" width="200" height="100" style="border:1px solid #d3d3d3;">
-    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
-
-  <script>
-    var c = document.getElementById("myCanvas6");
-    var ctx = c.getContext("2d");
-
-    // Create gradient
-    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
-    grd.addColorStop(0, "red");
-    grd.addColorStop(1, "white");
-
-    // Fill with gradient
-    ctx.fillStyle = grd;
-    ctx.fillRect(10, 10, 150, 80);
-  </script>
-
-  <h2>Dibujar imagen</h2>
-  <p>Imagen para usar:</p>
-  <img id="scream" src="img_the_scream.jpg" alt="The Scream" width="220" height="277">
-
-  <p>Lienzo para llenar:</p>
-  <canvas id="myCanvas7" width="250" height="300" style="border:1px solid #d3d3d3;">
-    Su navegador no es compatible con la etiqueta de lienzo HTML</canvas>
-
-  <p><button onclick="myCanvas()">Intentalo</button></p>
-
-  <script>
-    function myCanvas() {
-      var c = document.getElementById("myCanvas7");
-      var ctx = c.getContext("2d");
-      var img = document.getElementById("scream");
-      ctx.drawImage(img, 10, 10);
-    }
-  </script>
+El lienzo se representa píxel a píxel. En el lienzo, una vez que se dibuja el gráfico, el navegador lo olvida. Si se
+debe cambiar su posición, se debe volver a dibujar toda la escena, incluidos los objetos que podrían haber sido
+cubiertos por el gráfico.
+  </p>
+  <table>
+    <tr>
+      <th>Canvas</th>
+      <th>SVG</th>
+    </tr>
+    <tr>
+      <td>Depende de la resolución</td>
+      <td>Resolución independiente</td>
+    </tr>
+    <tr>
+      <td>Sin soporte para controladores de eventos</td>
+      <td>Soporte para controladores de eventos</td>
+    </tr>
+    <tr>
+      <td>Pobres capacidades de representación de texto</td>
+      <td>Más adecuado para aplicaciones con grandes áreas de representación (Google Maps)</td>
+    </tr>
+    <tr>
+      <td>Puede guardar la imagen resultante como .png o .jpg</td>
+      <td>Renderizado lento si es complejo (todo lo que use mucho DOM será lento)</td>
+    </tr>
+    <tr>
+      <td>Muy adecuado para juegos con uso intensivo de gráficos</td>
+      <td>No adecuado para aplicaciones de juegos</td>
+    </tr>
+  </table>
 </body>
 
 </html>
