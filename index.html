@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="En esta pagina se esta aprendiendo GRAFICOS-HTML5" />
+  <meta name="keywords" content="HTML, CSS, JavaScript y Git" />
+  <meta name="author" content="Alexander Jeanpaul Salazar Marquez" />
+  <meta http-equiv="refresh" content="30" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graficos-HTML5</title>
+  <style>
+    table,
+    th,
+    td {
+      max-width: 100%;
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Gráficos HTML SVG</h1>
+  <p>SVG define gráficos basados ​​en vectores en formato XML.</p>
+
+  <h2>¿Qué es SVG?</h2>
+  <ul>
+    <li>SVG son las siglas de Scalable Vector Graphics</li>
+    <li>SVG se utiliza para definir gráficos para la Web</li>
+    <li>SVG es una recomendación del W3C</li>
+  </ul>
+
+  <h2>El elemento HTML svg</h2>
+  <p>
+    El elemento HTML svg es un contenedor para gráficos SVG.<br>
+    SVG tiene varios métodos para dibujar trazados, cuadros, círculos, texto e imágenes gráficas.
+  </p>
+
+  <h2>Círculo SVG</h2>
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  </svg>
+
+  <h2>Rectángulo SVG</h2>
+  <svg width="400" height="100">
+    <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+  </svg>
+
+  <h2>Rectángulo redondeado SVG</h2>
+  <svg width="400" height="180">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+      style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+  </svg>
+
+  <h2>Estrella SVG</h2>
+  <svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+      style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+  </svg>
+
+  <h2>Logotipo de SVG</h2>
+  <svg height="130" width="500">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+  </svg>
+
+  <h2>Diferencias entre SVG y Canvas</h2>
+  <p style="white-space: pre;">
+SVG es un lenguaje para describir gráficos 2D en XML.
+
+Canvas dibuja gráficos 2D sobre la marcha (con JavaScript).
+
+SVG está basado en XML, lo que significa que cada elemento está disponible dentro del DOM de SVG. Puede adjuntar
+controladores de eventos JavaScript para un elemento.
+
+En SVG, cada forma dibujada se recuerda como un objeto. Si se cambian los atributos de un objeto SVG, el navegador
+puede volver a renderizar automáticamente la forma.
+
+El lienzo se representa píxel a píxel. En el lienzo, una vez que se dibuja el gráfico, el navegador lo olvida. Si se
+debe cambiar su posición, se debe volver a dibujar toda la escena, incluidos los objetos que podrían haber sido
+cubiertos por el gráfico.
+  </p>
+  <table>
+    <tr>
+      <th>Canvas</th>
+      <th>SVG</th>
+    </tr>
+    <tr>
+      <td>Depende de la resolución</td>
+      <td>Resolución independiente</td>
+    </tr>
+    <tr>
+      <td>Sin soporte para controladores de eventos</td>
+      <td>Soporte para controladores de eventos</td>
+    </tr>
+    <tr>
+      <td>Pobres capacidades de representación de texto</td>
+      <td>Más adecuado para aplicaciones con grandes áreas de representación (Google Maps)</td>
+    </tr>
+    <tr>
+      <td>Puede guardar la imagen resultante como .png o .jpg</td>
+      <td>Renderizado lento si es complejo (todo lo que use mucho DOM será lento)</td>
+    </tr>
+    <tr>
+      <td>Muy adecuado para juegos con uso intensivo de gráficos</td>
+      <td>No adecuado para aplicaciones de juegos</td>
+    </tr>
+  </table>
+</body>
+
+</html>
